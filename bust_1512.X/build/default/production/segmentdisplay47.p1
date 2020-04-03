@@ -1,0 +1,891 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"8 ./segmentdisplay47.h
+[; ;./segmentdisplay47.h: 8: void set_digit (uint8_t digit_val, uint8_t digit);
+[v _set_digit `(v ~T0 @X0 0 ef2`uc`uc ]
+"1957 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1957: extern volatile unsigned char LATB __attribute__((address(0x10D)));
+[v _LATB `Vuc ~T0 @X0 0 e@269 ]
+"1895
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1895: extern volatile unsigned char LATA __attribute__((address(0x10C)));
+[v _LATA `Vuc ~T0 @X0 0 e@268 ]
+"11 ./segmentdisplay47.h
+[; ;./segmentdisplay47.h: 11:     struct {
+[s S275 :2 `uc 1 :8 `uc 1 :6 `uc 1 :1 `uc 1 ]
+[n S275 . digit value_lo value_hi status ]
+"10
+[; ;./segmentdisplay47.h: 10: typedef union {
+[u S274 `S275 1 ]
+[n S274 . . ]
+"72 segmentdisplay47.c
+[; ;segmentdisplay47.c: 72: uint16_t seg_disp_47_get_val (seg_disp_47_t *s_t);
+[v _seg_disp_47_get_val `(us ~T0 @X0 0 ef1`*S274 ]
+"26 ./segmentdisplay47.h
+[; ;./segmentdisplay47.h: 26: void seg_disp_47_set_val (seg_disp_47_t *s_t, uint16_t value);
+[v _seg_disp_47_set_val `(v ~T0 @X0 0 ef2`*S274`us ]
+"54 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"493
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 493: __asm("PORTB equ 0Dh");
+[; <" PORTB equ 0Dh ;# ">
+"555
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 555: __asm("PORTC equ 0Eh");
+[; <" PORTC equ 0Eh ;# ">
+"617
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 617: __asm("PORTE equ 010h");
+[; <" PORTE equ 010h ;# ">
+"638
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 638: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"700
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 700: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"734
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 734: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"754
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 754: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"761
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 761: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"781
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 781: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"801
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 801: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"873
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 873: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"943
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 943: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"963
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 963: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"983
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 983: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"1054
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1054: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"1116
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1116: __asm("TRISB equ 08Dh");
+[; <" TRISB equ 08Dh ;# ">
+"1178
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1178: __asm("TRISC equ 08Eh");
+[; <" TRISC equ 08Eh ;# ">
+"1240
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1240: __asm("TRISE equ 090h");
+[; <" TRISE equ 090h ;# ">
+"1247
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1247: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1309
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1309: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1343
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1343: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1426
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1426: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1483
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1483: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1542
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1542: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1608
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1608: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1663
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1663: __asm("ADRES0 equ 09Bh");
+[; <" ADRES0 equ 09Bh ;# ">
+"1668
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1668: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1675
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1675: __asm("ADRES0L equ 09Bh");
+[; <" ADRES0L equ 09Bh ;# ">
+"1680
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1680: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1713
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1713: __asm("ADRES0H equ 09Ch");
+[; <" ADRES0H equ 09Ch ;# ">
+"1718
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1718: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1751
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1751: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1831
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1831: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"1897
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1897: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"1959
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1959: __asm("LATB equ 010Dh");
+[; <" LATB equ 010Dh ;# ">
+"2021
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2021: __asm("LATC equ 010Eh");
+[; <" LATC equ 010Eh ;# ">
+"2083
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2083: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2116
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2116: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2175
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2175: __asm("APFCON equ 011Dh");
+[; <" APFCON equ 011Dh ;# ">
+"2201
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2201: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2254
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2254: __asm("ANSELB equ 018Dh");
+[; <" ANSELB equ 018Dh ;# ">
+"2312
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2312: __asm("ANSELC equ 018Eh");
+[; <" ANSELC equ 018Eh ;# ">
+"2363
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2363: __asm("PMADR equ 0191h");
+[; <" PMADR equ 0191h ;# ">
+"2370
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2370: __asm("PMADRL equ 0191h");
+[; <" PMADRL equ 0191h ;# ">
+"2390
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2390: __asm("PMADRH equ 0192h");
+[; <" PMADRH equ 0192h ;# ">
+"2410
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2410: __asm("PMDAT equ 0193h");
+[; <" PMDAT equ 0193h ;# ">
+"2417
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2417: __asm("PMDATL equ 0193h");
+[; <" PMDATL equ 0193h ;# ">
+"2437
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2437: __asm("PMDATH equ 0194h");
+[; <" PMDATH equ 0194h ;# ">
+"2457
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2457: __asm("PMCON1 equ 0195h");
+[; <" PMCON1 equ 0195h ;# ">
+"2513
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2513: __asm("PMCON2 equ 0196h");
+[; <" PMCON2 equ 0196h ;# ">
+"2533
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2533: __asm("VREGCON equ 0197h");
+[; <" VREGCON equ 0197h ;# ">
+"2554
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2554: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"2574
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2574: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"2594
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2594: __asm("SP1BRG equ 019Bh");
+[; <" SP1BRG equ 019Bh ;# ">
+"2601
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2601: __asm("SP1BRGL equ 019Bh");
+[; <" SP1BRGL equ 019Bh ;# ">
+"2606
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2606: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"2610
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2610: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"2655
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2655: __asm("SP1BRGH equ 019Ch");
+[; <" SP1BRGH equ 019Ch ;# ">
+"2660
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2660: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"2693
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2693: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"2755
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2755: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"2817
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2817: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"2869
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2869: __asm("WPUB equ 020Dh");
+[; <" WPUB equ 020Dh ;# ">
+"2939
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2939: __asm("WPUE equ 0210h");
+[; <" WPUE equ 0210h ;# ">
+"2960
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2960: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"2965
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2965: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"2998
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2998: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3003
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3003: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3036
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3036: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3041
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3041: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3074
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3074: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3079
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3079: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3196
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3196: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3201
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3201: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"3205
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3205: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3400
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3400: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"3405
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3405: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"3522
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3522: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"3527
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3527: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"3644
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3644: __asm("CCPR1 equ 0291h");
+[; <" CCPR1 equ 0291h ;# ">
+"3651
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3651: __asm("CCPR1L equ 0291h");
+[; <" CCPR1L equ 0291h ;# ">
+"3671
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3671: __asm("CCPR1H equ 0292h");
+[; <" CCPR1H equ 0292h ;# ">
+"3691
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3691: __asm("CCP1CON equ 0293h");
+[; <" CCP1CON equ 0293h ;# ">
+"3755
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3755: __asm("CCPR2 equ 0298h");
+[; <" CCPR2 equ 0298h ;# ">
+"3762
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3762: __asm("CCPR2L equ 0298h");
+[; <" CCPR2L equ 0298h ;# ">
+"3782
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3782: __asm("CCPR2H equ 0299h");
+[; <" CCPR2H equ 0299h ;# ">
+"3802
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3802: __asm("CCP2CON equ 029Ah");
+[; <" CCP2CON equ 029Ah ;# ">
+"3866
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3866: __asm("IOCBP equ 0394h");
+[; <" IOCBP equ 0394h ;# ">
+"3936
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3936: __asm("IOCBN equ 0395h");
+[; <" IOCBN equ 0395h ;# ">
+"4006
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4006: __asm("IOCBF equ 0396h");
+[; <" IOCBF equ 0396h ;# ">
+"4076
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4076: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"4108
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4108: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"4128
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4128: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"4148
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4148: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"4168
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4168: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"4188
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4188: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"4208
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4208: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"4228
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4228: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"4248
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4248: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"4268
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4268: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"4288
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4288: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"4308
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4308: __asm("AADCON0 equ 0711h");
+[; <" AADCON0 equ 0711h ;# ">
+"4373
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4373: __asm("AADCON1 equ 0712h");
+[; <" AADCON1 equ 0712h ;# ">
+"4439
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4439: __asm("AADCON2 equ 0713h");
+[; <" AADCON2 equ 0713h ;# ">
+"4481
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4481: __asm("AADCON3 equ 0714h");
+[; <" AADCON3 equ 0714h ;# ">
+"4538
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4538: __asm("AADSTAT equ 0715h");
+[; <" AADSTAT equ 0715h ;# ">
+"4578
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4578: __asm("AADPRE equ 0716h");
+[; <" AADPRE equ 0716h ;# ">
+"4642
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4642: __asm("AADACQ equ 0717h");
+[; <" AADACQ equ 0717h ;# ">
+"4706
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4706: __asm("AADGRD equ 0718h");
+[; <" AADGRD equ 0718h ;# ">
+"4739
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4739: __asm("AADCAP equ 0719h");
+[; <" AADCAP equ 0719h ;# ">
+"4779
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4779: __asm("AADRES0 equ 071Ah");
+[; <" AADRES0 equ 071Ah ;# ">
+"4784
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4784: __asm("AD1RES0 equ 071Ah");
+[; <" AD1RES0 equ 071Ah ;# ">
+"4791
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4791: __asm("AADRES0L equ 071Ah");
+[; <" AADRES0L equ 071Ah ;# ">
+"4811
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4811: __asm("AADRES0H equ 071Bh");
+[; <" AADRES0H equ 071Bh ;# ">
+"4831
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4831: __asm("AADRES1 equ 071Ch");
+[; <" AADRES1 equ 071Ch ;# ">
+"4836
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4836: __asm("AD1RES1 equ 071Ch");
+[; <" AD1RES1 equ 071Ch ;# ">
+"4843
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4843: __asm("AADRES1L equ 071Ch");
+[; <" AADRES1L equ 071Ch ;# ">
+"4863
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4863: __asm("AADRES1H equ 071Dh");
+[; <" AADRES1H equ 071Dh ;# ">
+"8 segmentdisplay47.c
+[; ;segmentdisplay47.c: 8: void vis_counter (uint32_t cur_val){
+[v _vis_counter `(v ~T0 @X0 1 ef1`ul ]
+{
+[e :U _vis_counter ]
+[v _cur_val `ul ~T0 @X0 1 r1 ]
+[f ]
+"10
+[; ;segmentdisplay47.c: 10:     uint32_t value = cur_val;
+[v _value `ul ~T0 @X0 1 a ]
+[e = _value _cur_val ]
+"11
+[; ;segmentdisplay47.c: 11:     for (uint8_t digit = 0; digit < 4; digit++){
+{
+[v _digit `uc ~T0 @X0 1 a ]
+[e = _digit -> -> 0 `i `uc ]
+[e $ < -> _digit `i -> 4 `i 277  ]
+[e $U 278  ]
+[e :U 277 ]
+{
+"12
+[; ;segmentdisplay47.c: 12:         uint32_t digit_seperator = value % 10;
+[v _digit_seperator `ul ~T0 @X0 1 a ]
+[e = _digit_seperator % _value -> -> -> 10 `i `l `ul ]
+"13
+[; ;segmentdisplay47.c: 13:         value /= 10;
+[e =/ _value -> -> -> 10 `i `l `ul ]
+"15
+[; ;segmentdisplay47.c: 15:         set_digit (digit_seperator, (digit % 4) + 1);
+[e ( _set_digit (2 , -> _digit_seperator `uc -> + % -> _digit `i -> 4 `i -> 1 `i `uc ]
+"16
+[; ;segmentdisplay47.c: 16:     }
+}
+[e ++ _digit -> -> 1 `i `uc ]
+[e $ < -> _digit `i -> 4 `i 277  ]
+[e :U 278 ]
+}
+"17
+[; ;segmentdisplay47.c: 17: }
+[e :UE 276 ]
+}
+"18
+[; ;segmentdisplay47.c: 18: void set_digit (uint8_t digit_val, uint8_t digit){
+[v _set_digit `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _set_digit ]
+[v _digit_val `uc ~T0 @X0 1 r1 ]
+[v _digit `uc ~T0 @X0 1 r2 ]
+[f ]
+"21
+[; ;segmentdisplay47.c: 21:     if (digit > 4) return;
+[e $ ! > -> _digit `i -> 4 `i 281  ]
+[e $UE 280  ]
+[e :U 281 ]
+"24
+[; ;segmentdisplay47.c: 24:     uint8_t sLATB = (0xF0 & LATB);
+[v _sLATB `uc ~T0 @X0 1 a ]
+[e = _sLATB -> & -> 240 `i -> _LATB `i `uc ]
+"26
+[; ;segmentdisplay47.c: 26:     LATB = sLATB| (0x08 >> (digit - 1));
+[e = _LATB -> | -> _sLATB `i >> -> 8 `i - -> _digit `i -> 1 `i `uc ]
+"29
+[; ;segmentdisplay47.c: 29:     switch (digit_val)
+[e $U 283  ]
+"30
+[; ;segmentdisplay47.c: 30:     {
+{
+"31
+[; ;segmentdisplay47.c: 31:         case 0:
+[e :U 284 ]
+"32
+[; ;segmentdisplay47.c: 32:             LATA = 0xC0;
+[e = _LATA -> -> 192 `i `uc ]
+"33
+[; ;segmentdisplay47.c: 33:             break;
+[e $U 282  ]
+"34
+[; ;segmentdisplay47.c: 34:         case 1:
+[e :U 285 ]
+"35
+[; ;segmentdisplay47.c: 35:             LATA = 0xF9;
+[e = _LATA -> -> 249 `i `uc ]
+"36
+[; ;segmentdisplay47.c: 36:             break;
+[e $U 282  ]
+"37
+[; ;segmentdisplay47.c: 37:         case 2:
+[e :U 286 ]
+"38
+[; ;segmentdisplay47.c: 38:             LATA = 0xA4;
+[e = _LATA -> -> 164 `i `uc ]
+"39
+[; ;segmentdisplay47.c: 39:             break;
+[e $U 282  ]
+"40
+[; ;segmentdisplay47.c: 40:         case 3:
+[e :U 287 ]
+"41
+[; ;segmentdisplay47.c: 41:             LATA = 0xB0;
+[e = _LATA -> -> 176 `i `uc ]
+"42
+[; ;segmentdisplay47.c: 42:             break;
+[e $U 282  ]
+"43
+[; ;segmentdisplay47.c: 43:         case 4:
+[e :U 288 ]
+"44
+[; ;segmentdisplay47.c: 44:             LATA = 0x99;
+[e = _LATA -> -> 153 `i `uc ]
+"45
+[; ;segmentdisplay47.c: 45:             break;
+[e $U 282  ]
+"46
+[; ;segmentdisplay47.c: 46:         case 5:
+[e :U 289 ]
+"47
+[; ;segmentdisplay47.c: 47:             LATA = 0x92;
+[e = _LATA -> -> 146 `i `uc ]
+"48
+[; ;segmentdisplay47.c: 48:             break;
+[e $U 282  ]
+"49
+[; ;segmentdisplay47.c: 49:         case 6:
+[e :U 290 ]
+"50
+[; ;segmentdisplay47.c: 50:             LATA = 0x82;
+[e = _LATA -> -> 130 `i `uc ]
+"51
+[; ;segmentdisplay47.c: 51:             break;
+[e $U 282  ]
+"52
+[; ;segmentdisplay47.c: 52:         case 7:
+[e :U 291 ]
+"53
+[; ;segmentdisplay47.c: 53:             LATA = 0xF8;
+[e = _LATA -> -> 248 `i `uc ]
+"54
+[; ;segmentdisplay47.c: 54:             break;
+[e $U 282  ]
+"55
+[; ;segmentdisplay47.c: 55:         case 8:
+[e :U 292 ]
+"56
+[; ;segmentdisplay47.c: 56:             LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"57
+[; ;segmentdisplay47.c: 57:             break;
+[e $U 282  ]
+"58
+[; ;segmentdisplay47.c: 58:         case 9:
+[e :U 293 ]
+"59
+[; ;segmentdisplay47.c: 59:             LATA = 0x90;
+[e = _LATA -> -> 144 `i `uc ]
+"60
+[; ;segmentdisplay47.c: 60:             break;
+[e $U 282  ]
+"62
+[; ;segmentdisplay47.c: 62:         default:
+[e :U 294 ]
+"63
+[; ;segmentdisplay47.c: 63:             LATA = 0xEF;
+[e = _LATA -> -> 239 `i `uc ]
+"64
+[; ;segmentdisplay47.c: 64:             break;
+[e $U 282  ]
+"65
+[; ;segmentdisplay47.c: 65:     }
+}
+[e $U 282  ]
+[e :U 283 ]
+[e [\ -> _digit_val `i , $ -> 0 `i 284
+ , $ -> 1 `i 285
+ , $ -> 2 `i 286
+ , $ -> 3 `i 287
+ , $ -> 4 `i 288
+ , $ -> 5 `i 289
+ , $ -> 6 `i 290
+ , $ -> 7 `i 291
+ , $ -> 8 `i 292
+ , $ -> 9 `i 293
+ 294 ]
+[e :U 282 ]
+"67
+[; ;segmentdisplay47.c: 67: }
+[e :UE 280 ]
+}
+"73
+[; ;segmentdisplay47.c: 73: void vis_next_digit(seg_disp_47_t * s_t){
+[v _vis_next_digit `(v ~T0 @X0 1 ef1`*S274 ]
+{
+[e :U _vis_next_digit ]
+[v _s_t `*S274 ~T0 @X0 1 r1 ]
+[f ]
+"75
+[; ;segmentdisplay47.c: 75:     if (!s_t->status){
+[e $ ! ! != -> . . *U _s_t 0 3 `i -> 0 `i 296  ]
+{
+"76
+[; ;segmentdisplay47.c: 76:         return;
+[e $UE 295  ]
+"77
+[; ;segmentdisplay47.c: 77:     }
+}
+[e :U 296 ]
+"79
+[; ;segmentdisplay47.c: 79:     uint16_t val = seg_disp_47_get_val(s_t);
+[v _val `us ~T0 @X0 1 a ]
+[e = _val ( _seg_disp_47_get_val (1 _s_t ]
+"80
+[; ;segmentdisplay47.c: 80:     uint16_t digit_divider = 1;
+[v _digit_divider `us ~T0 @X0 1 a ]
+[e = _digit_divider -> -> 1 `i `us ]
+"81
+[; ;segmentdisplay47.c: 81:     for (uint8_t p = 0; p < s_t->digit; p++) {
+{
+[v _p `uc ~T0 @X0 1 a ]
+[e = _p -> -> 0 `i `uc ]
+[e $U 300  ]
+[e :U 297 ]
+{
+"82
+[; ;segmentdisplay47.c: 82:         digit_divider *= 10;
+[e =* _digit_divider -> -> 10 `i `us ]
+"83
+[; ;segmentdisplay47.c: 83:     }
+}
+[e ++ _p -> -> 1 `i `uc ]
+[e :U 300 ]
+[e $ < -> _p `i -> . . *U _s_t 0 0 `i 297  ]
+[e :U 298 ]
+}
+"85
+[; ;segmentdisplay47.c: 85:     uint8_t digit_val = ( val / digit_divider ) % 10;
+[v _digit_val `uc ~T0 @X0 1 a ]
+[e = _digit_val -> % / -> _val `ui -> _digit_divider `ui -> -> 10 `i `ui `uc ]
+"89
+[; ;segmentdisplay47.c: 89:     uint8_t sLATB = (0xF0 & LATB);
+[v _sLATB `uc ~T0 @X0 1 a ]
+[e = _sLATB -> & -> 240 `i -> _LATB `i `uc ]
+"91
+[; ;segmentdisplay47.c: 91:     LATB = sLATB| (0x08 >> (s_t->digit));
+[e = _LATB -> | -> _sLATB `i >> -> 8 `i -> . . *U _s_t 0 0 `i `uc ]
+"94
+[; ;segmentdisplay47.c: 94:     switch (digit_val)
+[e $U 302  ]
+"95
+[; ;segmentdisplay47.c: 95:     {
+{
+"96
+[; ;segmentdisplay47.c: 96:         case 0:
+[e :U 303 ]
+"97
+[; ;segmentdisplay47.c: 97:             LATA = 0xC0;
+[e = _LATA -> -> 192 `i `uc ]
+"98
+[; ;segmentdisplay47.c: 98:             break;
+[e $U 301  ]
+"99
+[; ;segmentdisplay47.c: 99:         case 1:
+[e :U 304 ]
+"100
+[; ;segmentdisplay47.c: 100:             LATA = 0xF9;
+[e = _LATA -> -> 249 `i `uc ]
+"101
+[; ;segmentdisplay47.c: 101:             break;
+[e $U 301  ]
+"102
+[; ;segmentdisplay47.c: 102:         case 2:
+[e :U 305 ]
+"103
+[; ;segmentdisplay47.c: 103:             LATA = 0xA4;
+[e = _LATA -> -> 164 `i `uc ]
+"104
+[; ;segmentdisplay47.c: 104:             break;
+[e $U 301  ]
+"105
+[; ;segmentdisplay47.c: 105:         case 3:
+[e :U 306 ]
+"106
+[; ;segmentdisplay47.c: 106:             LATA = 0xB0;
+[e = _LATA -> -> 176 `i `uc ]
+"107
+[; ;segmentdisplay47.c: 107:             break;
+[e $U 301  ]
+"108
+[; ;segmentdisplay47.c: 108:         case 4:
+[e :U 307 ]
+"109
+[; ;segmentdisplay47.c: 109:             LATA = 0x99;
+[e = _LATA -> -> 153 `i `uc ]
+"110
+[; ;segmentdisplay47.c: 110:             break;
+[e $U 301  ]
+"111
+[; ;segmentdisplay47.c: 111:         case 5:
+[e :U 308 ]
+"112
+[; ;segmentdisplay47.c: 112:             LATA = 0x92;
+[e = _LATA -> -> 146 `i `uc ]
+"113
+[; ;segmentdisplay47.c: 113:             break;
+[e $U 301  ]
+"114
+[; ;segmentdisplay47.c: 114:         case 6:
+[e :U 309 ]
+"115
+[; ;segmentdisplay47.c: 115:             LATA = 0x82;
+[e = _LATA -> -> 130 `i `uc ]
+"116
+[; ;segmentdisplay47.c: 116:             break;
+[e $U 301  ]
+"117
+[; ;segmentdisplay47.c: 117:         case 7:
+[e :U 310 ]
+"118
+[; ;segmentdisplay47.c: 118:             LATA = 0xF8;
+[e = _LATA -> -> 248 `i `uc ]
+"119
+[; ;segmentdisplay47.c: 119:             break;
+[e $U 301  ]
+"120
+[; ;segmentdisplay47.c: 120:         case 8:
+[e :U 311 ]
+"121
+[; ;segmentdisplay47.c: 121:             LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"122
+[; ;segmentdisplay47.c: 122:             break;
+[e $U 301  ]
+"123
+[; ;segmentdisplay47.c: 123:         case 9:
+[e :U 312 ]
+"124
+[; ;segmentdisplay47.c: 124:             LATA = 0x90;
+[e = _LATA -> -> 144 `i `uc ]
+"125
+[; ;segmentdisplay47.c: 125:             break;
+[e $U 301  ]
+"127
+[; ;segmentdisplay47.c: 127:         default:
+[e :U 313 ]
+"128
+[; ;segmentdisplay47.c: 128:             LATA = 0xEF;
+[e = _LATA -> -> 239 `i `uc ]
+"129
+[; ;segmentdisplay47.c: 129:             break;
+[e $U 301  ]
+"130
+[; ;segmentdisplay47.c: 130:     }
+}
+[e $U 301  ]
+[e :U 302 ]
+[e [\ -> _digit_val `i , $ -> 0 `i 303
+ , $ -> 1 `i 304
+ , $ -> 2 `i 305
+ , $ -> 3 `i 306
+ , $ -> 4 `i 307
+ , $ -> 5 `i 308
+ , $ -> 6 `i 309
+ , $ -> 7 `i 310
+ , $ -> 8 `i 311
+ , $ -> 9 `i 312
+ 313 ]
+[e :U 301 ]
+"132
+[; ;segmentdisplay47.c: 132:     s_t->digit++;
+[e ++ . . *U _s_t 0 0 -> -> 1 `i `uc ]
+"133
+[; ;segmentdisplay47.c: 133: }
+[e :UE 295 ]
+}
+"135
+[; ;segmentdisplay47.c: 135: void create_seg_disp_47 (seg_disp_47_t *s_t){
+[v _create_seg_disp_47 `(v ~T0 @X0 1 ef1`*S274 ]
+{
+[e :U _create_seg_disp_47 ]
+[v _s_t `*S274 ~T0 @X0 1 r1 ]
+[f ]
+"136
+[; ;segmentdisplay47.c: 136:     s_t->digit = 0;
+[e = . . *U _s_t 0 0 -> -> 0 `i `uc ]
+"137
+[; ;segmentdisplay47.c: 137:     s_t->value_lo = 0;
+[e = . . *U _s_t 0 1 -> -> 0 `i `uc ]
+"138
+[; ;segmentdisplay47.c: 138:     s_t->value_hi = 0;
+[e = . . *U _s_t 0 2 -> -> 0 `i `uc ]
+"139
+[; ;segmentdisplay47.c: 139:     s_t->status = 1;
+[e = . . *U _s_t 0 3 -> -> 1 `i `uc ]
+"140
+[; ;segmentdisplay47.c: 140: }
+[e :UE 314 ]
+}
+"141
+[; ;segmentdisplay47.c: 141: void update_seg_disp_47 (seg_disp_47_t *s_t, uint16_t cur_val){
+[v _update_seg_disp_47 `(v ~T0 @X0 1 ef2`*S274`us ]
+{
+[e :U _update_seg_disp_47 ]
+[v _s_t `*S274 ~T0 @X0 1 r1 ]
+[v _cur_val `us ~T0 @X0 1 r2 ]
+[f ]
+"142
+[; ;segmentdisplay47.c: 142:     seg_disp_47_set_val (s_t, cur_val);
+[e ( _seg_disp_47_set_val (2 , _s_t _cur_val ]
+"143
+[; ;segmentdisplay47.c: 143: }
+[e :UE 315 ]
+}
+"146
+[; ;segmentdisplay47.c: 146: uint16_t seg_disp_47_get_val (seg_disp_47_t *s_t){
+[v _seg_disp_47_get_val `(us ~T0 @X0 1 ef1`*S274 ]
+{
+[e :U _seg_disp_47_get_val ]
+[v _s_t `*S274 ~T0 @X0 1 r1 ]
+[f ]
+"147
+[; ;segmentdisplay47.c: 147:     uint16_t val = 0;
+[v _val `us ~T0 @X0 1 a ]
+[e = _val -> -> 0 `i `us ]
+"148
+[; ;segmentdisplay47.c: 148:     val |= s_t->value_lo;
+[e =| _val -> . . *U _s_t 0 1 `us ]
+"149
+[; ;segmentdisplay47.c: 149:     val |= s_t->value_hi << 8;
+[e =| _val -> << -> . . *U _s_t 0 2 `i -> 8 `i `us ]
+"150
+[; ;segmentdisplay47.c: 150:     return val;
+[e ) _val ]
+[e $UE 316  ]
+"151
+[; ;segmentdisplay47.c: 151: }
+[e :UE 316 ]
+}
+"152
+[; ;segmentdisplay47.c: 152: void seg_disp_47_set_val (seg_disp_47_t *s_t, uint16_t value){
+[v _seg_disp_47_set_val `(v ~T0 @X0 1 ef2`*S274`us ]
+{
+[e :U _seg_disp_47_set_val ]
+[v _s_t `*S274 ~T0 @X0 1 r1 ]
+[v _value `us ~T0 @X0 1 r2 ]
+[f ]
+"153
+[; ;segmentdisplay47.c: 153:     s_t->value_lo = value;
+[e = . . *U _s_t 0 1 -> _value `uc ]
+"154
+[; ;segmentdisplay47.c: 154:     s_t->value_hi = value >> 8;
+[e = . . *U _s_t 0 2 -> >> -> _value `ui -> 8 `i `uc ]
+"155
+[; ;segmentdisplay47.c: 155: }
+[e :UE 317 ]
+}
+"159
+[; ;segmentdisplay47.c: 159: void seg_disp_47_on (seg_disp_47_t *s_t){s_t->status = 1; }
+[v _seg_disp_47_on `(v ~T0 @X0 1 ef1`*S274 ]
+{
+[e :U _seg_disp_47_on ]
+[v _s_t `*S274 ~T0 @X0 1 r1 ]
+[f ]
+[e = . . *U _s_t 0 3 -> -> 1 `i `uc ]
+[e :UE 318 ]
+}
+"160
+[; ;segmentdisplay47.c: 160: void seg_disp_47_off(seg_disp_47_t *s_t){s_t->status = 0; LATA = 0xFF;}
+[v _seg_disp_47_off `(v ~T0 @X0 1 ef1`*S274 ]
+{
+[e :U _seg_disp_47_off ]
+[v _s_t `*S274 ~T0 @X0 1 r1 ]
+[f ]
+[e = . . *U _s_t 0 3 -> -> 0 `i `uc ]
+[e = _LATA -> -> 255 `i `uc ]
+[e :UE 319 ]
+}

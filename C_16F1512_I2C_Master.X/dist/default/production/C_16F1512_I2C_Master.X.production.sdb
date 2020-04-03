@@ -1,0 +1,158 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1512 ]
+[d frameptr 6 ]
+"8 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Master.X\conf.c
+[v _init init `(v  1 e 1 0 ]
+"16
+[v _init_oscillator init_oscillator `(v  1 e 1 0 ]
+"31
+[v _reset_ports reset_ports `(v  1 e 1 0 ]
+"51
+[v _init_ports init_ports `(v  1 e 1 0 ]
+"61
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+"68
+[v _init_i2c_master init_i2c_master `(v  1 e 1 0 ]
+"10 D:\Programs\Compilers\8 bit\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"15 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Master.X\main.c
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+"20
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+"32
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+"38
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+"49
+[v _i2cSend i2cSend `(v  1 e 1 0 ]
+"67
+[v _main main `(v  1 e 1 0 ]
+"1052 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1114
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1176
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S101 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1561
+[s S105 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S113 . 1 `S101 1 . 1 0 `S105 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES113  1 e 1 @153 ]
+"1895
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"1957
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2019
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S32 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2036
+[u S41 . 1 `S32 1 . 1 0 ]
+[v _LATCbits LATCbits `VES41  1 e 1 @270 ]
+"2199
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2252
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2310
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2958
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"2996
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3072
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+"3194
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+"3398
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+"5412
+[v _PEN PEN `VEb  1 e 0 @4274 ]
+"5517
+[v _RSEN RSEN `VEb  1 e 0 @4273 ]
+"5550
+[v _SEN SEN `VEb  1 e 0 @4272 ]
+"67 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Master.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"72
+[v main@v v `ui  1 a 2 5 ]
+"80
+} 0
+"8 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Master.X\conf.c
+[v _init init `(v  1 e 1 0 ]
+{
+"13
+} 0
+"51
+[v _init_ports init_ports `(v  1 e 1 0 ]
+{
+"57
+} 0
+"31
+[v _reset_ports reset_ports `(v  1 e 1 0 ]
+{
+"48
+} 0
+"16
+[v _init_oscillator init_oscillator `(v  1 e 1 0 ]
+{
+"23
+} 0
+"61
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+{
+"66
+} 0
+"68
+[v _init_i2c_master init_i2c_master `(v  1 e 1 0 ]
+{
+"84
+} 0
+"49 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Master.X\main.c
+[v _i2cSend i2cSend `(v  1 e 1 0 ]
+{
+[v i2cSend@data data `ui  1 p 2 2 ]
+"64
+} 0
+"38
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+{
+[v I2C_Master_Write@d d `ui  1 p 2 0 ]
+"42
+} 0
+"32
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+{
+"36
+} 0
+"20
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+{
+"24
+} 0
+"15
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+{
+"18
+} 0

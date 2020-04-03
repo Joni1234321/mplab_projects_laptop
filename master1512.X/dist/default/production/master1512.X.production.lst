@@ -1,0 +1,1010 @@
+
+
+Microchip MPLAB XC8 Assembler V2.05 build -831301201 
+                                                                                               Sat Oct 05 18:26:36 2019
+
+Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
+     1                           	processor	16F1512
+     2                           	opt	pw 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,merge=1,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	dabs	1,0x7E,2
+    11  0000                     
+    12                           ; Version 2.05
+    13                           ; Generated 20/12/2018 GMT
+    14                           ; 
+    15                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    16                           ; All rights reserved.
+    17                           ; 
+    18                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    19                           ; 
+    20                           ; Redistribution and use in source and binary forms, with or without modification, are
+    21                           ; permitted provided that the following conditions are met:
+    22                           ; 
+    23                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    24                           ;        conditions and the following disclaimer.
+    25                           ; 
+    26                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    27                           ;        of conditions and the following disclaimer in the documentation and/or other
+    28                           ;        materials provided with the distribution.
+    29                           ; 
+    30                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    31                           ;        software without specific prior written permission.
+    32                           ; 
+    33                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    34                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    35                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    36                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    37                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    38                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    39                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    40                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    41                           ; 
+    42                           ; 
+    43                           ; Code-generator required, PIC16F1512 Definitions
+    44                           ; 
+    45                           ; SFR Addresses
+    46  0000                     	;# 
+    47  0001                     	;# 
+    48  0002                     	;# 
+    49  0003                     	;# 
+    50  0004                     	;# 
+    51  0005                     	;# 
+    52  0006                     	;# 
+    53  0007                     	;# 
+    54  0008                     	;# 
+    55  0009                     	;# 
+    56  000A                     	;# 
+    57  000B                     	;# 
+    58  000C                     	;# 
+    59  000D                     	;# 
+    60  000E                     	;# 
+    61  0010                     	;# 
+    62  0011                     	;# 
+    63  0012                     	;# 
+    64  0015                     	;# 
+    65  0016                     	;# 
+    66  0016                     	;# 
+    67  0017                     	;# 
+    68  0018                     	;# 
+    69  0019                     	;# 
+    70  001A                     	;# 
+    71  001B                     	;# 
+    72  001C                     	;# 
+    73  008C                     	;# 
+    74  008D                     	;# 
+    75  008E                     	;# 
+    76  0090                     	;# 
+    77  0091                     	;# 
+    78  0092                     	;# 
+    79  0095                     	;# 
+    80  0096                     	;# 
+    81  0097                     	;# 
+    82  0099                     	;# 
+    83  009A                     	;# 
+    84  009B                     	;# 
+    85  009B                     	;# 
+    86  009B                     	;# 
+    87  009B                     	;# 
+    88  009C                     	;# 
+    89  009C                     	;# 
+    90  009D                     	;# 
+    91  009E                     	;# 
+    92  010C                     	;# 
+    93  010D                     	;# 
+    94  010E                     	;# 
+    95  0116                     	;# 
+    96  0117                     	;# 
+    97  011D                     	;# 
+    98  018C                     	;# 
+    99  018D                     	;# 
+   100  018E                     	;# 
+   101  0191                     	;# 
+   102  0191                     	;# 
+   103  0192                     	;# 
+   104  0193                     	;# 
+   105  0193                     	;# 
+   106  0194                     	;# 
+   107  0195                     	;# 
+   108  0196                     	;# 
+   109  0197                     	;# 
+   110  0199                     	;# 
+   111  019A                     	;# 
+   112  019B                     	;# 
+   113  019B                     	;# 
+   114  019B                     	;# 
+   115  019B                     	;# 
+   116  019C                     	;# 
+   117  019C                     	;# 
+   118  019D                     	;# 
+   119  019E                     	;# 
+   120  019F                     	;# 
+   121  020D                     	;# 
+   122  0210                     	;# 
+   123  0211                     	;# 
+   124  0211                     	;# 
+   125  0212                     	;# 
+   126  0212                     	;# 
+   127  0213                     	;# 
+   128  0213                     	;# 
+   129  0214                     	;# 
+   130  0214                     	;# 
+   131  0215                     	;# 
+   132  0215                     	;# 
+   133  0215                     	;# 
+   134  0216                     	;# 
+   135  0216                     	;# 
+   136  0217                     	;# 
+   137  0217                     	;# 
+   138  0291                     	;# 
+   139  0291                     	;# 
+   140  0292                     	;# 
+   141  0293                     	;# 
+   142  0298                     	;# 
+   143  0298                     	;# 
+   144  0299                     	;# 
+   145  029A                     	;# 
+   146  0394                     	;# 
+   147  0395                     	;# 
+   148  0396                     	;# 
+   149  0FE4                     	;# 
+   150  0FE5                     	;# 
+   151  0FE6                     	;# 
+   152  0FE7                     	;# 
+   153  0FE8                     	;# 
+   154  0FE9                     	;# 
+   155  0FEA                     	;# 
+   156  0FEB                     	;# 
+   157  0FED                     	;# 
+   158  0FEE                     	;# 
+   159  0FEF                     	;# 
+   160  0711                     	;# 
+   161  0712                     	;# 
+   162  0713                     	;# 
+   163  0714                     	;# 
+   164  0715                     	;# 
+   165  0716                     	;# 
+   166  0717                     	;# 
+   167  0718                     	;# 
+   168  0719                     	;# 
+   169  071A                     	;# 
+   170  071A                     	;# 
+   171  071A                     	;# 
+   172  071B                     	;# 
+   173  071C                     	;# 
+   174  071C                     	;# 
+   175  071C                     	;# 
+   176  071D                     	;# 
+   177  0011                     _PIR1bits	set	17
+   178  008B                     _SSPIF	set	139
+   179  008E                     _TRISCbits	set	142
+   180  008D                     _TRISB	set	141
+   181  008C                     _TRISA	set	140
+   182  0099                     _OSCCONbits	set	153
+   183  010D                     _LATBbits	set	269
+   184  010C                     _LATA	set	268
+   185  018E                     _ANSELC	set	398
+   186  018D                     _ANSELB	set	397
+   187  018C                     _ANSELA	set	396
+   188  0214                     _SSPSTATbits	set	532
+   189  0211                     _SSPBUF	set	529
+   190  0216                     _SSPCON2bits	set	534
+   191  0215                     _SSPCON1	set	533
+   192  0212                     _SSPADD	set	530
+   193  10B4                     _ACKEN	set	4276
+   194  10B1                     _RSEN	set	4273
+   195  10B2                     _PEN	set	4274
+   196  10B0                     _SEN	set	4272
+   197                           
+   198                           ; #config settings
+   199  0000                     
+   200                           	psect	cinit
+   201  07FD                     start_initialization:	
+   202  07FD                     __initialization:	
+   203                           
+   204                           ; Clear objects allocated to COMMON
+   205  07FD  01FA               	clrf	__pbssCOMMON& (0+127)
+   206  07FE                     end_of_initialization:	
+   207                           ;End of C runtime variable initialization code
+   208                           
+   209  07FE                     __end_of__initialization:	
+   210  07FE  0020               	movlb	0
+   211  07FF  2F5C               	ljmp	_main	;jump to C main() function
+   212                           
+   213                           	psect	bssCOMMON
+   214  007A                     __pbssCOMMON:	
+   215  007A                     _readData:	
+   216  007A                     	ds	1
+   217                           
+   218                           	psect	cstackCOMMON
+   219  0070                     __pcstackCOMMON:	
+   220  0070                     ?_EepromWrite:	
+   221  0070                     ?_EepromRead:	
+   222                           ; 1 bytes @ 0x0
+   223                           
+   224  0070                     ?_main:	
+   225                           ; 1 bytes @ 0x0
+   226                           
+   227  0070                     EepromWrite@addHigh:	
+   228                           ; 1 bytes @ 0x0
+   229                           
+   230  0070                     EepromRead@addHigh:	
+   231                           ; 1 bytes @ 0x0
+   232                           
+   233                           
+   234                           ; 1 bytes @ 0x0
+   235  0070                     	ds	1
+   236  0071                     EepromWrite@addLow:	
+   237  0071                     EepromRead@addLow:	
+   238                           ; 1 bytes @ 0x1
+   239                           
+   240                           
+   241                           ; 1 bytes @ 0x1
+   242  0071                     	ds	1
+   243  0072                     ??_EepromRead:	
+   244  0072                     EepromWrite@eeData:	
+   245                           ; 1 bytes @ 0x2
+   246                           
+   247                           
+   248                           ; 1 bytes @ 0x2
+   249  0072                     	ds	1
+   250  0073                     ??_EepromWrite:	
+   251  0073                     EepromWrite@slaveAdd:	
+   252                           ; 1 bytes @ 0x3
+   253                           
+   254  0073                     EepromRead@tempData:	
+   255                           ; 1 bytes @ 0x3
+   256                           
+   257                           
+   258                           ; 1 bytes @ 0x3
+   259  0073                     	ds	1
+   260  0074                     EepromRead@slaveAdd:	
+   261                           
+   262                           ; 1 bytes @ 0x4
+   263  0074                     	ds	1
+   264  0075                     ??_main:	
+   265                           
+   266                           ; 1 bytes @ 0x5
+   267  0075                     	ds	3
+   268  0078                     main@x:	
+   269                           
+   270                           ; 2 bytes @ 0x8
+   271  0078                     	ds	2
+   272                           
+   273                           	psect	maintext
+   274  075C                     __pmaintext:	
+   275 ;;
+   276 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   277 ;;
+   278 ;; *************** function _main *****************
+   279 ;; Defined at:
+   280 ;;		line 42 in file "master.c"
+   281 ;; Parameters:    Size  Location     Type
+   282 ;;		None
+   283 ;; Auto vars:     Size  Location     Type
+   284 ;;  x               2    8[COMMON] int 
+   285 ;; Return value:  Size  Location     Type
+   286 ;;                  1    wreg      void 
+   287 ;; Registers used:
+   288 ;;		wreg, status,2, status,0, pclath, cstack
+   289 ;; Tracked objects:
+   290 ;;		On entry : B1F/0
+   291 ;;		On exit  : 0/0
+   292 ;;		Unchanged: 0/0
+   293 ;; Data sizes:     COMMON   BANK0   BANK1
+   294 ;;      Params:         0       0       0
+   295 ;;      Locals:         2       0       0
+   296 ;;      Temps:          3       0       0
+   297 ;;      Totals:         5       0       0
+   298 ;;Total ram usage:        5 bytes
+   299 ;; Hardware stack levels required when called:    1
+   300 ;; This function calls:
+   301 ;;		_EepromRead
+   302 ;;		_EepromWrite
+   303 ;; This function is called by:
+   304 ;;		Startup code after reset
+   305 ;; This function uses a non-reentrant model
+   306 ;;
+   307                           
+   308                           
+   309                           ;psect for function _main
+   310  075C                     _main:	
+   311                           
+   312                           ;master.c: 43:     int x;;master.c: 47:     OSCCONbits.IRCF = 0b1100;
+   313                           
+   314                           ;incstack = 0
+   315                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   316  075C  0021               	movlb	1	; select bank1
+   317  075D  0819               	movf	25,w	;volatile
+   318  075E  3987               	andlw	-121
+   319  075F  3860               	iorlw	96
+   320  0760  0099               	movwf	25	;volatile
+   321                           
+   322                           ;master.c: 50:     ANSELA = 0;
+   323  0761  0023               	movlb	3	; select bank3
+   324  0762  018C               	clrf	12	;volatile
+   325                           
+   326                           ;master.c: 51:     TRISA = 0;
+   327  0763  0021               	movlb	1	; select bank1
+   328  0764  018C               	clrf	12	;volatile
+   329                           
+   330                           ;master.c: 52:     LATA = 0;
+   331  0765  0022               	movlb	2	; select bank2
+   332  0766  018C               	clrf	12	;volatile
+   333                           
+   334                           ;master.c: 54:     ANSELB = 0;
+   335  0767  0023               	movlb	3	; select bank3
+   336  0768  018D               	clrf	13	;volatile
+   337                           
+   338                           ;master.c: 55:     TRISB = 0;
+   339  0769  0021               	movlb	1	; select bank1
+   340  076A  018D               	clrf	13	;volatile
+   341                           
+   342                           ;master.c: 56:     LATBbits.LATB0 = 1;
+   343  076B  0022               	movlb	2	; select bank2
+   344  076C  140D               	bsf	13,0	;volatile
+   345                           
+   346                           ;master.c: 58:     ANSELC = 0;
+   347  076D  0023               	movlb	3	; select bank3
+   348  076E  018E               	clrf	14	;volatile
+   349                           
+   350                           ;master.c: 59:     TRISCbits.TRISC3 = 1;
+   351  076F  0021               	movlb	1	; select bank1
+   352  0770  158E               	bsf	14,3	;volatile
+   353                           
+   354                           ;master.c: 60:     TRISCbits.TRISC4 = 1;
+   355  0771  160E               	bsf	14,4	;volatile
+   356                           
+   357                           ;master.c: 64:     SSPADD = 4;
+   358  0772  3004               	movlw	4
+   359  0773  0024               	movlb	4	; select bank4
+   360  0774  0092               	movwf	18	;volatile
+   361                           
+   362                           ;master.c: 68:     SSPCON1 = 0x28;
+   363  0775  3028               	movlw	40
+   364  0776  0095               	movwf	21	;volatile
+   365                           
+   366                           ;master.c: 70:     EepromWrite (0xA0, 0x12, 0x34, 0xAA);
+   367  0777  3012               	movlw	18
+   368  0778  00F5               	movwf	??_main
+   369  0779  0875               	movf	??_main,w
+   370  077A  00F0               	movwf	EepromWrite@addHigh
+   371  077B  3034               	movlw	52
+   372  077C  00F6               	movwf	??_main+1
+   373  077D  0876               	movf	??_main+1,w
+   374  077E  00F1               	movwf	EepromWrite@addLow
+   375  077F  30AA               	movlw	170
+   376  0780  00F7               	movwf	??_main+2
+   377  0781  0877               	movf	??_main+2,w
+   378  0782  00F2               	movwf	EepromWrite@eeData
+   379  0783  30A0               	movlw	160
+   380  0784  2722               	fcall	_EepromWrite
+   381                           
+   382                           ;master.c: 71:     for (x = 1; x < 165; x++);
+   383  0785  3001               	movlw	1
+   384  0786  00F8               	movwf	main@x
+   385  0787  3000               	movlw	0
+   386  0788  00F9               	movwf	main@x+1
+   387  0789                     l875:	
+   388  0789  3001               	movlw	1
+   389  078A  07F8               	addwf	main@x,f
+   390  078B  3000               	movlw	0
+   391  078C  3DF9               	addwfc	main@x+1,f
+   392  078D  0879               	movf	main@x+1,w
+   393  078E  3A80               	xorlw	128
+   394  078F  00F5               	movwf	??_main
+   395  0790  3080               	movlw	128
+   396  0791  0275               	subwf	??_main,w
+   397  0792  1D03               	skipz
+   398  0793  2F96               	goto	u665
+   399  0794  30A5               	movlw	165
+   400  0795  0278               	subwf	main@x,w
+   401  0796                     u665:	
+   402  0796  1C03               	skipc
+   403  0797  2F89               	goto	l875
+   404                           
+   405                           ;master.c: 72:     readData = EepromRead (0xA0, 0x12, 0x34);
+   406  0798  3012               	movlw	18
+   407  0799  00F5               	movwf	??_main
+   408  079A  0875               	movf	??_main,w
+   409  079B  00F0               	movwf	EepromRead@addHigh
+   410  079C  3034               	movlw	52
+   411  079D  00F6               	movwf	??_main+1
+   412  079E  0876               	movf	??_main+1,w
+   413  079F  00F1               	movwf	EepromRead@addLow
+   414  07A0  30A0               	movlw	160
+   415  07A1  27A9               	fcall	_EepromRead
+   416  07A2  00F7               	movwf	??_main+2
+   417  07A3  0877               	movf	??_main+2,w
+   418  07A4  00FA               	movwf	_readData	;volatile
+   419                           
+   420                           ;master.c: 73:     LATA = readData;
+   421  07A5  087A               	movf	_readData,w	;volatile
+   422  07A6  0022               	movlb	2	; select bank2
+   423  07A7  008C               	movwf	12	;volatile
+   424  07A8  2801               	ljmp	start
+   425  07A9                     __end_of_main:	
+   426                           
+   427                           	psect	text1
+   428  0722                     __ptext1:	
+   429 ;; *************** function _EepromWrite *****************
+   430 ;; Defined at:
+   431 ;;		line 87 in file "master.c"
+   432 ;; Parameters:    Size  Location     Type
+   433 ;;  slaveAdd        1    wreg     unsigned char 
+   434 ;;  addHigh         1    0[COMMON] unsigned char 
+   435 ;;  addLow          1    1[COMMON] unsigned char 
+   436 ;;  eeData          1    2[COMMON] unsigned char 
+   437 ;; Auto vars:     Size  Location     Type
+   438 ;;  slaveAdd        1    3[COMMON] unsigned char 
+   439 ;; Return value:  Size  Location     Type
+   440 ;;                  1    wreg      void 
+   441 ;; Registers used:
+   442 ;;		wreg
+   443 ;; Tracked objects:
+   444 ;;		On entry : 0/0
+   445 ;;		On exit  : 0/0
+   446 ;;		Unchanged: 0/0
+   447 ;; Data sizes:     COMMON   BANK0   BANK1
+   448 ;;      Params:         3       0       0
+   449 ;;      Locals:         1       0       0
+   450 ;;      Temps:          0       0       0
+   451 ;;      Totals:         4       0       0
+   452 ;;Total ram usage:        4 bytes
+   453 ;; Hardware stack levels used:    1
+   454 ;; This function calls:
+   455 ;;		Nothing
+   456 ;; This function is called by:
+   457 ;;		_main
+   458 ;; This function uses a non-reentrant model
+   459 ;;
+   460                           
+   461                           
+   462                           ;psect for function _EepromWrite
+   463  0722                     _EepromWrite:	
+   464                           
+   465                           ;incstack = 0
+   466                           ; Regs used in _EepromWrite: [wreg]
+   467                           ;EepromWrite@slaveAdd stored from wreg
+   468  0722  00F3               	movwf	EepromWrite@slaveAdd
+   469                           
+   470                           ;master.c: 88:     SSPCON2bits.SEN = 1;
+   471  0723  0024               	movlb	4	; select bank4
+   472  0724  1416               	bsf	22,0	;volatile
+   473  0725                     l56:	
+   474                           ;master.c: 89:     while (SEN);
+   475                           
+   476  0725  1816               	btfsc	22,0	;volatile
+   477  0726  2F25               	goto	l56
+   478                           
+   479                           ;master.c: 90:     PIR1bits.SSPIF = 0;
+   480  0727  0020               	movlb	0	; select bank0
+   481  0728  1191               	bcf	17,3	;volatile
+   482                           
+   483                           ;master.c: 92:     SSPBUF = slaveAdd;
+   484  0729  0873               	movf	EepromWrite@slaveAdd,w
+   485  072A  0024               	movlb	4	; select bank4
+   486  072B  0091               	movwf	17	;volatile
+   487  072C                     l59:	
+   488                           ;master.c: 93:     while (!SSPIF);
+   489                           
+   490  072C  0020               	movlb	0	; select bank0
+   491  072D  1D91               	btfss	17,3	;volatile
+   492  072E  2F2C               	goto	l59
+   493                           
+   494                           ;master.c: 94:     PIR1bits.SSPIF = 0;
+   495  072F  1191               	bcf	17,3	;volatile
+   496                           
+   497                           ;master.c: 95:     if (SSPCON2bits.ACKSTAT) {
+   498  0730  0024               	movlb	4	; select bank4
+   499  0731  1F16               	btfss	22,6	;volatile
+   500  0732  2F37               	goto	l789
+   501                           
+   502                           ;master.c: 96:         SSPCON2bits.PEN = 1;
+   503  0733  1516               	bsf	22,2	;volatile
+   504  0734                     l63:	
+   505                           ;master.c: 97:         while (PEN);
+   506                           
+   507  0734  1D16               	btfss	22,2	;volatile
+   508  0735  0008               	return
+   509  0736  2F34               	goto	l63
+   510  0737                     l789:	
+   511                           
+   512                           ;master.c: 101:     SSPBUF = addHigh;
+   513  0737  0870               	movf	EepromWrite@addHigh,w
+   514  0738  0091               	movwf	17	;volatile
+   515  0739                     l67:	
+   516                           ;master.c: 102:     while (!SSPIF);
+   517                           
+   518  0739  0020               	movlb	0	; select bank0
+   519  073A  1D91               	btfss	17,3	;volatile
+   520  073B  2F39               	goto	l67
+   521                           
+   522                           ;master.c: 103:     PIR1bits.SSPIF = 0;
+   523  073C  1191               	bcf	17,3	;volatile
+   524                           
+   525                           ;master.c: 104:     if (SSPCON2bits.ACKSTAT) {
+   526  073D  0024               	movlb	4	; select bank4
+   527  073E  1F16               	btfss	22,6	;volatile
+   528  073F  2F44               	goto	l793
+   529                           
+   530                           ;master.c: 105:         SSPCON2bits.PEN = 1;
+   531  0740  1516               	bsf	22,2	;volatile
+   532  0741                     l71:	
+   533                           ;master.c: 106:         while (PEN);
+   534                           
+   535  0741  1D16               	btfss	22,2	;volatile
+   536  0742  0008               	return
+   537  0743  2F41               	goto	l71
+   538  0744                     l793:	
+   539                           
+   540                           ;master.c: 110:     SSPBUF = addLow;
+   541  0744  0871               	movf	EepromWrite@addLow,w
+   542  0745  0091               	movwf	17	;volatile
+   543  0746                     l74:	
+   544                           ;master.c: 111:     while (!SSPIF);
+   545                           
+   546  0746  0020               	movlb	0	; select bank0
+   547  0747  1D91               	btfss	17,3	;volatile
+   548  0748  2F46               	goto	l74
+   549                           
+   550                           ;master.c: 112:     PIR1bits.SSPIF = 0;
+   551  0749  1191               	bcf	17,3	;volatile
+   552                           
+   553                           ;master.c: 113:     if (SSPCON2bits.ACKSTAT) {
+   554  074A  0024               	movlb	4	; select bank4
+   555  074B  1F16               	btfss	22,6	;volatile
+   556  074C  2F51               	goto	l797
+   557                           
+   558                           ;master.c: 114:         SSPCON2bits.PEN = 1;
+   559  074D  1516               	bsf	22,2	;volatile
+   560  074E                     l78:	
+   561                           ;master.c: 115:         while (PEN);
+   562                           
+   563  074E  1D16               	btfss	22,2	;volatile
+   564  074F  0008               	return
+   565  0750  2F4E               	goto	l78
+   566  0751                     l797:	
+   567                           
+   568                           ;master.c: 119:     SSPBUF = eeData;
+   569  0751  0872               	movf	EepromWrite@eeData,w
+   570  0752  0091               	movwf	17	;volatile
+   571  0753                     l81:	
+   572                           ;master.c: 120:     while (!SSPIF);
+   573                           
+   574  0753  0020               	movlb	0	; select bank0
+   575  0754  1D91               	btfss	17,3	;volatile
+   576  0755  2F53               	goto	l81
+   577                           
+   578                           ;master.c: 121:     PIR1bits.SSPIF = 0;
+   579  0756  1191               	bcf	17,3	;volatile
+   580                           
+   581                           ;master.c: 123:     SSPCON2bits.PEN = 1;
+   582  0757  0024               	movlb	4	; select bank4
+   583  0758  1516               	bsf	22,2	;volatile
+   584  0759                     l84:	
+   585                           ;master.c: 124:     while (PEN);
+   586                           
+   587  0759  1D16               	btfss	22,2	;volatile
+   588  075A  0008               	return
+   589  075B  2F59               	goto	l84
+   590  075C                     __end_of_EepromWrite:	
+   591                           
+   592                           	psect	text2
+   593  07A9                     __ptext2:	
+   594 ;; *************** function _EepromRead *****************
+   595 ;; Defined at:
+   596 ;;		line 128 in file "master.c"
+   597 ;; Parameters:    Size  Location     Type
+   598 ;;  slaveAdd        1    wreg     unsigned char 
+   599 ;;  addHigh         1    0[COMMON] unsigned char 
+   600 ;;  addLow          1    1[COMMON] unsigned char 
+   601 ;; Auto vars:     Size  Location     Type
+   602 ;;  slaveAdd        1    4[COMMON] unsigned char 
+   603 ;;  tempData        1    3[COMMON] unsigned char 
+   604 ;; Return value:  Size  Location     Type
+   605 ;;                  1    wreg      unsigned char 
+   606 ;; Registers used:
+   607 ;;		wreg, status,2, status,0
+   608 ;; Tracked objects:
+   609 ;;		On entry : 0/0
+   610 ;;		On exit  : 0/0
+   611 ;;		Unchanged: 0/0
+   612 ;; Data sizes:     COMMON   BANK0   BANK1
+   613 ;;      Params:         2       0       0
+   614 ;;      Locals:         2       0       0
+   615 ;;      Temps:          1       0       0
+   616 ;;      Totals:         5       0       0
+   617 ;;Total ram usage:        5 bytes
+   618 ;; Hardware stack levels used:    1
+   619 ;; This function calls:
+   620 ;;		Nothing
+   621 ;; This function is called by:
+   622 ;;		_main
+   623 ;; This function uses a non-reentrant model
+   624 ;;
+   625                           
+   626                           
+   627                           ;psect for function _EepromRead
+   628  07A9                     _EepromRead:	
+   629                           
+   630                           ;incstack = 0
+   631                           ; Regs used in _EepromRead: [wreg+status,2+status,0]
+   632                           ;EepromRead@slaveAdd stored from wreg
+   633  07A9  00F4               	movwf	EepromRead@slaveAdd
+   634                           
+   635                           ;master.c: 129:     char tempData;;master.c: 131:     SSPCON2bits.SEN = 1;
+   636  07AA  0024               	movlb	4	; select bank4
+   637  07AB  1416               	bsf	22,0	;volatile
+   638  07AC                     l89:	
+   639                           ;master.c: 132:     while (SEN);
+   640                           
+   641  07AC  1816               	btfsc	22,0	;volatile
+   642  07AD  2FAC               	goto	l89
+   643                           
+   644                           ;master.c: 133:     PIR1bits.SSPIF = 0;
+   645  07AE  0020               	movlb	0	; select bank0
+   646  07AF  1191               	bcf	17,3	;volatile
+   647                           
+   648                           ;master.c: 135:     SSPBUF = slaveAdd;
+   649  07B0  0874               	movf	EepromRead@slaveAdd,w
+   650  07B1  0024               	movlb	4	; select bank4
+   651  07B2  0091               	movwf	17	;volatile
+   652  07B3                     l92:	
+   653                           ;master.c: 136:     while (!SSPIF);
+   654                           
+   655  07B3  0020               	movlb	0	; select bank0
+   656  07B4  1D91               	btfss	17,3	;volatile
+   657  07B5  2FB3               	goto	l92
+   658                           
+   659                           ;master.c: 137:     PIR1bits.SSPIF = 0;
+   660  07B6  1191               	bcf	17,3	;volatile
+   661                           
+   662                           ;master.c: 138:     if (SSPCON2bits.ACKSTAT) {
+   663  07B7  0024               	movlb	4	; select bank4
+   664  07B8  1F16               	btfss	22,6	;volatile
+   665  07B9  2FBF               	goto	l809
+   666                           
+   667                           ;master.c: 139:         SSPCON2bits.PEN = 1;
+   668  07BA  1516               	bsf	22,2	;volatile
+   669  07BB                     l96:	
+   670                           ;master.c: 140:         while (PEN);
+   671                           
+   672  07BB  1916               	btfsc	22,2	;volatile
+   673  07BC  2FBB               	goto	l96
+   674  07BD                     l805:	
+   675                           
+   676                           ;master.c: 141:         return (0xFF);
+   677  07BD  30FF               	movlw	255
+   678  07BE  0008               	return
+   679  07BF                     l809:	
+   680                           
+   681                           ;master.c: 144:     SSPBUF = addHigh;
+   682  07BF  0870               	movf	EepromRead@addHigh,w
+   683  07C0  0091               	movwf	17	;volatile
+   684  07C1                     l100:	
+   685                           ;master.c: 145:     while (!SSPIF);
+   686                           
+   687  07C1  0020               	movlb	0	; select bank0
+   688  07C2  1D91               	btfss	17,3	;volatile
+   689  07C3  2FC1               	goto	l100
+   690                           
+   691                           ;master.c: 146:     PIR1bits.SSPIF = 0;
+   692  07C4  1191               	bcf	17,3	;volatile
+   693                           
+   694                           ;master.c: 147:     if (SSPCON2bits.ACKSTAT) {
+   695  07C5  0024               	movlb	4	; select bank4
+   696  07C6  1F16               	btfss	22,6	;volatile
+   697  07C7  2FCC               	goto	l817
+   698                           
+   699                           ;master.c: 148:         SSPCON2bits.PEN = 1;
+   700  07C8  1516               	bsf	22,2	;volatile
+   701  07C9                     l104:	
+   702                           ;master.c: 149:         while (PEN);
+   703                           
+   704  07C9  1D16               	btfss	22,2	;volatile
+   705  07CA  2FBD               	goto	l805
+   706  07CB  2FC9               	goto	l104
+   707  07CC                     l817:	
+   708                           
+   709                           ;master.c: 153:     SSPBUF = addLow;
+   710  07CC  0871               	movf	EepromRead@addLow,w
+   711  07CD  0091               	movwf	17	;volatile
+   712  07CE                     l107:	
+   713                           ;master.c: 154:     while (!SSPIF);
+   714                           
+   715  07CE  0020               	movlb	0	; select bank0
+   716  07CF  1D91               	btfss	17,3	;volatile
+   717  07D0  2FCE               	goto	l107
+   718                           
+   719                           ;master.c: 155:     PIR1bits.SSPIF = 0;
+   720  07D1  1191               	bcf	17,3	;volatile
+   721                           
+   722                           ;master.c: 156:     if (SSPCON2bits.ACKSTAT) {
+   723  07D2  0024               	movlb	4	; select bank4
+   724  07D3  1F16               	btfss	22,6	;volatile
+   725  07D4  2FD9               	goto	l110
+   726                           
+   727                           ;master.c: 157:         SSPCON2bits.PEN = 1;
+   728  07D5  1516               	bsf	22,2	;volatile
+   729  07D6                     l111:	
+   730                           ;master.c: 158:         while (PEN);
+   731                           
+   732  07D6  1D16               	btfss	22,2	;volatile
+   733  07D7  2FBD               	goto	l805
+   734  07D8  2FD6               	goto	l111
+   735  07D9                     l110:	
+   736                           ;master.c: 160:     }
+   737                           
+   738                           
+   739                           ;master.c: 162:     SSPCON2bits.RSEN = 1;
+   740  07D9  1496               	bsf	22,1	;volatile
+   741  07DA                     l114:	
+   742                           ;master.c: 163:     while (RSEN);
+   743                           
+   744  07DA  1896               	btfsc	22,1	;volatile
+   745  07DB  2FDA               	goto	l114
+   746                           
+   747                           ;master.c: 164:     PIR1bits.SSPIF = 0;
+   748  07DC  0020               	movlb	0	; select bank0
+   749  07DD  1191               	bcf	17,3	;volatile
+   750                           
+   751                           ;master.c: 166:     SSPBUF = (slaveAdd+1);
+   752  07DE  0874               	movf	EepromRead@slaveAdd,w
+   753  07DF  3E01               	addlw	1
+   754  07E0  0024               	movlb	4	; select bank4
+   755  07E1  0091               	movwf	17	;volatile
+   756  07E2                     l117:	
+   757                           ;master.c: 167:     while (!SSPIF);
+   758                           
+   759  07E2  0020               	movlb	0	; select bank0
+   760  07E3  1D91               	btfss	17,3	;volatile
+   761  07E4  2FE2               	goto	l117
+   762                           
+   763                           ;master.c: 168:     PIR1bits.SSPIF = 0;
+   764  07E5  1191               	bcf	17,3	;volatile
+   765                           
+   766                           ;master.c: 169:     if (SSPCON2bits.ACKSTAT) {
+   767  07E6  0024               	movlb	4	; select bank4
+   768  07E7  1F16               	btfss	22,6	;volatile
+   769  07E8  2FED               	goto	l120
+   770                           
+   771                           ;master.c: 170:         SSPCON2bits.PEN = 1;
+   772  07E9  1516               	bsf	22,2	;volatile
+   773  07EA                     l121:	
+   774                           ;master.c: 171:         while (PEN);
+   775                           
+   776  07EA  1D16               	btfss	22,2	;volatile
+   777  07EB  2FBD               	goto	l805
+   778  07EC  2FEA               	goto	l121
+   779  07ED                     l120:	
+   780                           ;master.c: 173:     }
+   781                           
+   782                           
+   783                           ;master.c: 175:     SSPCON2bits.RCEN = 1;
+   784  07ED  1596               	bsf	22,3	;volatile
+   785  07EE                     l124:	
+   786                           ;master.c: 176:     while (!SSPSTATbits.BF);
+   787                           
+   788  07EE  1C14               	btfss	20,0	;volatile
+   789  07EF  2FEE               	goto	l124
+   790                           
+   791                           ;master.c: 177:     tempData = SSPBUF;
+   792  07F0  0811               	movf	17,w	;volatile
+   793  07F1  00F2               	movwf	??_EepromRead
+   794  07F2  0872               	movf	??_EepromRead,w
+   795  07F3  00F3               	movwf	EepromRead@tempData
+   796                           
+   797                           ;master.c: 179:     SSPCON2bits.ACKDT = 1;
+   798  07F4  1696               	bsf	22,5	;volatile
+   799                           
+   800                           ;master.c: 180:     SSPCON2bits.ACKEN = 1;
+   801  07F5  1616               	bsf	22,4	;volatile
+   802  07F6                     l127:	
+   803                           ;master.c: 181:     while (ACKEN);
+   804                           
+   805  07F6  1A16               	btfsc	22,4	;volatile
+   806  07F7  2FF6               	goto	l127
+   807                           
+   808                           ;master.c: 183:     SSPCON2bits.PEN = 1;
+   809  07F8  1516               	bsf	22,2	;volatile
+   810  07F9                     l130:	
+   811                           ;master.c: 184:     while(PEN);
+   812                           
+   813  07F9  1916               	btfsc	22,2	;volatile
+   814  07FA  2FF9               	goto	l130
+   815                           
+   816                           ;master.c: 185:     return tempData;
+   817  07FB  0873               	movf	EepromRead@tempData,w
+   818  07FC  0008               	return
+   819  07FD                     __end_of_EepromRead:	
+   820  007E                     btemp	set	126	;btemp
+   821  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         1
+    Persistent  32
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     10      11
+    BANK0            80      0       0
+    BANK1            32      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_EepromRead
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 5     5      0     625
+                                              5 COMMON     5     5      0
+                         _EepromRead
+                        _EepromWrite
+ ---------------------------------------------------------------------------------
+ (1) _EepromWrite                                          4     1      3     316
+                                              0 COMMON     4     1      3
+ ---------------------------------------------------------------------------------
+ (1) _EepromRead                                           5     3      2     263
+                                              0 COMMON     5     3      2
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _EepromRead
+   _EepromWrite
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM              70      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITCOMMON            E      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               E      A       B       2       78.6%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR2              0      0       0       3        0.0%
+SFR2                 0      0       0       3        0.0%
+STACK                0      0       0       3        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0       B       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR4              0      0       0       5        0.0%
+SFR4                 0      0       0       5        0.0%
+BANK0               50      0       0       6        0.0%
+BITSFR5              0      0       0       6        0.0%
+SFR5                 0      0       0       6        0.0%
+BITBANK1            20      0       0       7        0.0%
+BITSFR6              0      0       0       7        0.0%
+SFR6                 0      0       0       7        0.0%
+BANK1               20      0       0       8        0.0%
+BITSFR7              0      0       0       8        0.0%
+SFR7                 0      0       0       8        0.0%
+BITSFR8              0      0       0       9        0.0%
+SFR8                 0      0       0       9        0.0%
+DATA                 0      0       B       9        0.0%
+BITSFR9              0      0       0      10        0.0%
+SFR9                 0      0       0      10        0.0%
+BITSFR10             0      0       0      11        0.0%
+SFR10                0      0       0      11        0.0%
+BITSFR11             0      0       0      12        0.0%
+SFR11                0      0       0      12        0.0%
+BITSFR12             0      0       0      13        0.0%
+SFR12                0      0       0      13        0.0%
+BITSFR13             0      0       0      14        0.0%
+SFR13                0      0       0      14        0.0%
+BITSFR14             0      0       0      15        0.0%
+SFR14                0      0       0      15        0.0%
+BITSFR15             0      0       0      16        0.0%
+SFR15                0      0       0      16        0.0%
+BITSFR16             0      0       0      17        0.0%
+SFR16                0      0       0      17        0.0%
+BITSFR17             0      0       0      18        0.0%
+SFR17                0      0       0      18        0.0%
+BITSFR18             0      0       0      19        0.0%
+SFR18                0      0       0      19        0.0%
+BITSFR19             0      0       0      20        0.0%
+SFR19                0      0       0      20        0.0%
+BITSFR20             0      0       0      21        0.0%
+SFR20                0      0       0      21        0.0%
+BITSFR21             0      0       0      22        0.0%
+SFR21                0      0       0      22        0.0%
+BITSFR22             0      0       0      23        0.0%
+SFR22                0      0       0      23        0.0%
+BITSFR23             0      0       0      24        0.0%
+SFR23                0      0       0      24        0.0%
+BITSFR24             0      0       0      25        0.0%
+SFR24                0      0       0      25        0.0%
+BITSFR25             0      0       0      26        0.0%
+SFR25                0      0       0      26        0.0%
+BITSFR26             0      0       0      27        0.0%
+SFR26                0      0       0      27        0.0%
+BITSFR27             0      0       0      28        0.0%
+SFR27                0      0       0      28        0.0%
+BITSFR28             0      0       0      29        0.0%
+SFR28                0      0       0      29        0.0%
+BITSFR29             0      0       0      30        0.0%
+SFR29                0      0       0      30        0.0%
+BITSFR30             0      0       0      31        0.0%
+SFR30                0      0       0      31        0.0%
+BITSFR31             0      0       0      32        0.0%
+SFR31                0      0       0      32        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.05 build -831301201 
+Symbol Table                                                                                   Sat Oct 05 18:26:36 2019
+
+            __CFG_CP$OFF 0000              _SSPSTATbits 0214                       l71 0741  
+                     l63 0734                       l56 0725                       l81 0753  
+                     l74 0746                       l67 0739                       l59 072C  
+                     l92 07B3                       l84 0759                       l78 074E  
+                     l96 07BB                       l89 07AC                      l100 07C1  
+                    l110 07D9                      l111 07D6                      l120 07ED  
+                    l104 07C9                      l121 07EA                      l130 07F9  
+                    l114 07DA                      l107 07CE                      l124 07EE  
+                    l117 07E2                      l127 07F6                      l805 07BD  
+                    l817 07CC                      l809 07BF                      l793 0744  
+                    l875 0789                      l797 0751                      l789 0737  
+                    _PEN 10B2                      _SEN 10B0                      u665 0796  
+           __CFG_BORV$LO 0000             __CFG_IESO$ON 0000       EepromWrite@addHigh 0070  
+           __CFG_LVP$OFF 0000                     _LATA 010C                     _RSEN 10B1  
+           __CFG_WRT$OFF 0000            __CFG_FCMEN$ON 0000                     _main 075C  
+                   btemp 007E            __CFG_BOREN$ON 0000                     start 0001  
+    __end_of_EepromWrite 075C            __CFG_MCLRE$ON 0000                    ?_main 0070  
+                  _ACKEN 10B4            __CFG_WDTE$OFF 0000               _EepromRead 07A9  
+                  _TRISA 008C                    _TRISB 008D                    _SSPIF 008B  
+                  main@x 0078                    wtemp0 007E      EepromWrite@slaveAdd 0073  
+        __initialization 07FD             __end_of_main 07A9           __CFG_LPBOR$OFF 0000  
+                 ??_main 0075                   _ANSELA 018C                   _ANSELB 018D  
+                 _ANSELC 018E              _EepromWrite 0722                   _SSPADD 0212  
+                 _SSPBUF 0211           __CFG_PWRTE$OFF 0000           __CFG_STVREN$ON 0000  
+            ?_EepromRead 0070  __end_of__initialization 07FE           __pcstackCOMMON 0070  
+        __CFG_VCAPEN$OFF 0000      __size_of_EepromRead 0054               __pmaintext 075C  
+                _SSPCON1 0215                  __ptext1 0722                  __ptext2 07A9  
+   end_of_initialization 07FE             ?_EepromWrite 0070         EepromRead@addLow 0071  
+           ??_EepromRead 0072         __CFG_FOSC$INTOSC 0000                _TRISCbits 008E  
+      EepromWrite@eeData 0072        EepromWrite@addLow 0071       __end_of_EepromRead 07FD  
+    start_initialization 07FD              __pbssCOMMON 007A                ___latbits 0000  
+   __size_of_EepromWrite 003A                 _LATBbits 010D                 _PIR1bits 0011  
+               _readData 007A            __size_of_main 004D        __CFG_CLKOUTEN$OFF 0000  
+             _OSCCONbits 0099        EepromRead@addHigh 0070       EepromRead@tempData 0073  
+     EepromRead@slaveAdd 0074              _SSPCON2bits 0216            ??_EepromWrite 0073  

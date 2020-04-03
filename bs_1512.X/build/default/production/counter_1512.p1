@@ -1,0 +1,1155 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"6 ./interrupt.h
+[; ;./interrupt.h: 6:     struct {
+[s S275 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S275 . seg_disp_sleep seg_disp_awake seg_disp_vis seg_disp_save ]
+"5
+[; ;./interrupt.h: 5: typedef union {
+[u S274 `S275 1 ]
+[n S274 . . ]
+"5 ./switches.h
+[; ;./switches.h: 5:     struct {
+[s S277 :1 `uc 1 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S277 . prev state streak status ]
+"4
+[; ;./switches.h: 4: typedef union {
+[u S276 `S277 1 ]
+[n S276 . . ]
+"11 ./segmentdisplay47.h
+[; ;./segmentdisplay47.h: 11:     struct {
+[s S279 :2 `uc 1 :8 `uc 1 :6 `uc 1 :1 `uc 1 ]
+[n S279 . digit value_lo value_hi status ]
+"10
+[; ;./segmentdisplay47.h: 10: typedef union {
+[u S278 `S279 1 ]
+[n S278 . . ]
+[p mainexit ]
+"19 ./init.h
+[; ;./init.h: 19: void init (void);
+[v _init `(v ~T0 @X0 0 ef ]
+"35 counter_1512.c
+[; ;counter_1512.c: 35: void init_structs (void);
+[v _init_structs `(v ~T0 @X0 0 ef ]
+"14 ./i2c_eeprom.h
+[; ;./i2c_eeprom.h: 14: uint8_t eeprom_read_16 (uint8_t slaveAdd, uint16_t add);
+[v _eeprom_read_16 `(uc ~T0 @X0 0 ef2`uc`us ]
+"29 counter_1512.c
+[; ;counter_1512.c: 29: void rst_storage (void);
+[v _rst_storage `(v ~T0 @X0 0 ef ]
+[v F1828 `(v ~T0 @X0 1 tf1`ul ]
+"92 D:\Programs\Compilers\8 bit\pic\include\pic.h
+[v __delay `JF1828 ~T0 @X0 0 e ]
+[p i __delay ]
+"13 ./i2c_eeprom.h
+[; ;./i2c_eeprom.h: 13: void eeprom_write_16 (uint8_t slaveAdd, uint16_t add, uint8_t eeData);
+[v _eeprom_write_16 `(v ~T0 @X0 0 ef3`uc`us`uc ]
+"23 counter_1512.c
+[; ;counter_1512.c: 23: uint16_t get_cat_val (uint8_t category);
+[v _get_cat_val `(us ~T0 @X0 0 ef1`uc ]
+"22
+[; ;counter_1512.c: 22: void change_category (uint8_t category);
+[v _change_category `(v ~T0 @X0 0 ef1`uc ]
+"48
+[; ;counter_1512.c: 48: void update_switches (void);
+[v _update_switches `(v ~T0 @X0 0 ef ]
+"21 ./segmentdisplay47.h
+[; ;./segmentdisplay47.h: 21: void update_seg_disp_47 (seg_disp_47_t *s_t, uint16_t cur_val);
+[v _update_seg_disp_47 `(v ~T0 @X0 0 ef2`*S278`us ]
+"47 counter_1512.c
+[; ;counter_1512.c: 47: void update_int_flags (void);
+[v _update_int_flags `(v ~T0 @X0 0 ef ]
+"30 ./switches.h
+[; ;./switches.h: 30: void update_switch (switch_t *s_t, uint8_t sbtn, uint32_t streak);
+[v _update_switch `(v ~T0 @X0 0 ef3`*S276`uc`ul ]
+"497 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 497:     struct {
+[s S36 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S36 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"496
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 496: typedef union {
+[u S35 `S36 1 ]
+[n S35 . . ]
+"508
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 508: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x00D)));
+[v _PORTBbits `VS35 ~T0 @X0 0 e@13 ]
+"559
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 559:     struct {
+[s S38 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"558
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 558: typedef union {
+[u S37 `S38 1 ]
+[n S37 . . ]
+"570
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 570: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x00E)));
+[v _PORTCbits `VS37 ~T0 @X0 0 e@14 ]
+"38 ./switches.h
+[; ;./switches.h: 38: uint8_t get_switch_toggle (switch_t old_s_t, switch_t new_s_t);
+[v _get_switch_toggle `(uc ~T0 @X0 0 ef2`S276`S276 ]
+"20 ./interrupt.h
+[; ;./interrupt.h: 20: void seg_disp_awake (void);
+[v _seg_disp_awake `(v ~T0 @X0 0 ef ]
+"32 counter_1512.c
+[; ;counter_1512.c: 32: void increment (void);
+[v _increment `(v ~T0 @X0 0 ef ]
+"33
+[; ;counter_1512.c: 33: void decrement (void);
+[v _decrement `(v ~T0 @X0 0 ef ]
+"37 ./switches.h
+[; ;./switches.h: 37: uint8_t get_switch_status (switch_t s_t);
+[v _get_switch_status `(uc ~T0 @X0 0 ef1`S276 ]
+"24 counter_1512.c
+[; ;counter_1512.c: 24: void set_cat_val (uint8_t category, uint16_t val);
+[v _set_cat_val `(v ~T0 @X0 0 ef2`uc`us ]
+"24 ./segmentdisplay47.h
+[; ;./segmentdisplay47.h: 24: void seg_disp_47_off(seg_disp_47_t *s_t);
+[v _seg_disp_47_off `(v ~T0 @X0 0 ef1`*S278 ]
+"23
+[; ;./segmentdisplay47.h: 23: void seg_disp_47_on (seg_disp_47_t *s_t);
+[v _seg_disp_47_on `(v ~T0 @X0 0 ef1`*S278 ]
+"27
+[; ;./segmentdisplay47.h: 27: void vis_next_digit(seg_disp_47_t *s_t);
+[v _vis_next_digit `(v ~T0 @X0 0 ef1`*S278 ]
+"25 counter_1512.c
+[; ;counter_1512.c: 25: void cat_auto_save (void);
+[v _cat_auto_save `(v ~T0 @X0 0 ef ]
+"22 ./switches.h
+[; ;./switches.h: 22: void create_switch (switch_t *s_t);
+[v _create_switch `(v ~T0 @X0 0 ef1`*S276 ]
+"20 ./segmentdisplay47.h
+[; ;./segmentdisplay47.h: 20: void create_seg_disp_47 (seg_disp_47_t *s_t);
+[v _create_seg_disp_47 `(v ~T0 @X0 0 ef1`*S278 ]
+"54 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"493
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 493: __asm("PORTB equ 0Dh");
+[; <" PORTB equ 0Dh ;# ">
+"555
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 555: __asm("PORTC equ 0Eh");
+[; <" PORTC equ 0Eh ;# ">
+"617
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 617: __asm("PORTE equ 010h");
+[; <" PORTE equ 010h ;# ">
+"638
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 638: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"700
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 700: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"734
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 734: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"754
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 754: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"761
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 761: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"781
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 781: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"801
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 801: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"873
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 873: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"943
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 943: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"963
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 963: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"983
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 983: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"1054
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1054: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"1116
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1116: __asm("TRISB equ 08Dh");
+[; <" TRISB equ 08Dh ;# ">
+"1178
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1178: __asm("TRISC equ 08Eh");
+[; <" TRISC equ 08Eh ;# ">
+"1240
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1240: __asm("TRISE equ 090h");
+[; <" TRISE equ 090h ;# ">
+"1247
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1247: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1309
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1309: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1343
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1343: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1426
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1426: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1483
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1483: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1542
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1542: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1608
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1608: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1663
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1663: __asm("ADRES0 equ 09Bh");
+[; <" ADRES0 equ 09Bh ;# ">
+"1668
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1668: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1675
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1675: __asm("ADRES0L equ 09Bh");
+[; <" ADRES0L equ 09Bh ;# ">
+"1680
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1680: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1713
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1713: __asm("ADRES0H equ 09Ch");
+[; <" ADRES0H equ 09Ch ;# ">
+"1718
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1718: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1751
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1751: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1831
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1831: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"1897
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1897: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"1959
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1959: __asm("LATB equ 010Dh");
+[; <" LATB equ 010Dh ;# ">
+"2021
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2021: __asm("LATC equ 010Eh");
+[; <" LATC equ 010Eh ;# ">
+"2083
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2083: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2116
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2116: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2175
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2175: __asm("APFCON equ 011Dh");
+[; <" APFCON equ 011Dh ;# ">
+"2201
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2201: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2254
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2254: __asm("ANSELB equ 018Dh");
+[; <" ANSELB equ 018Dh ;# ">
+"2312
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2312: __asm("ANSELC equ 018Eh");
+[; <" ANSELC equ 018Eh ;# ">
+"2363
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2363: __asm("PMADR equ 0191h");
+[; <" PMADR equ 0191h ;# ">
+"2370
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2370: __asm("PMADRL equ 0191h");
+[; <" PMADRL equ 0191h ;# ">
+"2390
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2390: __asm("PMADRH equ 0192h");
+[; <" PMADRH equ 0192h ;# ">
+"2410
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2410: __asm("PMDAT equ 0193h");
+[; <" PMDAT equ 0193h ;# ">
+"2417
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2417: __asm("PMDATL equ 0193h");
+[; <" PMDATL equ 0193h ;# ">
+"2437
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2437: __asm("PMDATH equ 0194h");
+[; <" PMDATH equ 0194h ;# ">
+"2457
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2457: __asm("PMCON1 equ 0195h");
+[; <" PMCON1 equ 0195h ;# ">
+"2513
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2513: __asm("PMCON2 equ 0196h");
+[; <" PMCON2 equ 0196h ;# ">
+"2533
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2533: __asm("VREGCON equ 0197h");
+[; <" VREGCON equ 0197h ;# ">
+"2554
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2554: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"2574
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2574: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"2594
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2594: __asm("SP1BRG equ 019Bh");
+[; <" SP1BRG equ 019Bh ;# ">
+"2601
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2601: __asm("SP1BRGL equ 019Bh");
+[; <" SP1BRGL equ 019Bh ;# ">
+"2606
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2606: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"2610
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2610: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"2655
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2655: __asm("SP1BRGH equ 019Ch");
+[; <" SP1BRGH equ 019Ch ;# ">
+"2660
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2660: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"2693
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2693: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"2755
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2755: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"2817
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2817: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"2869
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2869: __asm("WPUB equ 020Dh");
+[; <" WPUB equ 020Dh ;# ">
+"2939
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2939: __asm("WPUE equ 0210h");
+[; <" WPUE equ 0210h ;# ">
+"2960
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2960: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"2965
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2965: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"2998
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2998: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3003
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3003: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3036
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3036: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3041
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3041: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3074
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3074: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3079
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3079: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3196
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3196: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3201
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3201: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"3205
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3205: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3400
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3400: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"3405
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3405: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"3522
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3522: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"3527
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3527: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"3644
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3644: __asm("CCPR1 equ 0291h");
+[; <" CCPR1 equ 0291h ;# ">
+"3651
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3651: __asm("CCPR1L equ 0291h");
+[; <" CCPR1L equ 0291h ;# ">
+"3671
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3671: __asm("CCPR1H equ 0292h");
+[; <" CCPR1H equ 0292h ;# ">
+"3691
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3691: __asm("CCP1CON equ 0293h");
+[; <" CCP1CON equ 0293h ;# ">
+"3755
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3755: __asm("CCPR2 equ 0298h");
+[; <" CCPR2 equ 0298h ;# ">
+"3762
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3762: __asm("CCPR2L equ 0298h");
+[; <" CCPR2L equ 0298h ;# ">
+"3782
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3782: __asm("CCPR2H equ 0299h");
+[; <" CCPR2H equ 0299h ;# ">
+"3802
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3802: __asm("CCP2CON equ 029Ah");
+[; <" CCP2CON equ 029Ah ;# ">
+"3866
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3866: __asm("IOCBP equ 0394h");
+[; <" IOCBP equ 0394h ;# ">
+"3936
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3936: __asm("IOCBN equ 0395h");
+[; <" IOCBN equ 0395h ;# ">
+"4006
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4006: __asm("IOCBF equ 0396h");
+[; <" IOCBF equ 0396h ;# ">
+"4076
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4076: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"4108
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4108: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"4128
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4128: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"4148
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4148: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"4168
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4168: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"4188
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4188: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"4208
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4208: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"4228
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4228: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"4248
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4248: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"4268
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4268: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"4288
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4288: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"4308
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4308: __asm("AADCON0 equ 0711h");
+[; <" AADCON0 equ 0711h ;# ">
+"4373
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4373: __asm("AADCON1 equ 0712h");
+[; <" AADCON1 equ 0712h ;# ">
+"4439
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4439: __asm("AADCON2 equ 0713h");
+[; <" AADCON2 equ 0713h ;# ">
+"4481
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4481: __asm("AADCON3 equ 0714h");
+[; <" AADCON3 equ 0714h ;# ">
+"4538
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4538: __asm("AADSTAT equ 0715h");
+[; <" AADSTAT equ 0715h ;# ">
+"4578
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4578: __asm("AADPRE equ 0716h");
+[; <" AADPRE equ 0716h ;# ">
+"4642
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4642: __asm("AADACQ equ 0717h");
+[; <" AADACQ equ 0717h ;# ">
+"4706
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4706: __asm("AADGRD equ 0718h");
+[; <" AADGRD equ 0718h ;# ">
+"4739
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4739: __asm("AADCAP equ 0719h");
+[; <" AADCAP equ 0719h ;# ">
+"4779
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4779: __asm("AADRES0 equ 071Ah");
+[; <" AADRES0 equ 071Ah ;# ">
+"4784
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4784: __asm("AD1RES0 equ 071Ah");
+[; <" AD1RES0 equ 071Ah ;# ">
+"4791
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4791: __asm("AADRES0L equ 071Ah");
+[; <" AADRES0L equ 071Ah ;# ">
+"4811
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4811: __asm("AADRES0H equ 071Bh");
+[; <" AADRES0H equ 071Bh ;# ">
+"4831
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4831: __asm("AADRES1 equ 071Ch");
+[; <" AADRES1 equ 071Ch ;# ">
+"4836
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4836: __asm("AD1RES1 equ 071Ch");
+[; <" AD1RES1 equ 071Ch ;# ">
+"4843
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4843: __asm("AADRES1L equ 071Ch");
+[; <" AADRES1L equ 071Ch ;# ">
+"4863
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4863: __asm("AADRES1H equ 071Dh");
+[; <" AADRES1H equ 071Dh ;# ">
+"5 ./config.h
+[p x FOSC = INTOSC ]
+"6
+[p x WDTE = OFF ]
+"7
+[p x PWRTE = OFF ]
+"8
+[p x MCLRE = ON ]
+"9
+[p x CP = OFF ]
+"10
+[p x BOREN = ON ]
+"11
+[p x CLKOUTEN = OFF ]
+"12
+[p x IESO = ON ]
+"13
+[p x FCMEN = ON ]
+"16
+[p x WRT = OFF ]
+"17
+[p x VCAPEN = OFF ]
+"18
+[p x STVREN = ON ]
+"19
+[p x BORV = LO ]
+"20
+[p x LPBOR = OFF ]
+"21
+[p x LVP = OFF ]
+"13 ./interrupt.h
+[; ;./interrupt.h: 13: volatile int_flag_t INT_FLAGS;
+[v _INT_FLAGS `VS274 ~T0 @X0 1 e ]
+"17 counter_1512.c
+[; ;counter_1512.c: 17: uint8_t cur_cat;
+[v _cur_cat `uc ~T0 @X0 1 e ]
+"18
+[; ;counter_1512.c: 18: uint16_t cur_val;
+[v _cur_val `us ~T0 @X0 1 e ]
+"19
+[; ;counter_1512.c: 19: uint16_t extended_rst_streak = 0;
+[v _extended_rst_streak `us ~T0 @X0 1 e ]
+[i _extended_rst_streak
+-> -> 0 `i `us
+]
+"20
+[; ;counter_1512.c: 20: uint8_t rst_flag = 0;
+[v _rst_flag `uc ~T0 @X0 1 e ]
+[i _rst_flag
+-> -> 0 `i `uc
+]
+"38
+[; ;counter_1512.c: 38: switch_t v_btns [5];
+[v _v_btns `S276 ~T0 @X0 -> 5 `i e ]
+"39
+[; ;counter_1512.c: 39: switch_t *p_btns [5];
+[v _p_btns `*S276 ~T0 @X0 -> 5 `i e ]
+"40
+[; ;counter_1512.c: 40: switch_t old_btns [5];
+[v _old_btns `S276 ~T0 @X0 -> 5 `i e ]
+"43
+[; ;counter_1512.c: 43: seg_disp_47_t v_disp;
+[v _v_disp `S278 ~T0 @X0 1 e ]
+"44
+[; ;counter_1512.c: 44: seg_disp_47_t *p_disp;
+[v _p_disp `*S278 ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"50
+[; ;counter_1512.c: 50: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"51
+[; ;counter_1512.c: 51:     init();
+[e ( _init ..  ]
+"52
+[; ;counter_1512.c: 52:     init_structs();
+[e ( _init_structs ..  ]
+"55
+[; ;counter_1512.c: 55:     if (eeprom_read_16(0xA0, 0x0001) != 0x01){
+[e $ ! != -> ( _eeprom_read_16 (2 , -> -> 160 `i `uc -> -> 1 `i `us `i -> 1 `i 281  ]
+{
+"56
+[; ;counter_1512.c: 56:         rst_storage();
+[e ( _rst_storage ..  ]
+"57
+[; ;counter_1512.c: 57:         _delay((unsigned long)((5)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"58
+[; ;counter_1512.c: 58:         eeprom_write_16(0xA0, 0x0001, 0x01);
+[e ( _eeprom_write_16 (3 , , -> -> 160 `i `uc -> -> 1 `i `us -> -> 1 `i `uc ]
+"59
+[; ;counter_1512.c: 59:     }
+}
+[e :U 281 ]
+"62
+[; ;counter_1512.c: 62:     uint8_t k = 0; uint8_t f = 0;
+[v _k `uc ~T0 @X0 1 a ]
+[e = _k -> -> 0 `i `uc ]
+[v _f `uc ~T0 @X0 1 a ]
+[e = _f -> -> 0 `i `uc ]
+"64
+[; ;counter_1512.c: 64:     for(;;) {
+{
+[e :U 282 ]
+{
+"65
+[; ;counter_1512.c: 65:         if (f == 0) k++; if (k >= 7 && f == 0) { f = 1; cur_val = get_cat_val (cur_cat); change_category(cur_cat); }
+[e $ ! == -> _f `i -> 0 `i 285  ]
+[e ++ _k -> -> 1 `i `uc ]
+[e :U 285 ]
+[e $ ! && >= -> _k `i -> 7 `i == -> _f `i -> 0 `i 286  ]
+{
+[e = _f -> -> 1 `i `uc ]
+[e = _cur_val ( _get_cat_val (1 _cur_cat ]
+[e ( _change_category (1 _cur_cat ]
+}
+[e $U 287  ]
+"66
+[; ;counter_1512.c: 66:         else {
+[e :U 286 ]
+{
+"67
+[; ;counter_1512.c: 67:             update_switches();
+[e ( _update_switches ..  ]
+"68
+[; ;counter_1512.c: 68:             update_seg_disp_47(p_disp, cur_val);
+[e ( _update_seg_disp_47 (2 , _p_disp _cur_val ]
+"69
+[; ;counter_1512.c: 69:             update_int_flags();
+[e ( _update_int_flags ..  ]
+"70
+[; ;counter_1512.c: 70:         }
+}
+[e :U 287 ]
+"71
+[; ;counter_1512.c: 71:     }
+}
+[e $U 282  ]
+[e :U 283 ]
+}
+"72
+[; ;counter_1512.c: 72:     return;
+[e $UE 280  ]
+"73
+[; ;counter_1512.c: 73: }
+[e :UE 280 ]
+}
+"76
+[; ;counter_1512.c: 76: void update_switches (void) {
+[v _update_switches `(v ~T0 @X0 1 ef ]
+{
+[e :U _update_switches ]
+[f ]
+"78
+[; ;counter_1512.c: 78:     update_switch (p_btns[0], PORTBbits.RB4, 5);
+[e ( _update_switch (3 , , *U + &U _p_btns * -> -> -> 0 `i `ui `ux -> -> # *U &U _p_btns `ui `ux . . _PORTBbits 0 4 -> -> -> 5 `i `l `ul ]
+"79
+[; ;counter_1512.c: 79:     update_switch (p_btns[1], PORTBbits.RB5, 5);
+[e ( _update_switch (3 , , *U + &U _p_btns * -> -> -> 1 `i `ui `ux -> -> # *U &U _p_btns `ui `ux . . _PORTBbits 0 5 -> -> -> 5 `i `l `ul ]
+"80
+[; ;counter_1512.c: 80:     update_switch (p_btns[2], PORTBbits.RB6, 5);
+[e ( _update_switch (3 , , *U + &U _p_btns * -> -> -> 2 `i `ui `ux -> -> # *U &U _p_btns `ui `ux . . _PORTBbits 0 6 -> -> -> 5 `i `l `ul ]
+"81
+[; ;counter_1512.c: 81:     update_switch (p_btns[3], PORTBbits.RB7, 5);
+[e ( _update_switch (3 , , *U + &U _p_btns * -> -> -> 3 `i `ui `ux -> -> # *U &U _p_btns `ui `ux . . _PORTBbits 0 7 -> -> -> 5 `i `l `ul ]
+"82
+[; ;counter_1512.c: 82:     update_switch (p_btns[4], PORTCbits.RC5, 5);
+[e ( _update_switch (3 , , *U + &U _p_btns * -> -> -> 4 `i `ui `ux -> -> # *U &U _p_btns `ui `ux . . _PORTCbits 0 5 -> -> -> 5 `i `l `ul ]
+"84
+[; ;counter_1512.c: 84:     uint16_t value = cur_val;
+[v _value `us ~T0 @X0 1 a ]
+[e = _value _cur_val ]
+"85
+[; ;counter_1512.c: 85:     if (get_switch_toggle(old_btns[0], v_btns[0])){
+[e $ ! != -> ( _get_switch_toggle (2 , *U + &U _old_btns * -> -> -> 0 `i `ui `ux -> -> # *U &U _old_btns `ui `ux *U + &U _v_btns * -> -> -> 0 `i `ui `ux -> -> # *U &U _v_btns `ui `ux `i -> 0 `i 289  ]
+{
+"86
+[; ;counter_1512.c: 86:         seg_disp_awake();
+[e ( _seg_disp_awake ..  ]
+"87
+[; ;counter_1512.c: 87:         if (value == 9999) {}
+[e $ ! == -> _value `ui -> -> 9999 `i `ui 290  ]
+{
+}
+[e $U 291  ]
+"88
+[; ;counter_1512.c: 88:         else increment();
+[e :U 290 ]
+[e ( _increment ..  ]
+[e :U 291 ]
+"89
+[; ;counter_1512.c: 89:     }
+}
+[e :U 289 ]
+"90
+[; ;counter_1512.c: 90:     if (get_switch_toggle(old_btns[1], v_btns[1])) {
+[e $ ! != -> ( _get_switch_toggle (2 , *U + &U _old_btns * -> -> -> 1 `i `ui `ux -> -> # *U &U _old_btns `ui `ux *U + &U _v_btns * -> -> -> 1 `i `ui `ux -> -> # *U &U _v_btns `ui `ux `i -> 0 `i 292  ]
+{
+"91
+[; ;counter_1512.c: 91:         seg_disp_awake();
+[e ( _seg_disp_awake ..  ]
+"92
+[; ;counter_1512.c: 92:         if (value == 0) {}
+[e $ ! == -> _value `ui -> -> 0 `i `ui 293  ]
+{
+}
+[e $U 294  ]
+"93
+[; ;counter_1512.c: 93:         else decrement();
+[e :U 293 ]
+[e ( _decrement ..  ]
+[e :U 294 ]
+"94
+[; ;counter_1512.c: 94:     }
+}
+[e :U 292 ]
+"95
+[; ;counter_1512.c: 95:     if (get_switch_toggle(old_btns[2], v_btns[2])) {
+[e $ ! != -> ( _get_switch_toggle (2 , *U + &U _old_btns * -> -> -> 2 `i `ui `ux -> -> # *U &U _old_btns `ui `ux *U + &U _v_btns * -> -> -> 2 `i `ui `ux -> -> # *U &U _v_btns `ui `ux `i -> 0 `i 295  ]
+{
+"96
+[; ;counter_1512.c: 96:         seg_disp_awake();
+[e ( _seg_disp_awake ..  ]
+"97
+[; ;counter_1512.c: 97:         change_category(0);
+[e ( _change_category (1 -> -> 0 `i `uc ]
+"98
+[; ;counter_1512.c: 98:     }
+}
+[e :U 295 ]
+"99
+[; ;counter_1512.c: 99:     if (get_switch_toggle(old_btns[3], v_btns[3])){
+[e $ ! != -> ( _get_switch_toggle (2 , *U + &U _old_btns * -> -> -> 3 `i `ui `ux -> -> # *U &U _old_btns `ui `ux *U + &U _v_btns * -> -> -> 3 `i `ui `ux -> -> # *U &U _v_btns `ui `ux `i -> 0 `i 296  ]
+{
+"100
+[; ;counter_1512.c: 100:         seg_disp_awake();
+[e ( _seg_disp_awake ..  ]
+"101
+[; ;counter_1512.c: 101:         change_category(1);
+[e ( _change_category (1 -> -> 1 `i `uc ]
+"102
+[; ;counter_1512.c: 102:     }
+}
+[e :U 296 ]
+"103
+[; ;counter_1512.c: 103:     if (get_switch_status(v_btns[4]) == 1 ){
+[e $ ! == -> ( _get_switch_status (1 *U + &U _v_btns * -> -> -> 4 `i `ui `ux -> -> # *U &U _v_btns `ui `ux `i -> 1 `i 297  ]
+{
+"104
+[; ;counter_1512.c: 104:         seg_disp_awake();
+[e ( _seg_disp_awake ..  ]
+"105
+[; ;counter_1512.c: 105:         extended_rst_streak++;
+[e ++ _extended_rst_streak -> -> 1 `i `us ]
+"106
+[; ;counter_1512.c: 106:         if (extended_rst_streak == 10000) { extended_rst_streak = 0; cur_val = 0; set_cat_val(cur_cat, cur_val); }
+[e $ ! == -> _extended_rst_streak `ui -> -> 10000 `i `ui 298  ]
+{
+[e = _extended_rst_streak -> -> 0 `i `us ]
+[e = _cur_val -> -> 0 `i `us ]
+[e ( _set_cat_val (2 , _cur_cat _cur_val ]
+}
+[e :U 298 ]
+"107
+[; ;counter_1512.c: 107:     }
+}
+[e $U 299  ]
+"108
+[; ;counter_1512.c: 108:     else {
+[e :U 297 ]
+{
+"109
+[; ;counter_1512.c: 109:         extended_rst_streak = 0;
+[e = _extended_rst_streak -> -> 0 `i `us ]
+"110
+[; ;counter_1512.c: 110:     }
+}
+[e :U 299 ]
+"114
+[; ;counter_1512.c: 114:     for (uint8_t i = 0; i < 5; i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 300  ]
+[e $U 301  ]
+[e :U 300 ]
+{
+"115
+[; ;counter_1512.c: 115:         old_btns[i] = v_btns[i];
+[e = *U + &U _old_btns * -> _i `ux -> -> # *U &U _old_btns `ui `ux *U + &U _v_btns * -> _i `ux -> -> # *U &U _v_btns `ui `ux ]
+"116
+[; ;counter_1512.c: 116:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 300  ]
+[e :U 301 ]
+}
+"117
+[; ;counter_1512.c: 117: }
+[e :UE 288 ]
+}
+"119
+[; ;counter_1512.c: 119: void update_int_flags () {
+[v _update_int_flags `(v ~T0 @X0 1 ef ]
+{
+[e :U _update_int_flags ]
+[f ]
+"122
+[; ;counter_1512.c: 122:     if (INT_FLAGS.seg_disp_sleep){
+[e $ ! != -> . . _INT_FLAGS 0 0 `i -> 0 `i 304  ]
+{
+"123
+[; ;counter_1512.c: 123:         seg_disp_47_off (p_disp);
+[e ( _seg_disp_47_off (1 _p_disp ]
+"124
+[; ;counter_1512.c: 124:         INT_FLAGS.seg_disp_sleep = 0;
+[e = . . _INT_FLAGS 0 0 -> -> 0 `i `uc ]
+"125
+[; ;counter_1512.c: 125:     }
+}
+[e :U 304 ]
+"127
+[; ;counter_1512.c: 127:     if (INT_FLAGS.seg_disp_awake && v_disp.status == 0){
+[e $ ! && != -> . . _INT_FLAGS 0 1 `i -> 0 `i == -> . . _v_disp 0 3 `i -> 0 `i 305  ]
+{
+"128
+[; ;counter_1512.c: 128:         seg_disp_47_on (p_disp);
+[e ( _seg_disp_47_on (1 _p_disp ]
+"129
+[; ;counter_1512.c: 129:         INT_FLAGS.seg_disp_awake = 0;
+[e = . . _INT_FLAGS 0 1 -> -> 0 `i `uc ]
+"130
+[; ;counter_1512.c: 130:     }
+}
+[e :U 305 ]
+"132
+[; ;counter_1512.c: 132:     if (INT_FLAGS.seg_disp_vis){
+[e $ ! != -> . . _INT_FLAGS 0 2 `i -> 0 `i 306  ]
+{
+"133
+[; ;counter_1512.c: 133:         vis_next_digit (p_disp);
+[e ( _vis_next_digit (1 _p_disp ]
+"134
+[; ;counter_1512.c: 134:         INT_FLAGS.seg_disp_vis = 0;
+[e = . . _INT_FLAGS 0 2 -> -> 0 `i `uc ]
+"135
+[; ;counter_1512.c: 135:     }
+}
+[e :U 306 ]
+"137
+[; ;counter_1512.c: 137:     if (INT_FLAGS.seg_disp_save && v_disp.status == 1){
+[e $ ! && != -> . . _INT_FLAGS 0 3 `i -> 0 `i == -> . . _v_disp 0 3 `i -> 1 `i 307  ]
+{
+"138
+[; ;counter_1512.c: 138:         cat_auto_save();
+[e ( _cat_auto_save ..  ]
+"139
+[; ;counter_1512.c: 139:         INT_FLAGS.seg_disp_save = 0;
+[e = . . _INT_FLAGS 0 3 -> -> 0 `i `uc ]
+"140
+[; ;counter_1512.c: 140:     }
+}
+[e :U 307 ]
+"143
+[; ;counter_1512.c: 143: }
+[e :UE 303 ]
+}
+"146
+[; ;counter_1512.c: 146: uint16_t get_cat_val (uint8_t category){
+[v _get_cat_val `(us ~T0 @X0 1 ef1`uc ]
+{
+[e :U _get_cat_val ]
+[v _category `uc ~T0 @X0 1 r1 ]
+[f ]
+"147
+[; ;counter_1512.c: 147:     if (cur_cat > 2 - 1) return -1;
+[e $ ! > -> _cur_cat `i - -> 2 `i -> 1 `i 309  ]
+[e ) -> -U -> 1 `i `us ]
+[e $UE 308  ]
+[e :U 309 ]
+"150
+[; ;counter_1512.c: 150:     uint16_t val = 0;
+[v _val `us ~T0 @X0 1 a ]
+[e = _val -> -> 0 `i `us ]
+"151
+[; ;counter_1512.c: 151:     uint16_t add_start = 0x0450 + (2 * category);
+[v _add_start `us ~T0 @X0 1 a ]
+[e = _add_start -> + -> 1104 `i * -> 2 `i -> _category `i `us ]
+"153
+[; ;counter_1512.c: 153:     for (uint8_t i = 0; i < 2; i ++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 2 `i 310  ]
+[e $U 311  ]
+[e :U 310 ]
+{
+"154
+[; ;counter_1512.c: 154:         _delay((unsigned long)((5)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"155
+[; ;counter_1512.c: 155:         uint8_t d = eeprom_read_16 (0xA0, add_start + i);
+[v _d `uc ~T0 @X0 1 a ]
+[e = _d ( _eeprom_read_16 (2 , -> -> 160 `i `uc -> + -> _add_start `ui -> _i `ui `us ]
+"156
+[; ;counter_1512.c: 156:         val |= d << (8 * i);
+[e =| _val -> << -> _d `i * -> 8 `i -> _i `i `us ]
+"157
+[; ;counter_1512.c: 157:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 310  ]
+[e :U 311 ]
+}
+"159
+[; ;counter_1512.c: 159:     return val;
+[e ) _val ]
+[e $UE 308  ]
+"160
+[; ;counter_1512.c: 160: }
+[e :UE 308 ]
+}
+"162
+[; ;counter_1512.c: 162: void set_cat_val (uint8_t category, uint16_t val){
+[v _set_cat_val `(v ~T0 @X0 1 ef2`uc`us ]
+{
+[e :U _set_cat_val ]
+[v _category `uc ~T0 @X0 1 r1 ]
+[v _val `us ~T0 @X0 1 r2 ]
+[f ]
+"163
+[; ;counter_1512.c: 163:     if (cur_cat > 2 - 1) return;
+[e $ ! > -> _cur_cat `i - -> 2 `i -> 1 `i 314  ]
+[e $UE 313  ]
+[e :U 314 ]
+"166
+[; ;counter_1512.c: 166:     uint16_t add_start = 0x0450 + (2 * category);
+[v _add_start `us ~T0 @X0 1 a ]
+[e = _add_start -> + -> 1104 `i * -> 2 `i -> _category `i `us ]
+"167
+[; ;counter_1512.c: 167:     for (uint8_t i = 0; i < 2; i ++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 2 `i 315  ]
+[e $U 316  ]
+[e :U 315 ]
+{
+"168
+[; ;counter_1512.c: 168:         _delay((unsigned long)((5)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"169
+[; ;counter_1512.c: 169:         eeprom_write_16 (0xA0, add_start + i, val);
+[e ( _eeprom_write_16 (3 , , -> -> 160 `i `uc -> + -> _add_start `ui -> _i `ui `us -> _val `uc ]
+"170
+[; ;counter_1512.c: 170:         val = val >> 8;
+[e = _val -> >> -> _val `ui -> 8 `i `us ]
+"171
+[; ;counter_1512.c: 171:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 315  ]
+[e :U 316 ]
+}
+"172
+[; ;counter_1512.c: 172: }
+[e :UE 313 ]
+}
+"174
+[; ;counter_1512.c: 174: uint8_t last_save_cat = 0;
+[v _last_save_cat `uc ~T0 @X0 1 e ]
+[i _last_save_cat
+-> -> 0 `i `uc
+]
+"175
+[; ;counter_1512.c: 175: uint16_t last_save_val = 0;
+[v _last_save_val `us ~T0 @X0 1 e ]
+[i _last_save_val
+-> -> 0 `i `us
+]
+"176
+[; ;counter_1512.c: 176: void cat_auto_save (void) {
+[v _cat_auto_save `(v ~T0 @X0 1 ef ]
+{
+[e :U _cat_auto_save ]
+[f ]
+"177
+[; ;counter_1512.c: 177:     if (last_save_cat == cur_cat && last_save_val == cur_val) return;
+[e $ ! && == -> _last_save_cat `i -> _cur_cat `i == -> _last_save_val `ui -> _cur_val `ui 319  ]
+[e $UE 318  ]
+[e :U 319 ]
+"178
+[; ;counter_1512.c: 178:     last_save_cat = cur_cat; last_save_val = cur_val;
+[e = _last_save_cat _cur_cat ]
+[e = _last_save_val _cur_val ]
+"179
+[; ;counter_1512.c: 179:     set_cat_val (cur_cat, cur_val);
+[e ( _set_cat_val (2 , _cur_cat _cur_val ]
+"180
+[; ;counter_1512.c: 180: }
+[e :UE 318 ]
+}
+"182
+[; ;counter_1512.c: 182: void increment (void) {
+[v _increment `(v ~T0 @X0 1 ef ]
+{
+[e :U _increment ]
+[f ]
+"183
+[; ;counter_1512.c: 183:     cur_val++;
+[e ++ _cur_val -> -> 1 `i `us ]
+"184
+[; ;counter_1512.c: 184: }
+[e :UE 320 ]
+}
+"185
+[; ;counter_1512.c: 185: void decrement (void) {
+[v _decrement `(v ~T0 @X0 1 ef ]
+{
+[e :U _decrement ]
+[f ]
+"186
+[; ;counter_1512.c: 186:     cur_val--;
+[e -- _cur_val -> -> 1 `i `us ]
+"187
+[; ;counter_1512.c: 187: }
+[e :UE 321 ]
+}
+"189
+[; ;counter_1512.c: 189: void change_category (uint8_t category){
+[v _change_category `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _change_category ]
+[v _category `uc ~T0 @X0 1 r1 ]
+[f ]
+"190
+[; ;counter_1512.c: 190:     set_cat_val (cur_cat, cur_val);
+[e ( _set_cat_val (2 , _cur_cat _cur_val ]
+"191
+[; ;counter_1512.c: 191:     cur_cat = category;
+[e = _cur_cat _category ]
+"192
+[; ;counter_1512.c: 192:     cur_val = get_cat_val(cur_cat);
+[e = _cur_val ( _get_cat_val (1 _cur_cat ]
+"193
+[; ;counter_1512.c: 193: }
+[e :UE 322 ]
+}
+"196
+[; ;counter_1512.c: 196: void rst_storage (void){
+[v _rst_storage `(v ~T0 @X0 1 ef ]
+{
+[e :U _rst_storage ]
+[f ]
+"197
+[; ;counter_1512.c: 197:     for (uint8_t i = 0; i < 2; i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 2 `i 324  ]
+[e $U 325  ]
+[e :U 324 ]
+{
+"198
+[; ;counter_1512.c: 198:         set_cat_val(i, 0x12);
+[e ( _set_cat_val (2 , _i -> -> 18 `i `us ]
+"199
+[; ;counter_1512.c: 199:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 324  ]
+[e :U 325 ]
+}
+"200
+[; ;counter_1512.c: 200: }
+[e :UE 323 ]
+}
+"203
+[; ;counter_1512.c: 203: void init_structs (void) {
+[v _init_structs `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_structs ]
+[f ]
+"206
+[; ;counter_1512.c: 206:     p_btns[0] = &v_btns[0];
+[e = *U + &U _p_btns * -> -> -> 0 `i `ui `ux -> -> # *U &U _p_btns `ui `ux &U *U + &U _v_btns * -> -> -> 0 `i `ui `ux -> -> # *U &U _v_btns `ui `ux ]
+"207
+[; ;counter_1512.c: 207:     p_btns[1] = &v_btns[1];
+[e = *U + &U _p_btns * -> -> -> 1 `i `ui `ux -> -> # *U &U _p_btns `ui `ux &U *U + &U _v_btns * -> -> -> 1 `i `ui `ux -> -> # *U &U _v_btns `ui `ux ]
+"208
+[; ;counter_1512.c: 208:     p_btns[2] = &v_btns[2];
+[e = *U + &U _p_btns * -> -> -> 2 `i `ui `ux -> -> # *U &U _p_btns `ui `ux &U *U + &U _v_btns * -> -> -> 2 `i `ui `ux -> -> # *U &U _v_btns `ui `ux ]
+"209
+[; ;counter_1512.c: 209:     p_btns[3] = &v_btns[3];
+[e = *U + &U _p_btns * -> -> -> 3 `i `ui `ux -> -> # *U &U _p_btns `ui `ux &U *U + &U _v_btns * -> -> -> 3 `i `ui `ux -> -> # *U &U _v_btns `ui `ux ]
+"210
+[; ;counter_1512.c: 210:     p_btns[4] = &v_btns[4];
+[e = *U + &U _p_btns * -> -> -> 4 `i `ui `ux -> -> # *U &U _p_btns `ui `ux &U *U + &U _v_btns * -> -> -> 4 `i `ui `ux -> -> # *U &U _v_btns `ui `ux ]
+"212
+[; ;counter_1512.c: 212:     create_switch(p_btns[0]);
+[e ( _create_switch (1 *U + &U _p_btns * -> -> -> 0 `i `ui `ux -> -> # *U &U _p_btns `ui `ux ]
+"213
+[; ;counter_1512.c: 213:     create_switch(p_btns[1]);
+[e ( _create_switch (1 *U + &U _p_btns * -> -> -> 1 `i `ui `ux -> -> # *U &U _p_btns `ui `ux ]
+"214
+[; ;counter_1512.c: 214:     create_switch(p_btns[2]);
+[e ( _create_switch (1 *U + &U _p_btns * -> -> -> 2 `i `ui `ux -> -> # *U &U _p_btns `ui `ux ]
+"215
+[; ;counter_1512.c: 215:     create_switch(p_btns[3]);
+[e ( _create_switch (1 *U + &U _p_btns * -> -> -> 3 `i `ui `ux -> -> # *U &U _p_btns `ui `ux ]
+"216
+[; ;counter_1512.c: 216:     create_switch(p_btns[4]);
+[e ( _create_switch (1 *U + &U _p_btns * -> -> -> 4 `i `ui `ux -> -> # *U &U _p_btns `ui `ux ]
+"219
+[; ;counter_1512.c: 219:     p_disp = &v_disp;
+[e = _p_disp &U _v_disp ]
+"220
+[; ;counter_1512.c: 220:     create_seg_disp_47 (p_disp);
+[e ( _create_seg_disp_47 (1 _p_disp ]
+"221
+[; ;counter_1512.c: 221: }
+[e :UE 327 ]
+}
+"225
+[; ;counter_1512.c: 225: void init_storage (void){
+[v _init_storage `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_storage ]
+[f ]
+"226
+[; ;counter_1512.c: 226:     set_cat_val(0, 0x0034);
+[e ( _set_cat_val (2 , -> -> 0 `i `uc -> -> 52 `i `us ]
+"227
+[; ;counter_1512.c: 227:     set_cat_val(1, 0x0048);
+[e ( _set_cat_val (2 , -> -> 1 `i `uc -> -> 72 `i `us ]
+"228
+[; ;counter_1512.c: 228: }
+[e :UE 328 ]
+}

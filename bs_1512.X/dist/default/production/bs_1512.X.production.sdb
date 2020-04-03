@@ -1,0 +1,642 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1512 ]
+[d frameptr 6 ]
+"51 C:\Users\Jonas\MPLABXProjects\bs_1512.X\bs_1512.c
+[v _main main `(v  1 e 1 0 ]
+"81
+[v _update_switches update_switches `(v  1 e 1 0 ]
+"157
+[v _update_int_flags update_int_flags `(v  1 e 1 0 ]
+"184
+[v _get_cat_val get_cat_val `(us  1 e 2 0 ]
+"200
+[v _set_cat_val set_cat_val `(v  1 e 1 0 ]
+"214
+[v _cat_auto_save cat_auto_save `(v  1 e 1 0 ]
+"227
+[v _change_category change_category `(v  1 e 1 0 ]
+"234
+[v _rst_storage rst_storage `(v  1 e 1 0 ]
+"241
+[v _init_structs init_structs `(v  1 e 1 0 ]
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 D:\Programs\Compilers\8 bit\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"115 C:\Users\Jonas\MPLABXProjects\bs_1512.X\i2c_eeprom.c
+[v _eeprom_write_16 eeprom_write_16 `(v  1 e 1 0 ]
+"156
+[v _eeprom_read_16 eeprom_read_16 `(uc  1 e 1 0 ]
+"5 C:\Users\Jonas\MPLABXProjects\bs_1512.X\init.c
+[v _init init `(v  1 e 1 0 ]
+"12
+[v _init_oscillerator init_oscillerator `(v  1 e 1 0 ]
+"16
+[v _init_ports init_ports `(v  1 e 1 0 ]
+"22
+[v _res_ports res_ports `(v  1 e 1 0 ]
+"40
+[v _set_ports set_ports `(v  1 e 1 0 ]
+"49
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+"67
+[v _init_interrupt init_interrupt `(v  1 e 1 0 ]
+"76
+[v _init_interrupt_timer init_interrupt_timer `(v  1 e 1 0 ]
+"9 C:\Users\Jonas\MPLABXProjects\bs_1512.X\interrupts.c
+[v _on_interrupt_timer_0 on_interrupt_timer_0 `(v  1 e 1 0 ]
+"33
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+"18 C:\Users\Jonas\MPLABXProjects\bs_1512.X\segmentdisplay47.c
+[v _set_digit set_digit `(v  1 e 1 0 ]
+"73
+[v _vis_next_digit vis_next_digit `(v  1 e 1 0 ]
+"135
+[v _create_seg_disp_47 create_seg_disp_47 `(v  1 e 1 0 ]
+"141
+[v _update_seg_disp_47 update_seg_disp_47 `(v  1 e 1 0 ]
+"146
+[v _seg_disp_47_get_val seg_disp_47_get_val `(us  1 e 2 0 ]
+"152
+[v _seg_disp_47_set_val seg_disp_47_set_val `(v  1 e 1 0 ]
+"159
+[v _seg_disp_47_on seg_disp_47_on `(v  1 e 1 0 ]
+"9 C:\Users\Jonas\MPLABXProjects\bs_1512.X\switches.c
+[v _create_switch create_switch `(v  1 e 1 0 ]
+"20
+[v _update_switch update_switch `(v  1 e 1 0 ]
+"51
+[v _get_switch_toggle get_switch_toggle `(uc  1 e 1 0 ]
+[s S441 . 1 `uc 1 seg_disp_sleep 1 0 :1:0 
+`uc 1 seg_disp_awake 1 0 :1:1 
+`uc 1 seg_disp_vis 1 0 :1:2 
+`uc 1 seg_disp_save 1 0 :1:3 
+]
+"13 C:\Users\Jonas\MPLABXProjects\bs_1512.X/interrupt.h
+[u S446 . 1 `S441 1 . 1 0 ]
+[v _INT_FLAGS INT_FLAGS `VES446  1 e 1 0 ]
+"17 C:\Users\Jonas\MPLABXProjects\bs_1512.X\bs_1512.c
+[v _cur_cat cur_cat `uc  1 e 1 0 ]
+"18
+[v _cur_val cur_val `us  1 e 2 0 ]
+[s S245 . 1 `uc 1 prev 1 0 :1:0 
+`uc 1 state 1 0 :1:1 
+`uc 1 streak 1 0 :5:2 
+`uc 1 status 1 0 :1:7 
+]
+"38
+[u S250 . 1 `S245 1 . 1 0 ]
+[v _v_btns v_btns `[5]S250  1 e 5 0 ]
+"39
+[v _p_btns p_btns `[5]*.4S250  1 e 5 0 ]
+"40
+[v _old_btns old_btns `[5]S250  1 e 5 0 ]
+[s S478 . 3 `uc 1 digit 1 0 :2:0 
+`uc 1 value_lo 1 1 :8:0 
+`uc 1 value_hi 1 2 :6:0 
+`uc 1 status 1 2 :1:6 
+]
+"43
+[u S483 . 3 `S478 1 . 3 0 ]
+[v _v_disp v_disp `S483  1 e 3 0 ]
+"44
+[v _p_disp p_disp `*.4S483  1 e 1 0 ]
+"50
+[v _dab dab `us  1 e 2 0 ]
+"79
+[v _scene scene `uc  1 e 1 0 ]
+"212
+[v _last_save_cat last_save_cat `uc  1 e 1 0 ]
+"213
+[v _last_save_val last_save_val `us  1 e 2 0 ]
+[s S131 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[s S140 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S145 . 1 `S131 1 . 1 0 `S140 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES145  1 e 1 @11 ]
+[s S630 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"508
+[u S639 . 1 `S630 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES639  1 e 1 @13 ]
+[s S329 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653
+[u S338 . 1 `S329 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES338  1 e 1 @17 ]
+"732
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"1052
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1114
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S83 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1131
+[u S92 . 1 `S83 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES92  1 e 1 @141 ]
+"1176
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S104 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1193
+[u S113 . 1 `S104 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES113  1 e 1 @142 ]
+[s S163 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1364
+[s S170 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S177 . 1 `S163 1 . 1 0 `S170 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES177  1 e 1 @149 ]
+[s S38 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1561
+[s S42 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S50 . 1 `S38 1 . 1 0 `S42 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES50  1 e 1 @153 ]
+"1895
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"1957
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2019
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S577 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2036
+[u S586 . 1 `S577 1 . 1 0 ]
+[v _LATCbits LATCbits `VES586  1 e 1 @270 ]
+"2199
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2252
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2310
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2958
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"2996
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+[s S354 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3094
+[u S363 . 1 `S354 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES363  1 e 1 @532 ]
+"3194
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S307 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"3420
+[u S316 . 1 `S307 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES316  1 e 1 @534 ]
+"4896
+[v _ACKEN ACKEN `VEb  1 e 0 @4276 ]
+"5412
+[v _PEN PEN `VEb  1 e 0 @4274 ]
+"5517
+[v _RSEN RSEN `VEb  1 e 0 @4273 ]
+"5550
+[v _SEN SEN `VEb  1 e 0 @4272 ]
+"5574
+[v _SSPIF SSPIF `VEb  1 e 0 @139 ]
+"5610
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"5613
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"50 C:\Users\Jonas\MPLABXProjects\bs_1512.X\i2c_eeprom.c
+[v _ee_seq_4 ee_seq_4 `[4]uc  1 e 4 0 ]
+"7 C:\Users\Jonas\MPLABXProjects\bs_1512.X\interrupts.c
+[v _seg_disp_sleep seg_disp_sleep `us  1 e 2 0 ]
+"8
+[v _seg_disp_save seg_disp_save `us  1 e 2 0 ]
+"51 C:\Users\Jonas\MPLABXProjects\bs_1512.X\bs_1512.c
+[v _main main `(v  1 e 1 0 ]
+{
+"66
+[v main@f f `uc  1 a 1 13 ]
+[v main@k k `uc  1 a 1 12 ]
+"77
+} 0
+"81
+[v _update_switches update_switches `(v  1 e 1 0 ]
+{
+"152
+[v update_switches@i i `uc  1 a 1 12 ]
+"155
+} 0
+"20 C:\Users\Jonas\MPLABXProjects\bs_1512.X\switches.c
+[v _update_switch update_switch `(v  1 e 1 0 ]
+{
+[s S245 . 1 `uc 1 prev 1 0 :1:0 
+`uc 1 state 1 0 :1:1 
+`uc 1 streak 1 0 :5:2 
+`uc 1 status 1 0 :1:7 
+]
+[u S250 . 1 `S245 1 . 1 0 ]
+[v update_switch@s_t s_t `*.4S250  1 a 1 wreg ]
+[v update_switch@s_t s_t `*.4S250  1 a 1 wreg ]
+[v update_switch@sbtn sbtn `uc  1 p 1 0 ]
+[v update_switch@streak streak `ul  1 p 4 1 ]
+[v update_switch@s_t s_t `*.4S250  1 a 1 9 ]
+"32
+} 0
+"51
+[v _get_switch_toggle get_switch_toggle `(uc  1 e 1 0 ]
+{
+[s S245 . 1 `uc 1 prev 1 0 :1:0 
+`uc 1 state 1 0 :1:1 
+`uc 1 streak 1 0 :5:2 
+`uc 1 status 1 0 :1:7 
+]
+[u S250 . 1 `S245 1 . 1 0 ]
+[v get_switch_toggle@old_s_t old_s_t `S250  1 a 1 wreg ]
+"52
+[v get_switch_toggle@val val `uc  1 a 1 3 ]
+"51
+[v get_switch_toggle@old_s_t old_s_t `S250  1 a 1 wreg ]
+[v get_switch_toggle@new_s_t new_s_t `S250  1 p 1 0 ]
+[v get_switch_toggle@old_s_t old_s_t `S250  1 a 1 2 ]
+"55
+} 0
+"141 C:\Users\Jonas\MPLABXProjects\bs_1512.X\segmentdisplay47.c
+[v _update_seg_disp_47 update_seg_disp_47 `(v  1 e 1 0 ]
+{
+[s S478 . 3 `uc 1 digit 1 0 :2:0 
+`uc 1 value_lo 1 1 :8:0 
+`uc 1 value_hi 1 2 :6:0 
+`uc 1 status 1 2 :1:6 
+]
+[u S483 . 3 `S478 1 . 3 0 ]
+[v update_seg_disp_47@s_t s_t `*.4S483  1 a 1 wreg ]
+[v update_seg_disp_47@s_t s_t `*.4S483  1 a 1 wreg ]
+[v update_seg_disp_47@cur_val cur_val `us  1 p 2 5 ]
+[v update_seg_disp_47@s_t s_t `*.4S483  1 a 1 7 ]
+"143
+} 0
+"152
+[v _seg_disp_47_set_val seg_disp_47_set_val `(v  1 e 1 0 ]
+{
+[s S478 . 3 `uc 1 digit 1 0 :2:0 
+`uc 1 value_lo 1 1 :8:0 
+`uc 1 value_hi 1 2 :6:0 
+`uc 1 status 1 2 :1:6 
+]
+[u S483 . 3 `S478 1 . 3 0 ]
+[v seg_disp_47_set_val@s_t s_t `*.4S483  1 a 1 wreg ]
+[v seg_disp_47_set_val@s_t s_t `*.4S483  1 a 1 wreg ]
+[v seg_disp_47_set_val@value value `us  1 p 2 0 ]
+[v seg_disp_47_set_val@s_t s_t `*.4S483  1 a 1 4 ]
+"155
+} 0
+"157 C:\Users\Jonas\MPLABXProjects\bs_1512.X\bs_1512.c
+[v _update_int_flags update_int_flags `(v  1 e 1 0 ]
+{
+"181
+} 0
+"73 C:\Users\Jonas\MPLABXProjects\bs_1512.X\segmentdisplay47.c
+[v _vis_next_digit vis_next_digit `(v  1 e 1 0 ]
+{
+[s S478 . 3 `uc 1 digit 1 0 :2:0 
+`uc 1 value_lo 1 1 :8:0 
+`uc 1 value_hi 1 2 :6:0 
+`uc 1 status 1 2 :1:6 
+]
+[u S483 . 3 `S478 1 . 3 0 ]
+[v vis_next_digit@s_t s_t `*.4S483  1 a 1 wreg ]
+"81
+[v vis_next_digit@p p `uc  1 a 1 7 ]
+"80
+[v vis_next_digit@digit_divider digit_divider `us  1 a 2 8 ]
+"79
+[v vis_next_digit@val val `us  1 a 2 3 ]
+"89
+[v vis_next_digit@sLATB sLATB `uc  1 a 1 6 ]
+"85
+[v vis_next_digit@digit_val digit_val `uc  1 a 1 5 ]
+"73
+[v vis_next_digit@s_t s_t `*.4S483  1 a 1 wreg ]
+"75
+"73
+[v vis_next_digit@s_t s_t `*.4S483  1 a 1 10 ]
+"133
+} 0
+"146
+[v _seg_disp_47_get_val seg_disp_47_get_val `(us  1 e 2 0 ]
+{
+[s S478 . 3 `uc 1 digit 1 0 :2:0 
+`uc 1 value_lo 1 1 :8:0 
+`uc 1 value_hi 1 2 :6:0 
+`uc 1 status 1 2 :1:6 
+]
+[u S483 . 3 `S478 1 . 3 0 ]
+[v seg_disp_47_get_val@s_t s_t `*.4S483  1 a 1 wreg ]
+"147
+[v seg_disp_47_get_val@val val `us  1 a 2 5 ]
+"146
+[v seg_disp_47_get_val@s_t s_t `*.4S483  1 a 1 wreg ]
+[v seg_disp_47_get_val@s_t s_t `*.4S483  1 a 1 7 ]
+"151
+} 0
+"15 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"25
+} 0
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"159 C:\Users\Jonas\MPLABXProjects\bs_1512.X\segmentdisplay47.c
+[v _seg_disp_47_on seg_disp_47_on `(v  1 e 1 0 ]
+{
+[s S478 . 3 `uc 1 digit 1 0 :2:0 
+`uc 1 value_lo 1 1 :8:0 
+`uc 1 value_hi 1 2 :6:0 
+`uc 1 status 1 2 :1:6 
+]
+[u S483 . 3 `S478 1 . 3 0 ]
+[v seg_disp_47_on@s_t s_t `*.4S483  1 a 1 wreg ]
+[v seg_disp_47_on@s_t s_t `*.4S483  1 a 1 wreg ]
+[v seg_disp_47_on@s_t s_t `*.4S483  1 a 1 0 ]
+} 0
+"214 C:\Users\Jonas\MPLABXProjects\bs_1512.X\bs_1512.c
+[v _cat_auto_save cat_auto_save `(v  1 e 1 0 ]
+{
+"218
+} 0
+"234
+[v _rst_storage rst_storage `(v  1 e 1 0 ]
+{
+"235
+[v rst_storage@i i `uc  1 a 1 12 ]
+"238
+} 0
+"241
+[v _init_structs init_structs `(v  1 e 1 0 ]
+{
+"259
+} 0
+"9 C:\Users\Jonas\MPLABXProjects\bs_1512.X\switches.c
+[v _create_switch create_switch `(v  1 e 1 0 ]
+{
+[s S245 . 1 `uc 1 prev 1 0 :1:0 
+`uc 1 state 1 0 :1:1 
+`uc 1 streak 1 0 :5:2 
+`uc 1 status 1 0 :1:7 
+]
+[u S250 . 1 `S245 1 . 1 0 ]
+[v create_switch@s_t s_t `*.4S250  1 a 1 wreg ]
+[v create_switch@s_t s_t `*.4S250  1 a 1 wreg ]
+"12
+"9
+[v create_switch@s_t s_t `*.4S250  1 a 1 1 ]
+"17
+} 0
+"135 C:\Users\Jonas\MPLABXProjects\bs_1512.X\segmentdisplay47.c
+[v _create_seg_disp_47 create_seg_disp_47 `(v  1 e 1 0 ]
+{
+[s S478 . 3 `uc 1 digit 1 0 :2:0 
+`uc 1 value_lo 1 1 :8:0 
+`uc 1 value_hi 1 2 :6:0 
+`uc 1 status 1 2 :1:6 
+]
+[u S483 . 3 `S478 1 . 3 0 ]
+[v create_seg_disp_47@s_t s_t `*.4S483  1 a 1 wreg ]
+[v create_seg_disp_47@s_t s_t `*.4S483  1 a 1 wreg ]
+[v create_seg_disp_47@s_t s_t `*.4S483  1 a 1 0 ]
+"140
+} 0
+"5 C:\Users\Jonas\MPLABXProjects\bs_1512.X\init.c
+[v _init init `(v  1 e 1 0 ]
+{
+"10
+} 0
+"16
+[v _init_ports init_ports `(v  1 e 1 0 ]
+{
+"19
+} 0
+"40
+[v _set_ports set_ports `(v  1 e 1 0 ]
+{
+"47
+} 0
+"22
+[v _res_ports res_ports `(v  1 e 1 0 ]
+{
+"37
+} 0
+"12
+[v _init_oscillerator init_oscillerator `(v  1 e 1 0 ]
+{
+"15
+} 0
+"67
+[v _init_interrupt init_interrupt `(v  1 e 1 0 ]
+{
+"73
+} 0
+"76
+[v _init_interrupt_timer init_interrupt_timer `(v  1 e 1 0 ]
+{
+"94
+} 0
+"49
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+{
+"64
+} 0
+"227 C:\Users\Jonas\MPLABXProjects\bs_1512.X\bs_1512.c
+[v _change_category change_category `(v  1 e 1 0 ]
+{
+[v change_category@category category `uc  1 a 1 wreg ]
+[v change_category@category category `uc  1 a 1 wreg ]
+[v change_category@category category `uc  1 a 1 13 ]
+"231
+} 0
+"200
+[v _set_cat_val set_cat_val `(v  1 e 1 0 ]
+{
+[v set_cat_val@category category `uc  1 a 1 wreg ]
+"205
+[v set_cat_val@i i `uc  1 a 1 3 ]
+"204
+[v set_cat_val@add_start add_start `us  1 a 2 0 ]
+"200
+[v set_cat_val@category category `uc  1 a 1 wreg ]
+[v set_cat_val@val val `us  1 p 2 7 ]
+[v set_cat_val@category category `uc  1 a 1 2 ]
+"210
+} 0
+"115 C:\Users\Jonas\MPLABXProjects\bs_1512.X\i2c_eeprom.c
+[v _eeprom_write_16 eeprom_write_16 `(v  1 e 1 0 ]
+{
+[v eeprom_write_16@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+"117
+[v eeprom_write_16@addLow addLow `uc  1 a 1 6 ]
+"116
+[v eeprom_write_16@addHigh addHigh `uc  1 a 1 5 ]
+"115
+[v eeprom_write_16@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+[v eeprom_write_16@add add `us  1 p 2 0 ]
+[v eeprom_write_16@eeData eeData `uc  1 p 1 2 ]
+[v eeprom_write_16@slaveAdd slaveAdd `uc  1 a 1 4 ]
+"155
+} 0
+"184 C:\Users\Jonas\MPLABXProjects\bs_1512.X\bs_1512.c
+[v _get_cat_val get_cat_val `(us  1 e 2 0 ]
+{
+[v get_cat_val@category category `uc  1 a 1 wreg ]
+"193
+[v get_cat_val@d d `uc  1 a 1 5 ]
+"191
+[v get_cat_val@i i `uc  1 a 1 6 ]
+"188
+[v get_cat_val@val val `us  1 a 2 3 ]
+"189
+[v get_cat_val@add_start add_start `us  1 a 2 0 ]
+"184
+[v get_cat_val@category category `uc  1 a 1 wreg ]
+[v get_cat_val@category category `uc  1 a 1 2 ]
+"198
+} 0
+"156 C:\Users\Jonas\MPLABXProjects\bs_1512.X\i2c_eeprom.c
+[v _eeprom_read_16 eeprom_read_16 `(uc  1 e 1 0 ]
+{
+[v eeprom_read_16@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+"159
+[v eeprom_read_16@tempData tempData `uc  1 a 1 5 ]
+"158
+[v eeprom_read_16@addLow addLow `uc  1 a 1 4 ]
+"157
+[v eeprom_read_16@addHigh addHigh `uc  1 a 1 3 ]
+"156
+[v eeprom_read_16@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+[v eeprom_read_16@add add `us  1 p 2 0 ]
+[v eeprom_read_16@slaveAdd slaveAdd `uc  1 a 1 6 ]
+"215
+} 0
+"33 C:\Users\Jonas\MPLABXProjects\bs_1512.X\interrupts.c
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+{
+"40
+} 0
+"9
+[v _on_interrupt_timer_0 on_interrupt_timer_0 `(v  1 e 1 0 ]
+{
+"31
+} 0

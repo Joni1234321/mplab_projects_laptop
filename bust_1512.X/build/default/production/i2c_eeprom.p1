@@ -1,0 +1,1628 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"3409 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3409:     struct {
+[s S189 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S189 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"3408
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3408: typedef union {
+[u S188 `S189 1 ]
+[n S188 . . ]
+"3420
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3420: extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0x216)));
+[v _SSPCON2bits `VS188 ~T0 @X0 0 e@534 ]
+"5550
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 5550: extern volatile __bit SEN __attribute__((address(0x10B0)));
+[v _SEN `Vb ~T0 @X0 0 e@4272 ]
+"642
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 642:     struct {
+[s S42 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S42 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF TMR1GIF ]
+"641
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 641: typedef union {
+[u S41 `S42 1 ]
+[n S41 . . ]
+"653
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 653: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS41 ~T0 @X0 0 e@17 ]
+"2958
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2958: extern volatile unsigned char SSPBUF __attribute__((address(0x211)));
+[v _SSPBUF `Vuc ~T0 @X0 0 e@529 ]
+"5574
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 5574: extern volatile __bit SSPIF __attribute__((address(0x8B)));
+[v _SSPIF `Vb ~T0 @X0 0 e@139 ]
+"5412
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 5412: extern volatile __bit PEN __attribute__((address(0x10B2)));
+[v _PEN `Vb ~T0 @X0 0 e@4274 ]
+"5517
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 5517: extern volatile __bit RSEN __attribute__((address(0x10B1)));
+[v _RSEN `Vb ~T0 @X0 0 e@4273 ]
+"3083
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3083:     struct {
+[s S176 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S176 . BF UA R_nW S P D_nA CKE SMP ]
+"3082
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3082: typedef union {
+[u S175 `S176 1 ]
+[n S175 . . ]
+"3094
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3094: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x214)));
+[v _SSPSTATbits `VS175 ~T0 @X0 0 e@532 ]
+"4896
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4896: extern volatile __bit ACKEN __attribute__((address(0x10B4)));
+[v _ACKEN `Vb ~T0 @X0 0 e@4276 ]
+"54 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"493
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 493: __asm("PORTB equ 0Dh");
+[; <" PORTB equ 0Dh ;# ">
+"555
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 555: __asm("PORTC equ 0Eh");
+[; <" PORTC equ 0Eh ;# ">
+"617
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 617: __asm("PORTE equ 010h");
+[; <" PORTE equ 010h ;# ">
+"638
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 638: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"700
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 700: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"734
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 734: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"754
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 754: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"761
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 761: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"781
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 781: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"801
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 801: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"873
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 873: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"943
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 943: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"963
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 963: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"983
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 983: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"1054
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1054: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"1116
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1116: __asm("TRISB equ 08Dh");
+[; <" TRISB equ 08Dh ;# ">
+"1178
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1178: __asm("TRISC equ 08Eh");
+[; <" TRISC equ 08Eh ;# ">
+"1240
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1240: __asm("TRISE equ 090h");
+[; <" TRISE equ 090h ;# ">
+"1247
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1247: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1309
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1309: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1343
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1343: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1426
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1426: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1483
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1483: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1542
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1542: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1608
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1608: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1663
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1663: __asm("ADRES0 equ 09Bh");
+[; <" ADRES0 equ 09Bh ;# ">
+"1668
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1668: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1675
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1675: __asm("ADRES0L equ 09Bh");
+[; <" ADRES0L equ 09Bh ;# ">
+"1680
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1680: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1713
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1713: __asm("ADRES0H equ 09Ch");
+[; <" ADRES0H equ 09Ch ;# ">
+"1718
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1718: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1751
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1751: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1831
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1831: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"1897
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1897: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"1959
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 1959: __asm("LATB equ 010Dh");
+[; <" LATB equ 010Dh ;# ">
+"2021
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2021: __asm("LATC equ 010Eh");
+[; <" LATC equ 010Eh ;# ">
+"2083
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2083: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2116
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2116: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2175
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2175: __asm("APFCON equ 011Dh");
+[; <" APFCON equ 011Dh ;# ">
+"2201
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2201: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2254
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2254: __asm("ANSELB equ 018Dh");
+[; <" ANSELB equ 018Dh ;# ">
+"2312
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2312: __asm("ANSELC equ 018Eh");
+[; <" ANSELC equ 018Eh ;# ">
+"2363
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2363: __asm("PMADR equ 0191h");
+[; <" PMADR equ 0191h ;# ">
+"2370
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2370: __asm("PMADRL equ 0191h");
+[; <" PMADRL equ 0191h ;# ">
+"2390
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2390: __asm("PMADRH equ 0192h");
+[; <" PMADRH equ 0192h ;# ">
+"2410
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2410: __asm("PMDAT equ 0193h");
+[; <" PMDAT equ 0193h ;# ">
+"2417
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2417: __asm("PMDATL equ 0193h");
+[; <" PMDATL equ 0193h ;# ">
+"2437
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2437: __asm("PMDATH equ 0194h");
+[; <" PMDATH equ 0194h ;# ">
+"2457
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2457: __asm("PMCON1 equ 0195h");
+[; <" PMCON1 equ 0195h ;# ">
+"2513
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2513: __asm("PMCON2 equ 0196h");
+[; <" PMCON2 equ 0196h ;# ">
+"2533
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2533: __asm("VREGCON equ 0197h");
+[; <" VREGCON equ 0197h ;# ">
+"2554
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2554: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"2574
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2574: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"2594
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2594: __asm("SP1BRG equ 019Bh");
+[; <" SP1BRG equ 019Bh ;# ">
+"2601
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2601: __asm("SP1BRGL equ 019Bh");
+[; <" SP1BRGL equ 019Bh ;# ">
+"2606
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2606: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"2610
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2610: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"2655
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2655: __asm("SP1BRGH equ 019Ch");
+[; <" SP1BRGH equ 019Ch ;# ">
+"2660
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2660: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"2693
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2693: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"2755
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2755: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"2817
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2817: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"2869
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2869: __asm("WPUB equ 020Dh");
+[; <" WPUB equ 020Dh ;# ">
+"2939
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2939: __asm("WPUE equ 0210h");
+[; <" WPUE equ 0210h ;# ">
+"2960
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2960: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"2965
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2965: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"2998
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 2998: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3003
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3003: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3036
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3036: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3041
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3041: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3074
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3074: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3079
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3079: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3196
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3196: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3201
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3201: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"3205
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3205: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3400
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3400: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"3405
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3405: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"3522
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3522: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"3527
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3527: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"3644
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3644: __asm("CCPR1 equ 0291h");
+[; <" CCPR1 equ 0291h ;# ">
+"3651
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3651: __asm("CCPR1L equ 0291h");
+[; <" CCPR1L equ 0291h ;# ">
+"3671
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3671: __asm("CCPR1H equ 0292h");
+[; <" CCPR1H equ 0292h ;# ">
+"3691
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3691: __asm("CCP1CON equ 0293h");
+[; <" CCP1CON equ 0293h ;# ">
+"3755
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3755: __asm("CCPR2 equ 0298h");
+[; <" CCPR2 equ 0298h ;# ">
+"3762
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3762: __asm("CCPR2L equ 0298h");
+[; <" CCPR2L equ 0298h ;# ">
+"3782
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3782: __asm("CCPR2H equ 0299h");
+[; <" CCPR2H equ 0299h ;# ">
+"3802
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3802: __asm("CCP2CON equ 029Ah");
+[; <" CCP2CON equ 029Ah ;# ">
+"3866
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3866: __asm("IOCBP equ 0394h");
+[; <" IOCBP equ 0394h ;# ">
+"3936
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 3936: __asm("IOCBN equ 0395h");
+[; <" IOCBN equ 0395h ;# ">
+"4006
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4006: __asm("IOCBF equ 0396h");
+[; <" IOCBF equ 0396h ;# ">
+"4076
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4076: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"4108
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4108: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"4128
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4128: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"4148
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4148: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"4168
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4168: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"4188
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4188: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"4208
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4208: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"4228
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4228: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"4248
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4248: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"4268
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4268: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"4288
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4288: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"4308
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4308: __asm("AADCON0 equ 0711h");
+[; <" AADCON0 equ 0711h ;# ">
+"4373
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4373: __asm("AADCON1 equ 0712h");
+[; <" AADCON1 equ 0712h ;# ">
+"4439
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4439: __asm("AADCON2 equ 0713h");
+[; <" AADCON2 equ 0713h ;# ">
+"4481
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4481: __asm("AADCON3 equ 0714h");
+[; <" AADCON3 equ 0714h ;# ">
+"4538
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4538: __asm("AADSTAT equ 0715h");
+[; <" AADSTAT equ 0715h ;# ">
+"4578
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4578: __asm("AADPRE equ 0716h");
+[; <" AADPRE equ 0716h ;# ">
+"4642
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4642: __asm("AADACQ equ 0717h");
+[; <" AADACQ equ 0717h ;# ">
+"4706
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4706: __asm("AADGRD equ 0718h");
+[; <" AADGRD equ 0718h ;# ">
+"4739
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4739: __asm("AADCAP equ 0719h");
+[; <" AADCAP equ 0719h ;# ">
+"4779
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4779: __asm("AADRES0 equ 071Ah");
+[; <" AADRES0 equ 071Ah ;# ">
+"4784
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4784: __asm("AD1RES0 equ 071Ah");
+[; <" AD1RES0 equ 071Ah ;# ">
+"4791
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4791: __asm("AADRES0L equ 071Ah");
+[; <" AADRES0L equ 071Ah ;# ">
+"4811
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4811: __asm("AADRES0H equ 071Bh");
+[; <" AADRES0H equ 071Bh ;# ">
+"4831
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4831: __asm("AADRES1 equ 071Ch");
+[; <" AADRES1 equ 071Ch ;# ">
+"4836
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4836: __asm("AD1RES1 equ 071Ch");
+[; <" AD1RES1 equ 071Ch ;# ">
+"4843
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4843: __asm("AADRES1L equ 071Ch");
+[; <" AADRES1L equ 071Ch ;# ">
+"4863
+[; ;D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h: 4863: __asm("AADRES1H equ 071Dh");
+[; <" AADRES1H equ 071Dh ;# ">
+"6 i2c_eeprom.c
+[; ;i2c_eeprom.c: 6: void eeprom_page_write (uint8_t slaveAdd, uint16_t add, uint8_t *eeData, uint32_t eeDataSize){
+[v _eeprom_page_write `(v ~T0 @X0 1 ef4`uc`us`*uc`ul ]
+{
+[e :U _eeprom_page_write ]
+[v _slaveAdd `uc ~T0 @X0 1 r1 ]
+[v _add `us ~T0 @X0 1 r2 ]
+[v _eeData `*uc ~T0 @X0 1 r3 ]
+[v _eeDataSize `ul ~T0 @X0 1 r4 ]
+[f ]
+"7
+[; ;i2c_eeprom.c: 7:     uint8_t addHigh = add >> 8;
+[v _addHigh `uc ~T0 @X0 1 a ]
+[e = _addHigh -> >> -> _add `ui -> 8 `i `uc ]
+"8
+[; ;i2c_eeprom.c: 8:     uint8_t addLow = add;
+[v _addLow `uc ~T0 @X0 1 a ]
+[e = _addLow -> _add `uc ]
+"9
+[; ;i2c_eeprom.c: 9:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+"10
+[; ;i2c_eeprom.c: 10:     while (SEN);
+[e $U 275  ]
+[e :U 276 ]
+[e :U 275 ]
+[e $ _SEN 276  ]
+[e :U 277 ]
+"11
+[; ;i2c_eeprom.c: 11:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"13
+[; ;i2c_eeprom.c: 13:     SSPBUF = slaveAdd;
+[e = _SSPBUF _slaveAdd ]
+"14
+[; ;i2c_eeprom.c: 14:     while (!SSPIF);
+[e $U 278  ]
+[e :U 279 ]
+[e :U 278 ]
+[e $ ! _SSPIF 279  ]
+[e :U 280 ]
+"15
+[; ;i2c_eeprom.c: 15:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"16
+[; ;i2c_eeprom.c: 16:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 281  ]
+{
+"17
+[; ;i2c_eeprom.c: 17:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"18
+[; ;i2c_eeprom.c: 18:         while (PEN);
+[e $U 282  ]
+[e :U 283 ]
+[e :U 282 ]
+[e $ _PEN 283  ]
+[e :U 284 ]
+"19
+[; ;i2c_eeprom.c: 19:         return;
+[e $UE 274  ]
+"20
+[; ;i2c_eeprom.c: 20:     }
+}
+[e :U 281 ]
+"22
+[; ;i2c_eeprom.c: 22:     SSPBUF = addHigh;
+[e = _SSPBUF _addHigh ]
+"23
+[; ;i2c_eeprom.c: 23:     while (!SSPIF);
+[e $U 285  ]
+[e :U 286 ]
+[e :U 285 ]
+[e $ ! _SSPIF 286  ]
+[e :U 287 ]
+"24
+[; ;i2c_eeprom.c: 24:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"25
+[; ;i2c_eeprom.c: 25:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 288  ]
+{
+"26
+[; ;i2c_eeprom.c: 26:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"27
+[; ;i2c_eeprom.c: 27:         while (PEN);
+[e $U 289  ]
+[e :U 290 ]
+[e :U 289 ]
+[e $ _PEN 290  ]
+[e :U 291 ]
+"28
+[; ;i2c_eeprom.c: 28:         return;
+[e $UE 274  ]
+"29
+[; ;i2c_eeprom.c: 29:     }
+}
+[e :U 288 ]
+"31
+[; ;i2c_eeprom.c: 31:     SSPBUF = addLow;
+[e = _SSPBUF _addLow ]
+"32
+[; ;i2c_eeprom.c: 32:     while (!SSPIF);
+[e $U 292  ]
+[e :U 293 ]
+[e :U 292 ]
+[e $ ! _SSPIF 293  ]
+[e :U 294 ]
+"33
+[; ;i2c_eeprom.c: 33:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"34
+[; ;i2c_eeprom.c: 34:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 295  ]
+{
+"35
+[; ;i2c_eeprom.c: 35:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"36
+[; ;i2c_eeprom.c: 36:         while (PEN);
+[e $U 296  ]
+[e :U 297 ]
+[e :U 296 ]
+[e $ _PEN 297  ]
+[e :U 298 ]
+"37
+[; ;i2c_eeprom.c: 37:         return;
+[e $UE 274  ]
+"38
+[; ;i2c_eeprom.c: 38:     }
+}
+[e :U 295 ]
+"41
+[; ;i2c_eeprom.c: 41:     for (uint32_t i = 0; i < eeDataSize; i++) {
+{
+[v _i `ul ~T0 @X0 1 a ]
+[e = _i -> -> -> 0 `i `l `ul ]
+[e $U 302  ]
+[e :U 299 ]
+{
+"42
+[; ;i2c_eeprom.c: 42:         SSPBUF = eeData[i];
+[e = _SSPBUF *U + _eeData * -> _i `ux -> -> # *U _eeData `ui `ux ]
+"43
+[; ;i2c_eeprom.c: 43:         while (!SSPIF);
+[e $U 303  ]
+[e :U 304 ]
+[e :U 303 ]
+[e $ ! _SSPIF 304  ]
+[e :U 305 ]
+"44
+[; ;i2c_eeprom.c: 44:         PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"45
+[; ;i2c_eeprom.c: 45:     }
+}
+[e ++ _i -> -> -> 1 `i `l `ul ]
+[e :U 302 ]
+[e $ < _i _eeDataSize 299  ]
+[e :U 300 ]
+}
+"47
+[; ;i2c_eeprom.c: 47:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"48
+[; ;i2c_eeprom.c: 48:     while (PEN);
+[e $U 306  ]
+[e :U 307 ]
+[e :U 306 ]
+[e $ _PEN 307  ]
+[e :U 308 ]
+"49
+[; ;i2c_eeprom.c: 49: }
+[e :UE 274 ]
+}
+"50
+[; ;i2c_eeprom.c: 50: uint8_t ee_seq_4[4];
+[v _ee_seq_4 `uc ~T0 @X0 -> 4 `i e ]
+"51
+[; ;i2c_eeprom.c: 51: uint8_t* eeprom_sequential_4_read (uint8_t slaveAdd, uint16_t add){
+[v _eeprom_sequential_4_read `(*uc ~T0 @X0 1 ef2`uc`us ]
+{
+[e :U _eeprom_sequential_4_read ]
+[v _slaveAdd `uc ~T0 @X0 1 r1 ]
+[v _add `us ~T0 @X0 1 r2 ]
+[f ]
+"52
+[; ;i2c_eeprom.c: 52:     uint8_t addHigh = add >> 8;
+[v _addHigh `uc ~T0 @X0 1 a ]
+[e = _addHigh -> >> -> _add `ui -> 8 `i `uc ]
+"53
+[; ;i2c_eeprom.c: 53:     uint8_t addLow = add;
+[v _addLow `uc ~T0 @X0 1 a ]
+[e = _addLow -> _add `uc ]
+"55
+[; ;i2c_eeprom.c: 55:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+"56
+[; ;i2c_eeprom.c: 56:     while (SEN);
+[e $U 310  ]
+[e :U 311 ]
+[e :U 310 ]
+[e $ _SEN 311  ]
+[e :U 312 ]
+"57
+[; ;i2c_eeprom.c: 57:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"58
+[; ;i2c_eeprom.c: 58:     SSPBUF = slaveAdd;
+[e = _SSPBUF _slaveAdd ]
+"59
+[; ;i2c_eeprom.c: 59:     while (!SSPIF);
+[e $U 313  ]
+[e :U 314 ]
+[e :U 313 ]
+[e $ ! _SSPIF 314  ]
+[e :U 315 ]
+"60
+[; ;i2c_eeprom.c: 60:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"61
+[; ;i2c_eeprom.c: 61:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 316  ]
+{
+"62
+[; ;i2c_eeprom.c: 62:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"63
+[; ;i2c_eeprom.c: 63:         while (PEN);
+[e $U 317  ]
+[e :U 318 ]
+[e :U 317 ]
+[e $ _PEN 318  ]
+[e :U 319 ]
+"64
+[; ;i2c_eeprom.c: 64:         return 0;
+[e ) -> -> 0 `i `*uc ]
+[e $UE 309  ]
+"65
+[; ;i2c_eeprom.c: 65:     }
+}
+[e :U 316 ]
+"67
+[; ;i2c_eeprom.c: 67:     SSPBUF = addHigh;
+[e = _SSPBUF _addHigh ]
+"68
+[; ;i2c_eeprom.c: 68:     while (!SSPIF);
+[e $U 320  ]
+[e :U 321 ]
+[e :U 320 ]
+[e $ ! _SSPIF 321  ]
+[e :U 322 ]
+"69
+[; ;i2c_eeprom.c: 69:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"70
+[; ;i2c_eeprom.c: 70:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 323  ]
+{
+"71
+[; ;i2c_eeprom.c: 71:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"72
+[; ;i2c_eeprom.c: 72:         while (PEN);
+[e $U 324  ]
+[e :U 325 ]
+[e :U 324 ]
+[e $ _PEN 325  ]
+[e :U 326 ]
+"73
+[; ;i2c_eeprom.c: 73:         return 0;
+[e ) -> -> 0 `i `*uc ]
+[e $UE 309  ]
+"74
+[; ;i2c_eeprom.c: 74:     }
+}
+[e :U 323 ]
+"76
+[; ;i2c_eeprom.c: 76:     SSPBUF = addLow;
+[e = _SSPBUF _addLow ]
+"77
+[; ;i2c_eeprom.c: 77:     while (!SSPIF);
+[e $U 327  ]
+[e :U 328 ]
+[e :U 327 ]
+[e $ ! _SSPIF 328  ]
+[e :U 329 ]
+"78
+[; ;i2c_eeprom.c: 78:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"79
+[; ;i2c_eeprom.c: 79:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 330  ]
+{
+"80
+[; ;i2c_eeprom.c: 80:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"81
+[; ;i2c_eeprom.c: 81:         while (PEN);
+[e $U 331  ]
+[e :U 332 ]
+[e :U 331 ]
+[e $ _PEN 332  ]
+[e :U 333 ]
+"82
+[; ;i2c_eeprom.c: 82:         return 0;
+[e ) -> -> 0 `i `*uc ]
+[e $UE 309  ]
+"83
+[; ;i2c_eeprom.c: 83:     }
+}
+[e :U 330 ]
+"85
+[; ;i2c_eeprom.c: 85:     SSPCON2bits.RSEN = 1;
+[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
+"86
+[; ;i2c_eeprom.c: 86:     while (RSEN);
+[e $U 334  ]
+[e :U 335 ]
+[e :U 334 ]
+[e $ _RSEN 335  ]
+[e :U 336 ]
+"87
+[; ;i2c_eeprom.c: 87:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"89
+[; ;i2c_eeprom.c: 89:     SSPBUF = (slaveAdd+1);
+[e = _SSPBUF -> + -> _slaveAdd `i -> 1 `i `uc ]
+"90
+[; ;i2c_eeprom.c: 90:     while (!SSPIF);
+[e $U 337  ]
+[e :U 338 ]
+[e :U 337 ]
+[e $ ! _SSPIF 338  ]
+[e :U 339 ]
+"91
+[; ;i2c_eeprom.c: 91:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"92
+[; ;i2c_eeprom.c: 92:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 340  ]
+{
+"93
+[; ;i2c_eeprom.c: 93:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"94
+[; ;i2c_eeprom.c: 94:         while (PEN);
+[e $U 341  ]
+[e :U 342 ]
+[e :U 341 ]
+[e $ _PEN 342  ]
+[e :U 343 ]
+"95
+[; ;i2c_eeprom.c: 95:         return 0;
+[e ) -> -> 0 `i `*uc ]
+[e $UE 309  ]
+"96
+[; ;i2c_eeprom.c: 96:     }
+}
+[e :U 340 ]
+"99
+[; ;i2c_eeprom.c: 99:     for (uint32_t i = 0; i < 4; i++) {
+{
+[v _i `ul ~T0 @X0 1 a ]
+[e = _i -> -> -> 0 `i `l `ul ]
+[e $ < _i -> -> -> 4 `i `l `ul 344  ]
+[e $U 345  ]
+[e :U 344 ]
+{
+"100
+[; ;i2c_eeprom.c: 100:         SSPCON2bits.RCEN = 1;
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+"101
+[; ;i2c_eeprom.c: 101:         while (!SSPSTATbits.BF);
+[e $U 347  ]
+[e :U 348 ]
+[e :U 347 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 348  ]
+[e :U 349 ]
+"102
+[; ;i2c_eeprom.c: 102:         ee_seq_4[i] = SSPBUF;
+[e = *U + &U _ee_seq_4 * -> _i `ux -> -> # *U &U _ee_seq_4 `ui `ux _SSPBUF ]
+"103
+[; ;i2c_eeprom.c: 103:     }
+}
+[e ++ _i -> -> -> 1 `i `l `ul ]
+[e $ < _i -> -> -> 4 `i `l `ul 344  ]
+[e :U 345 ]
+}
+"105
+[; ;i2c_eeprom.c: 105:     SSPCON2bits.ACKDT = 1;
+[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
+"106
+[; ;i2c_eeprom.c: 106:     SSPCON2bits.ACKEN = 1;
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+"107
+[; ;i2c_eeprom.c: 107:     while (ACKEN);
+[e $U 350  ]
+[e :U 351 ]
+[e :U 350 ]
+[e $ _ACKEN 351  ]
+[e :U 352 ]
+"109
+[; ;i2c_eeprom.c: 109:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"110
+[; ;i2c_eeprom.c: 110:     while(PEN);
+[e $U 353  ]
+[e :U 354 ]
+[e :U 353 ]
+[e $ _PEN 354  ]
+[e :U 355 ]
+"111
+[; ;i2c_eeprom.c: 111:     return ee_seq_4;
+[e ) &U _ee_seq_4 ]
+[e $UE 309  ]
+"112
+[; ;i2c_eeprom.c: 112: }
+[e :UE 309 ]
+}
+"115
+[; ;i2c_eeprom.c: 115: void eeprom_write_16 (uint8_t slaveAdd, uint16_t add, uint8_t eeData){
+[v _eeprom_write_16 `(v ~T0 @X0 1 ef3`uc`us`uc ]
+{
+[e :U _eeprom_write_16 ]
+[v _slaveAdd `uc ~T0 @X0 1 r1 ]
+[v _add `us ~T0 @X0 1 r2 ]
+[v _eeData `uc ~T0 @X0 1 r3 ]
+[f ]
+"116
+[; ;i2c_eeprom.c: 116:     uint8_t addHigh = add >> 8;
+[v _addHigh `uc ~T0 @X0 1 a ]
+[e = _addHigh -> >> -> _add `ui -> 8 `i `uc ]
+"117
+[; ;i2c_eeprom.c: 117:     uint8_t addLow = add;
+[v _addLow `uc ~T0 @X0 1 a ]
+[e = _addLow -> _add `uc ]
+"118
+[; ;i2c_eeprom.c: 118:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+"119
+[; ;i2c_eeprom.c: 119:     while (SEN);
+[e $U 357  ]
+[e :U 358 ]
+[e :U 357 ]
+[e $ _SEN 358  ]
+[e :U 359 ]
+"120
+[; ;i2c_eeprom.c: 120:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"122
+[; ;i2c_eeprom.c: 122:     SSPBUF = slaveAdd;
+[e = _SSPBUF _slaveAdd ]
+"123
+[; ;i2c_eeprom.c: 123:     while (!SSPIF);
+[e $U 360  ]
+[e :U 361 ]
+[e :U 360 ]
+[e $ ! _SSPIF 361  ]
+[e :U 362 ]
+"124
+[; ;i2c_eeprom.c: 124:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"125
+[; ;i2c_eeprom.c: 125:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 363  ]
+{
+"126
+[; ;i2c_eeprom.c: 126:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"127
+[; ;i2c_eeprom.c: 127:         while (PEN);
+[e $U 364  ]
+[e :U 365 ]
+[e :U 364 ]
+[e $ _PEN 365  ]
+[e :U 366 ]
+"128
+[; ;i2c_eeprom.c: 128:         return;
+[e $UE 356  ]
+"129
+[; ;i2c_eeprom.c: 129:     }
+}
+[e :U 363 ]
+"131
+[; ;i2c_eeprom.c: 131:     SSPBUF = addHigh;
+[e = _SSPBUF _addHigh ]
+"132
+[; ;i2c_eeprom.c: 132:     while (!SSPIF);
+[e $U 367  ]
+[e :U 368 ]
+[e :U 367 ]
+[e $ ! _SSPIF 368  ]
+[e :U 369 ]
+"133
+[; ;i2c_eeprom.c: 133:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"134
+[; ;i2c_eeprom.c: 134:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 370  ]
+{
+"135
+[; ;i2c_eeprom.c: 135:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"136
+[; ;i2c_eeprom.c: 136:         while (PEN);
+[e $U 371  ]
+[e :U 372 ]
+[e :U 371 ]
+[e $ _PEN 372  ]
+[e :U 373 ]
+"137
+[; ;i2c_eeprom.c: 137:         return;
+[e $UE 356  ]
+"138
+[; ;i2c_eeprom.c: 138:     }
+}
+[e :U 370 ]
+"140
+[; ;i2c_eeprom.c: 140:     SSPBUF = addLow;
+[e = _SSPBUF _addLow ]
+"141
+[; ;i2c_eeprom.c: 141:     while (!SSPIF);
+[e $U 374  ]
+[e :U 375 ]
+[e :U 374 ]
+[e $ ! _SSPIF 375  ]
+[e :U 376 ]
+"142
+[; ;i2c_eeprom.c: 142:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"143
+[; ;i2c_eeprom.c: 143:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 377  ]
+{
+"144
+[; ;i2c_eeprom.c: 144:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"145
+[; ;i2c_eeprom.c: 145:         while (PEN);
+[e $U 378  ]
+[e :U 379 ]
+[e :U 378 ]
+[e $ _PEN 379  ]
+[e :U 380 ]
+"146
+[; ;i2c_eeprom.c: 146:         return;
+[e $UE 356  ]
+"147
+[; ;i2c_eeprom.c: 147:     }
+}
+[e :U 377 ]
+"149
+[; ;i2c_eeprom.c: 149:     SSPBUF = eeData;
+[e = _SSPBUF _eeData ]
+"150
+[; ;i2c_eeprom.c: 150:     while (!SSPIF);
+[e $U 381  ]
+[e :U 382 ]
+[e :U 381 ]
+[e $ ! _SSPIF 382  ]
+[e :U 383 ]
+"151
+[; ;i2c_eeprom.c: 151:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"153
+[; ;i2c_eeprom.c: 153:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"154
+[; ;i2c_eeprom.c: 154:     while (PEN);
+[e $U 384  ]
+[e :U 385 ]
+[e :U 384 ]
+[e $ _PEN 385  ]
+[e :U 386 ]
+"155
+[; ;i2c_eeprom.c: 155: }
+[e :UE 356 ]
+}
+"156
+[; ;i2c_eeprom.c: 156: uint8_t eeprom_read_16 (uint8_t slaveAdd, uint16_t add){
+[v _eeprom_read_16 `(uc ~T0 @X0 1 ef2`uc`us ]
+{
+[e :U _eeprom_read_16 ]
+[v _slaveAdd `uc ~T0 @X0 1 r1 ]
+[v _add `us ~T0 @X0 1 r2 ]
+[f ]
+"157
+[; ;i2c_eeprom.c: 157:     uint8_t addHigh = add >> 8;
+[v _addHigh `uc ~T0 @X0 1 a ]
+[e = _addHigh -> >> -> _add `ui -> 8 `i `uc ]
+"158
+[; ;i2c_eeprom.c: 158:     uint8_t addLow = add;
+[v _addLow `uc ~T0 @X0 1 a ]
+[e = _addLow -> _add `uc ]
+"159
+[; ;i2c_eeprom.c: 159:     uint8_t tempData;
+[v _tempData `uc ~T0 @X0 1 a ]
+"161
+[; ;i2c_eeprom.c: 161:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+"162
+[; ;i2c_eeprom.c: 162:     while (SEN);
+[e $U 388  ]
+[e :U 389 ]
+[e :U 388 ]
+[e $ _SEN 389  ]
+[e :U 390 ]
+"163
+[; ;i2c_eeprom.c: 163:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"164
+[; ;i2c_eeprom.c: 164:     SSPBUF = slaveAdd;
+[e = _SSPBUF _slaveAdd ]
+"165
+[; ;i2c_eeprom.c: 165:     while (!SSPIF);
+[e $U 391  ]
+[e :U 392 ]
+[e :U 391 ]
+[e $ ! _SSPIF 392  ]
+[e :U 393 ]
+"166
+[; ;i2c_eeprom.c: 166:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"167
+[; ;i2c_eeprom.c: 167:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 394  ]
+{
+"168
+[; ;i2c_eeprom.c: 168:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"169
+[; ;i2c_eeprom.c: 169:         while (PEN);
+[e $U 395  ]
+[e :U 396 ]
+[e :U 395 ]
+[e $ _PEN 396  ]
+[e :U 397 ]
+"170
+[; ;i2c_eeprom.c: 170:         return (0xFB);
+[e ) -> -> 251 `i `uc ]
+[e $UE 387  ]
+"171
+[; ;i2c_eeprom.c: 171:     }
+}
+[e :U 394 ]
+"173
+[; ;i2c_eeprom.c: 173:     SSPBUF = addHigh;
+[e = _SSPBUF _addHigh ]
+"174
+[; ;i2c_eeprom.c: 174:     while (!SSPIF);
+[e $U 398  ]
+[e :U 399 ]
+[e :U 398 ]
+[e $ ! _SSPIF 399  ]
+[e :U 400 ]
+"175
+[; ;i2c_eeprom.c: 175:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"176
+[; ;i2c_eeprom.c: 176:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 401  ]
+{
+"177
+[; ;i2c_eeprom.c: 177:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"178
+[; ;i2c_eeprom.c: 178:         while (PEN);
+[e $U 402  ]
+[e :U 403 ]
+[e :U 402 ]
+[e $ _PEN 403  ]
+[e :U 404 ]
+"179
+[; ;i2c_eeprom.c: 179:         return (0xFE);
+[e ) -> -> 254 `i `uc ]
+[e $UE 387  ]
+"180
+[; ;i2c_eeprom.c: 180:     }
+}
+[e :U 401 ]
+"182
+[; ;i2c_eeprom.c: 182:     SSPBUF = addLow;
+[e = _SSPBUF _addLow ]
+"183
+[; ;i2c_eeprom.c: 183:     while (!SSPIF);
+[e $U 405  ]
+[e :U 406 ]
+[e :U 405 ]
+[e $ ! _SSPIF 406  ]
+[e :U 407 ]
+"184
+[; ;i2c_eeprom.c: 184:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"185
+[; ;i2c_eeprom.c: 185:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 408  ]
+{
+"186
+[; ;i2c_eeprom.c: 186:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"187
+[; ;i2c_eeprom.c: 187:         while (PEN);
+[e $U 409  ]
+[e :U 410 ]
+[e :U 409 ]
+[e $ _PEN 410  ]
+[e :U 411 ]
+"188
+[; ;i2c_eeprom.c: 188:         return (0xFD);
+[e ) -> -> 253 `i `uc ]
+[e $UE 387  ]
+"189
+[; ;i2c_eeprom.c: 189:     }
+}
+[e :U 408 ]
+"191
+[; ;i2c_eeprom.c: 191:     SSPCON2bits.RSEN = 1;
+[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
+"192
+[; ;i2c_eeprom.c: 192:     while (RSEN);
+[e $U 412  ]
+[e :U 413 ]
+[e :U 412 ]
+[e $ _RSEN 413  ]
+[e :U 414 ]
+"193
+[; ;i2c_eeprom.c: 193:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"195
+[; ;i2c_eeprom.c: 195:     SSPBUF = (slaveAdd+1);
+[e = _SSPBUF -> + -> _slaveAdd `i -> 1 `i `uc ]
+"196
+[; ;i2c_eeprom.c: 196:     while (!SSPIF);
+[e $U 415  ]
+[e :U 416 ]
+[e :U 415 ]
+[e $ ! _SSPIF 416  ]
+[e :U 417 ]
+"197
+[; ;i2c_eeprom.c: 197:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"198
+[; ;i2c_eeprom.c: 198:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 418  ]
+{
+"199
+[; ;i2c_eeprom.c: 199:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"200
+[; ;i2c_eeprom.c: 200:         while (PEN);
+[e $U 419  ]
+[e :U 420 ]
+[e :U 419 ]
+[e $ _PEN 420  ]
+[e :U 421 ]
+"201
+[; ;i2c_eeprom.c: 201:         return (0xFC);
+[e ) -> -> 252 `i `uc ]
+[e $UE 387  ]
+"202
+[; ;i2c_eeprom.c: 202:     }
+}
+[e :U 418 ]
+"204
+[; ;i2c_eeprom.c: 204:     SSPCON2bits.RCEN = 1;
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+"205
+[; ;i2c_eeprom.c: 205:     while (!SSPSTATbits.BF);
+[e $U 422  ]
+[e :U 423 ]
+[e :U 422 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 423  ]
+[e :U 424 ]
+"206
+[; ;i2c_eeprom.c: 206:     tempData = SSPBUF;
+[e = _tempData _SSPBUF ]
+"208
+[; ;i2c_eeprom.c: 208:     SSPCON2bits.ACKDT = 1;
+[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
+"209
+[; ;i2c_eeprom.c: 209:     SSPCON2bits.ACKEN = 1;
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+"210
+[; ;i2c_eeprom.c: 210:     while (ACKEN);
+[e $U 425  ]
+[e :U 426 ]
+[e :U 425 ]
+[e $ _ACKEN 426  ]
+[e :U 427 ]
+"212
+[; ;i2c_eeprom.c: 212:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"213
+[; ;i2c_eeprom.c: 213:     while(PEN);
+[e $U 428  ]
+[e :U 429 ]
+[e :U 428 ]
+[e $ _PEN 429  ]
+[e :U 430 ]
+"214
+[; ;i2c_eeprom.c: 214:     return tempData;
+[e ) _tempData ]
+[e $UE 387  ]
+"215
+[; ;i2c_eeprom.c: 215: }
+[e :UE 387 ]
+}
+"218
+[; ;i2c_eeprom.c: 218: void eeprom_write (uint8_t slaveAdd, uint8_t addHigh, uint8_t addLow, uint8_t eeData) {
+[v _eeprom_write `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+{
+[e :U _eeprom_write ]
+[v _slaveAdd `uc ~T0 @X0 1 r1 ]
+[v _addHigh `uc ~T0 @X0 1 r2 ]
+[v _addLow `uc ~T0 @X0 1 r3 ]
+[v _eeData `uc ~T0 @X0 1 r4 ]
+[f ]
+"219
+[; ;i2c_eeprom.c: 219:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+"220
+[; ;i2c_eeprom.c: 220:     while (SEN);
+[e $U 432  ]
+[e :U 433 ]
+[e :U 432 ]
+[e $ _SEN 433  ]
+[e :U 434 ]
+"221
+[; ;i2c_eeprom.c: 221:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"223
+[; ;i2c_eeprom.c: 223:     SSPBUF = slaveAdd;
+[e = _SSPBUF _slaveAdd ]
+"224
+[; ;i2c_eeprom.c: 224:     while (!SSPIF);
+[e $U 435  ]
+[e :U 436 ]
+[e :U 435 ]
+[e $ ! _SSPIF 436  ]
+[e :U 437 ]
+"225
+[; ;i2c_eeprom.c: 225:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"226
+[; ;i2c_eeprom.c: 226:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 438  ]
+{
+"227
+[; ;i2c_eeprom.c: 227:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"228
+[; ;i2c_eeprom.c: 228:         while (PEN);
+[e $U 439  ]
+[e :U 440 ]
+[e :U 439 ]
+[e $ _PEN 440  ]
+[e :U 441 ]
+"229
+[; ;i2c_eeprom.c: 229:         return;
+[e $UE 431  ]
+"230
+[; ;i2c_eeprom.c: 230:     }
+}
+[e :U 438 ]
+"232
+[; ;i2c_eeprom.c: 232:     SSPBUF = addHigh;
+[e = _SSPBUF _addHigh ]
+"233
+[; ;i2c_eeprom.c: 233:     while (!SSPIF);
+[e $U 442  ]
+[e :U 443 ]
+[e :U 442 ]
+[e $ ! _SSPIF 443  ]
+[e :U 444 ]
+"234
+[; ;i2c_eeprom.c: 234:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"235
+[; ;i2c_eeprom.c: 235:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 445  ]
+{
+"236
+[; ;i2c_eeprom.c: 236:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"237
+[; ;i2c_eeprom.c: 237:         while (PEN);
+[e $U 446  ]
+[e :U 447 ]
+[e :U 446 ]
+[e $ _PEN 447  ]
+[e :U 448 ]
+"238
+[; ;i2c_eeprom.c: 238:         return;
+[e $UE 431  ]
+"239
+[; ;i2c_eeprom.c: 239:     }
+}
+[e :U 445 ]
+"241
+[; ;i2c_eeprom.c: 241:     SSPBUF = addLow;
+[e = _SSPBUF _addLow ]
+"242
+[; ;i2c_eeprom.c: 242:     while (!SSPIF);
+[e $U 449  ]
+[e :U 450 ]
+[e :U 449 ]
+[e $ ! _SSPIF 450  ]
+[e :U 451 ]
+"243
+[; ;i2c_eeprom.c: 243:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"244
+[; ;i2c_eeprom.c: 244:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 452  ]
+{
+"245
+[; ;i2c_eeprom.c: 245:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"246
+[; ;i2c_eeprom.c: 246:         while (PEN);
+[e $U 453  ]
+[e :U 454 ]
+[e :U 453 ]
+[e $ _PEN 454  ]
+[e :U 455 ]
+"247
+[; ;i2c_eeprom.c: 247:         return;
+[e $UE 431  ]
+"248
+[; ;i2c_eeprom.c: 248:     }
+}
+[e :U 452 ]
+"250
+[; ;i2c_eeprom.c: 250:     SSPBUF = eeData;
+[e = _SSPBUF _eeData ]
+"251
+[; ;i2c_eeprom.c: 251:     while (!SSPIF);
+[e $U 456  ]
+[e :U 457 ]
+[e :U 456 ]
+[e $ ! _SSPIF 457  ]
+[e :U 458 ]
+"252
+[; ;i2c_eeprom.c: 252:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"254
+[; ;i2c_eeprom.c: 254:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"255
+[; ;i2c_eeprom.c: 255:     while (PEN);
+[e $U 459  ]
+[e :U 460 ]
+[e :U 459 ]
+[e $ _PEN 460  ]
+[e :U 461 ]
+"257
+[; ;i2c_eeprom.c: 257: }
+[e :UE 431 ]
+}
+"258
+[; ;i2c_eeprom.c: 258: uint8_t eeprom_read (uint8_t slaveAdd, uint8_t addHigh, uint8_t addLow){
+[v _eeprom_read `(uc ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[e :U _eeprom_read ]
+[v _slaveAdd `uc ~T0 @X0 1 r1 ]
+[v _addHigh `uc ~T0 @X0 1 r2 ]
+[v _addLow `uc ~T0 @X0 1 r3 ]
+[f ]
+"259
+[; ;i2c_eeprom.c: 259:     uint8_t tempData;
+[v _tempData `uc ~T0 @X0 1 a ]
+"261
+[; ;i2c_eeprom.c: 261:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+"262
+[; ;i2c_eeprom.c: 262:     while (SEN);
+[e $U 463  ]
+[e :U 464 ]
+[e :U 463 ]
+[e $ _SEN 464  ]
+[e :U 465 ]
+"263
+[; ;i2c_eeprom.c: 263:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"264
+[; ;i2c_eeprom.c: 264:     SSPBUF = slaveAdd;
+[e = _SSPBUF _slaveAdd ]
+"265
+[; ;i2c_eeprom.c: 265:     while (!SSPIF);
+[e $U 466  ]
+[e :U 467 ]
+[e :U 466 ]
+[e $ ! _SSPIF 467  ]
+[e :U 468 ]
+"266
+[; ;i2c_eeprom.c: 266:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"267
+[; ;i2c_eeprom.c: 267:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 469  ]
+{
+"268
+[; ;i2c_eeprom.c: 268:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"269
+[; ;i2c_eeprom.c: 269:         while (PEN);
+[e $U 470  ]
+[e :U 471 ]
+[e :U 470 ]
+[e $ _PEN 471  ]
+[e :U 472 ]
+"270
+[; ;i2c_eeprom.c: 270:         return (0xFB);
+[e ) -> -> 251 `i `uc ]
+[e $UE 462  ]
+"271
+[; ;i2c_eeprom.c: 271:     }
+}
+[e :U 469 ]
+"273
+[; ;i2c_eeprom.c: 273:     SSPBUF = addHigh;
+[e = _SSPBUF _addHigh ]
+"274
+[; ;i2c_eeprom.c: 274:     while (!SSPIF);
+[e $U 473  ]
+[e :U 474 ]
+[e :U 473 ]
+[e $ ! _SSPIF 474  ]
+[e :U 475 ]
+"275
+[; ;i2c_eeprom.c: 275:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"276
+[; ;i2c_eeprom.c: 276:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 476  ]
+{
+"277
+[; ;i2c_eeprom.c: 277:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"278
+[; ;i2c_eeprom.c: 278:         while (PEN);
+[e $U 477  ]
+[e :U 478 ]
+[e :U 477 ]
+[e $ _PEN 478  ]
+[e :U 479 ]
+"279
+[; ;i2c_eeprom.c: 279:         return (0xFE);
+[e ) -> -> 254 `i `uc ]
+[e $UE 462  ]
+"280
+[; ;i2c_eeprom.c: 280:     }
+}
+[e :U 476 ]
+"282
+[; ;i2c_eeprom.c: 282:     SSPBUF = addLow;
+[e = _SSPBUF _addLow ]
+"283
+[; ;i2c_eeprom.c: 283:     while (!SSPIF);
+[e $U 480  ]
+[e :U 481 ]
+[e :U 480 ]
+[e $ ! _SSPIF 481  ]
+[e :U 482 ]
+"284
+[; ;i2c_eeprom.c: 284:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"285
+[; ;i2c_eeprom.c: 285:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 483  ]
+{
+"286
+[; ;i2c_eeprom.c: 286:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"287
+[; ;i2c_eeprom.c: 287:         while (PEN);
+[e $U 484  ]
+[e :U 485 ]
+[e :U 484 ]
+[e $ _PEN 485  ]
+[e :U 486 ]
+"288
+[; ;i2c_eeprom.c: 288:         return (0xFD);
+[e ) -> -> 253 `i `uc ]
+[e $UE 462  ]
+"289
+[; ;i2c_eeprom.c: 289:     }
+}
+[e :U 483 ]
+"291
+[; ;i2c_eeprom.c: 291:     SSPCON2bits.RSEN = 1;
+[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
+"292
+[; ;i2c_eeprom.c: 292:     while (RSEN);
+[e $U 487  ]
+[e :U 488 ]
+[e :U 487 ]
+[e $ _RSEN 488  ]
+[e :U 489 ]
+"293
+[; ;i2c_eeprom.c: 293:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"295
+[; ;i2c_eeprom.c: 295:     SSPBUF = (slaveAdd+1);
+[e = _SSPBUF -> + -> _slaveAdd `i -> 1 `i `uc ]
+"296
+[; ;i2c_eeprom.c: 296:     while (!SSPIF);
+[e $U 490  ]
+[e :U 491 ]
+[e :U 490 ]
+[e $ ! _SSPIF 491  ]
+[e :U 492 ]
+"297
+[; ;i2c_eeprom.c: 297:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"298
+[; ;i2c_eeprom.c: 298:     if (SSPCON2bits.ACKSTAT) {
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> 0 `i 493  ]
+{
+"299
+[; ;i2c_eeprom.c: 299:         SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"300
+[; ;i2c_eeprom.c: 300:         while (PEN);
+[e $U 494  ]
+[e :U 495 ]
+[e :U 494 ]
+[e $ _PEN 495  ]
+[e :U 496 ]
+"301
+[; ;i2c_eeprom.c: 301:         return (0xFC);
+[e ) -> -> 252 `i `uc ]
+[e $UE 462  ]
+"302
+[; ;i2c_eeprom.c: 302:     }
+}
+[e :U 493 ]
+"304
+[; ;i2c_eeprom.c: 304:     SSPCON2bits.RCEN = 1;
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+"305
+[; ;i2c_eeprom.c: 305:     while (!SSPSTATbits.BF);
+[e $U 497  ]
+[e :U 498 ]
+[e :U 497 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 498  ]
+[e :U 499 ]
+"306
+[; ;i2c_eeprom.c: 306:     tempData = SSPBUF;
+[e = _tempData _SSPBUF ]
+"308
+[; ;i2c_eeprom.c: 308:     SSPCON2bits.ACKDT = 1;
+[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
+"309
+[; ;i2c_eeprom.c: 309:     SSPCON2bits.ACKEN = 1;
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+"310
+[; ;i2c_eeprom.c: 310:     while (ACKEN);
+[e $U 500  ]
+[e :U 501 ]
+[e :U 500 ]
+[e $ _ACKEN 501  ]
+[e :U 502 ]
+"312
+[; ;i2c_eeprom.c: 312:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"313
+[; ;i2c_eeprom.c: 313:     while(PEN);
+[e $U 503  ]
+[e :U 504 ]
+[e :U 503 ]
+[e $ _PEN 504  ]
+[e :U 505 ]
+"314
+[; ;i2c_eeprom.c: 314:     return tempData;
+[e ) _tempData ]
+[e $UE 462  ]
+"316
+[; ;i2c_eeprom.c: 316: }
+[e :UE 462 ]
+}

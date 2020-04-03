@@ -1,0 +1,186 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1512 ]
+[d frameptr 6 ]
+"8 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Slave.X\conf.c
+[v _init init `(v  1 e 1 0 ]
+"17
+[v _init_oscillator init_oscillator `(v  1 e 1 0 ]
+"32
+[v _reset_ports reset_ports `(v  1 e 1 0 ]
+"53
+[v _init_ports init_ports `(v  1 e 1 0 ]
+"64
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+"75
+[v _init_i2c_slave init_i2c_slave `(v  1 e 1 0 ]
+"10 D:\Programs\Compilers\8 bit\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"17 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Slave.X\main.c
+[v _I2C_Slave_Read I2C_Slave_Read `(v  1 e 1 0 ]
+"46
+[v _on_interrupt_i2c on_interrupt_i2c `(v  1 e 1 0 ]
+"63
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+"72
+[v _main main `(v  1 e 1 0 ]
+[s S194 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[s S203 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S208 . 1 `S194 1 . 1 0 `S203 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES208  1 e 1 @11 ]
+"1052
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1114
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1176
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S148 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1561
+[s S152 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S160 . 1 `S148 1 . 1 0 `S152 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES160  1 e 1 @153 ]
+"1895
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"1957
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2019
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S74 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2036
+[u S83 . 1 `S74 1 . 1 0 ]
+[v _LATCbits LATCbits `VES83  1 e 1 @270 ]
+"2199
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2252
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2310
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2958
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"2996
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3072
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S49 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3094
+[u S58 . 1 `S49 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES58  1 e 1 @532 ]
+"3194
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S22 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3286
+[s S28 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S33 . 1 `S22 1 . 1 0 `S28 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES33  1 e 1 @533 ]
+"3398
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+"5064
+[v _BF BF `VEb  1 e 0 @4256 ]
+"5571
+[v _SSPIE SSPIE `VEb  1 e 0 @1163 ]
+"5574
+[v _SSPIF SSPIF `VEb  1 e 0 @139 ]
+"15 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Slave.X\main.c
+[v _z z `s  1 e 2 0 ]
+"72
+[v _main main `(v  1 e 1 0 ]
+{
+"77
+} 0
+"8 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Slave.X\conf.c
+[v _init init `(v  1 e 1 0 ]
+{
+"14
+} 0
+"53
+[v _init_ports init_ports `(v  1 e 1 0 ]
+{
+"59
+} 0
+"32
+[v _reset_ports reset_ports `(v  1 e 1 0 ]
+{
+"49
+} 0
+"17
+[v _init_oscillator init_oscillator `(v  1 e 1 0 ]
+{
+"24
+} 0
+"64
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+{
+"71
+} 0
+"75
+[v _init_i2c_slave init_i2c_slave `(v  1 e 1 0 ]
+{
+[v init_i2c_slave@address address `s  1 p 2 3 ]
+"104
+} 0
+"63 C:\Users\Jonas\MPLABXProjects\C_16F1512_I2C_Slave.X\main.c
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+{
+"70
+} 0
+"46
+[v _on_interrupt_i2c on_interrupt_i2c `(v  1 e 1 0 ]
+{
+"61
+} 0
+"17
+[v _I2C_Slave_Read I2C_Slave_Read `(v  1 e 1 0 ]
+{
+"44
+} 0

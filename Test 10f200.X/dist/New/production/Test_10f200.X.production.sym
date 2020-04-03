@@ -1,0 +1,93 @@
+__S0 4 0 ABS 0
+__S1 0 0 ABS 0
+__S2 0 0 ABS 0
+_main 3 0 CODE 0
+___sp 0 0 STACK 2
+btemp 1C 0 ABS 0
+start 0 0 ENTRY 0
+reset_vec FF 0 CODE 0
+ltemp0 1C 0 ABS 0
+ttemp0 1C 0 ABS 0
+wtemp0 1C 0 ABS 0
+wtemp1 1E 0 ABS 0
+__Hconfig 0 0 CONFIG 0
+__Lconfig 0 0 CONFIG 0
+__Hram 0 0 ABS 0
+__Lram 0 0 ABS 0
+__Hjmp_tab 0 0 ABS 0
+__Ljmp_tab 0 0 ABS 0
+__Hfunctab 0 0 ENTRY 0
+__Lfunctab 0 0 ENTRY 0
+__Hcommon 0 0 ABS 0
+__Lcommon 0 0 ABS 0
+___int_sp 0 0 STACK 2
+__Habs1 0 0 ABS 0
+__Labs1 0 0 ABS 0
+__Hsfr0 0 0 ABS 0
+__Lsfr0 0 0 ABS 0
+___stackhi 0 0 ABS 0
+__Hcode 0 0 ABS 0
+__Lcode 0 0 ABS 0
+__HcstackBANK0 0 0 ABS 0
+__LcstackBANK0 0 0 ABS 0
+__pcstackBANK0 0 0 BANK0 1
+__Hinit 0 0 ENTRY 0
+__Linit 0 0 ENTRY 0
+__end_of_main 4 0 CODE 0
+__Htext 0 0 ABS 0
+__Ltext 0 0 ABS 0
+end_of_initialization 1 0 ENTRY 0
+___stacklo 0 0 ABS 0
+__Hstrings 0 0 STRING 0
+__Lstrings 0 0 STRING 0
+__Hbank0 0 0 ABS 0
+__Lbank0 0 0 ABS 0
+___latbits 0 0 ABS 0
+__Hpowerup 0 0 CODE 0
+__Lpowerup 0 0 CODE 0
+__Hclrtext 3 0 ENTRY 0
+__Lclrtext 3 0 ENTRY 0
+__end_of__initialization 1 0 ENTRY 0
+__Hidloc 0 0 IDLOC 0
+__Lidloc 0 0 IDLOC 0
+__Hstack 0 0 STACK 2
+__Lstack 0 0 STACK 2
+__Hspace_0 100 0 ABS 0
+__Lspace_0 0 0 ABS 0
+__Hspace_1 0 0 ABS 0
+__Lspace_1 0 0 ABS 0
+__Hspace_2 0 0 ABS 0
+__Lspace_2 0 0 ABS 0
+__Hcinit 3 0 ENTRY 0
+__Lcinit 1 0 ENTRY 0
+__size_of_main 0 0 ABS 0
+__Hreset_wrap 0 0 ENTRY 0
+__Lreset_wrap 0 0 ENTRY 0
+__Hend_init 1 0 ENTRY 0
+__Lend_init 0 0 ENTRY 0
+__Hreset_vec 100 0 CODE 0
+__Lreset_vec FF 0 CODE 0
+__HcstackCOMMON 0 0 ABS 0
+__LcstackCOMMON 0 0 ABS 0
+__pcstackCOMMON 0 0 COMMON 1
+start_initialization 1 0 ENTRY 0
+__Hmaintext 0 0 ABS 0
+__Lmaintext 0 0 ABS 0
+__pmaintext 3 0 CODE 0
+__initialization 1 0 ENTRY 0
+%segments
+reset_vec 1FE 1FF CODE 1FE 0
+reset_wrap 0 5 ENTRY 0 0
+maintext 6 7 CODE 6 0
+%locals
+dist/New/production\Test_10f200.X.production.o
+C:\Users\Jonas\AppData\Local\Temp\s974.
+108 1 0 ENTRY 0
+111 1 0 ENTRY 0
+117 1 0 ENTRY 0
+119 1 0 ENTRY 0
+120 2 0 ENTRY 0
+main.c
+5 3 0 CODE 0
+8 3 0 CODE 0
+10 3 0 CODE 0

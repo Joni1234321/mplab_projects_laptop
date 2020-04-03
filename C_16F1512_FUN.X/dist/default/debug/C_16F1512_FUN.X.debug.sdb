@@ -1,0 +1,278 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1512 ]
+[d frameptr 6 ]
+"9 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\conf.c
+[v _init init `(v  1 e 1 0 ]
+"18
+[v _init_oscillerator init_oscillerator `(v  1 e 1 0 ]
+"32
+[v _reset_ports reset_ports `(v  1 e 1 0 ]
+"52
+[v _init_ports init_ports `(v  1 e 1 0 ]
+"65
+[v _init_interrupts init_interrupts `(v  1 e 1 0 ]
+"76
+[v _init_interrupt_pin init_interrupt_pin `(v  1 e 1 0 ]
+"90
+[v _init_interrupt_timer init_interrupt_timer `(v  1 e 1 0 ]
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 D:\Programs\Compilers\8 bit\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"11 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\handler_io.c
+[v _check_buttons check_buttons `(v  1 e 1 0 ]
+"23
+[v _poll_switches poll_switches `(v  1 e 1 0 ]
+"40
+[v _port_init port_init `(v  1 e 1 0 ]
+"54
+[v _btn_process btn_process `(v  1 e 1 0 ]
+"82
+[v _btn_rst btn_rst `(v  1 e 1 0 ]
+"89
+[v _btn_hi btn_hi `(v  1 e 1 0 ]
+"119
+[v _btn_lo btn_lo `(v  1 e 1 0 ]
+"9 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\interrupts.c
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+"24
+[v _on_interrupt_pin on_interrupt_pin `(v  1 e 1 0 ]
+"29
+[v _on_interrupt_timer on_interrupt_timer `(v  1 e 1 0 ]
+"32 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\loops.c
+[v _fixedUpdate fixedUpdate `(v  1 e 1 0 ]
+"56
+[v _update update `(v  1 e 1 0 ]
+"30 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"5 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X/handler_io.h
+[v _btn_en btn_en `uc  1 e 1 0 ]
+[s S103 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[s S112 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S117 . 1 `S103 1 . 1 0 `S112 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES117  1 e 1 @11 ]
+"491
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"732
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"1052
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1114
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1176
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S135 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1364
+[s S142 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S149 . 1 `S135 1 . 1 0 `S142 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES149  1 e 1 @149 ]
+[s S53 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1561
+[s S57 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S65 . 1 `S53 1 . 1 0 `S57 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES65  1 e 1 @153 ]
+"1895
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"1957
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2019
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2199
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2252
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2310
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"5610
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"5613
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"29 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\handler_io.c
+[v _btn_port btn_port `uc  1 e 1 0 ]
+"32
+[v _btn_prev_state btn_prev_state `uc  1 e 1 0 ]
+"35
+[v _btn_streaks btn_streaks `[8]uc  1 e 8 0 ]
+"8 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\loops.c
+[v _counter counter `uc  1 e 1 0 ]
+"30 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"36
+} 0
+"56 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\loops.c
+[v _update update `(v  1 e 1 0 ]
+{
+"58
+} 0
+"9 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\conf.c
+[v _init init `(v  1 e 1 0 ]
+{
+"15
+} 0
+"52
+[v _init_ports init_ports `(v  1 e 1 0 ]
+{
+"62
+} 0
+"32
+[v _reset_ports reset_ports `(v  1 e 1 0 ]
+{
+"49
+} 0
+"40 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\handler_io.c
+[v _port_init port_init `(v  1 e 1 0 ]
+{
+[v port_init@port port `uc  1 a 1 wreg ]
+[v port_init@port port `uc  1 a 1 wreg ]
+"43
+[v port_init@port port `uc  1 a 1 2 ]
+"51
+} 0
+"18 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\conf.c
+[v _init_oscillerator init_oscillerator `(v  1 e 1 0 ]
+{
+"25
+} 0
+"65
+[v _init_interrupts init_interrupts `(v  1 e 1 0 ]
+{
+"73
+} 0
+"90
+[v _init_interrupt_timer init_interrupt_timer `(v  1 e 1 0 ]
+{
+"108
+} 0
+"76
+[v _init_interrupt_pin init_interrupt_pin `(v  1 e 1 0 ]
+{
+"87
+} 0
+"9 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\interrupts.c
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+{
+"21
+} 0
+"29
+[v _on_interrupt_timer on_interrupt_timer `(v  1 e 1 0 ]
+{
+"31
+} 0
+"32 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\loops.c
+[v _fixedUpdate fixedUpdate `(v  1 e 1 0 ]
+{
+"53
+} 0
+"11 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\handler_io.c
+[v _check_buttons check_buttons `(v  1 e 1 0 ]
+{
+"20
+} 0
+"23
+[v _poll_switches poll_switches `(v  1 e 1 0 ]
+{
+"26
+} 0
+"54
+[v _btn_process btn_process `(v  1 e 1 0 ]
+{
+[v btn_process@data data `uc  1 a 1 wreg ]
+"60
+[v btn_process@i i `uc  1 a 1 7 ]
+"57
+[v btn_process@c_port c_port `uc  1 a 1 8 ]
+"54
+[v btn_process@data data `uc  1 a 1 wreg ]
+"57
+[v btn_process@data data `uc  1 a 1 6 ]
+"79
+} 0
+"119
+[v _btn_lo btn_lo `(v  1 e 1 0 ]
+{
+[v btn_lo@c_port c_port `uc  1 a 1 wreg ]
+"122
+[v btn_lo@btn_streak btn_streak `*.4uc  1 a 1 3 ]
+"119
+[v btn_lo@c_port c_port `uc  1 a 1 wreg ]
+[v btn_lo@i i `uc  1 p 1 0 ]
+"122
+[v btn_lo@c_port c_port `uc  1 a 1 2 ]
+"141
+} 0
+"89
+[v _btn_hi btn_hi `(v  1 e 1 0 ]
+{
+[v btn_hi@c_port c_port `uc  1 a 1 wreg ]
+"102
+[v btn_hi@sLATA sLATA `uc  1 a 1 2 ]
+"92
+[v btn_hi@btn_streak btn_streak `*.4uc  1 a 1 4 ]
+"89
+[v btn_hi@c_port c_port `uc  1 a 1 wreg ]
+[v btn_hi@i i `uc  1 p 1 0 ]
+"92
+[v btn_hi@c_port c_port `uc  1 a 1 3 ]
+"116
+} 0
+"82
+[v _btn_rst btn_rst `(v  1 e 1 0 ]
+{
+"86
+} 0
+"5 D:\Programs\Compilers\8 bit\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"24 C:\Users\Jonas\MPLABXProjects\C_16F1512_FUN.X\interrupts.c
+[v _on_interrupt_pin on_interrupt_pin `(v  1 e 1 0 ]
+{
+"27
+} 0

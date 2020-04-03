@@ -1,0 +1,111 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Mon Apr 29 22:49:02 2019
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                 RES_VECT       code   0x000000    program   0x00001c
+                   .cinit    romdata   0x00000e    program   0x000004
+                     SUBS       code   0x000010    program   0x0000d6
+                MAIN_PROG       code   0x00007b    program   0x00003e
+.config_2007_BUILD/DEFAULT/PRODUCTION/TEST_MA       code   0x002007    program   0x000002
+.config_2008_BUILD/DEFAULT/PRODUCTION/TEST_MA       code   0x002008    program   0x000002
+                   .udata      udata   0x000020       data   0x000003
+               .udata_shr      udata   0x000070       data   0x000005
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000099      
+                            0x002007    0x002008      
+            156 out of 8455 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 ADC_INIT   0x00000c    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                ADC_START   0x00000d    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+               CLOCK_INIT   0x00000a    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  DELAY_W   0x000076    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   D_LOOP   0x000077    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 IDLELOOP   0x000095    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 INIT_ADC   0x000050    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+               INIT_CLOCK   0x00003c    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                INIT_PORT   0x000041    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  LED01_H   0x000008    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  LED01_L   0x000009    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  LED01_T   0x000007    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                LED1_HIGH   0x000034    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 LED1_LOW   0x000038    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+              LED1_TOGGLE   0x00002d    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   MYLOOP   0x000081    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                PORT_INIT   0x00000b    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                    START   0x00007b    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                START_ADC   0x00005d    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                     WAIT   0x000010    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  WAIT_08   0x000004    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  WAIT_10   0x000003    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  WAIT_DN   0x000005    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  WAIT_UP   0x000006    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  W_BTN_D   0x00001f    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  W_BTN_U   0x000026    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+               _SUBS_005B   0x00006b    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                     dly1   0x000018    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                     dly2   0x000015    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                Del_Count   0x000072       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                      dc1   0x000020       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                      dc2   0x000021       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                      dc3   0x000022       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 resulthi   0x000073       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 resultlo   0x000074       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   sPORTA   0x000070       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   sPORTB   0x000071       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  WAIT_10   0x000003    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  WAIT_08   0x000004    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  WAIT_DN   0x000005    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  WAIT_UP   0x000006    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  LED01_T   0x000007    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  LED01_H   0x000008    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  LED01_L   0x000009    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+               CLOCK_INIT   0x00000a    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                PORT_INIT   0x00000b    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 ADC_INIT   0x00000c    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                ADC_START   0x00000d    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                     WAIT   0x000010    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                     dly2   0x000015    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                     dly1   0x000018    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  W_BTN_D   0x00001f    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  W_BTN_U   0x000026    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+              LED1_TOGGLE   0x00002d    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                LED1_HIGH   0x000034    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 LED1_LOW   0x000038    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+               INIT_CLOCK   0x00003c    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                INIT_PORT   0x000041    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 INIT_ADC   0x000050    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                START_ADC   0x00005d    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+               _SUBS_005B   0x00006b    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                  DELAY_W   0x000076    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   D_LOOP   0x000077    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                    START   0x00007b    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   MYLOOP   0x000081    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 IDLELOOP   0x000095    program     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                      dc1   0x000020       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                      dc2   0x000021       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                      dc3   0x000022       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   sPORTA   0x000070       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                   sPORTB   0x000071       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                Del_Count   0x000072       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 resulthi   0x000073       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+                 resultlo   0x000074       data     static C:\Users\Jonas\MPLABXProjects\test 16f886.X\test_main.asm
+
+

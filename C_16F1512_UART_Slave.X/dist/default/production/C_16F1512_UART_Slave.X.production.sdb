@@ -1,0 +1,70 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1512 ]
+[d frameptr 6 ]
+"10 D:\Programs\Compilers\8 bit\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"14 C:\Users\Jonas\MPLABXProjects\C_16F1512_UART_Slave.X\slave.c
+[v _main main `(v  1 e 1 0 ]
+"40
+[v _UART_RX_Init UART_RX_Init `(v  1 e 1 0 ]
+"58
+[v _ISR ISR `II(v  1 e 1 0 ]
+"429 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"491
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"1052
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1114
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"2310
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2552
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"2604
+[v _SPBRG SPBRG `VEuc  1 e 1 @411 ]
+"5079
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"5148
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"5196
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"5409
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"5451
+[v _RB0 RB0 `VEb  1 e 0 @104 ]
+"5457
+[v _RB2 RB2 `VEb  1 e 0 @106 ]
+"5505
+[v _RCIE RCIE `VEb  1 e 0 @1165 ]
+"5508
+[v _RCIF RCIF `VEb  1 e 0 @141 ]
+"5562
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"5604
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"5790
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1142 ]
+"5793
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1143 ]
+"11 C:\Users\Jonas\MPLABXProjects\C_16F1512_UART_Slave.X\slave.c
+[v _UART_Buffer UART_Buffer `uc  1 e 1 0 ]
+"14
+[v _main main `(v  1 e 1 0 ]
+{
+"36
+} 0
+"40
+[v _UART_RX_Init UART_RX_Init `(v  1 e 1 0 ]
+{
+"56
+} 0
+"58
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"69
+} 0

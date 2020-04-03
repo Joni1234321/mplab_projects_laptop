@@ -1,0 +1,136 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1512 ]
+[d frameptr 6 ]
+"10 D:\Programs\Compilers\8 bit\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"39 C:\Users\Jonas\MPLABXProjects\slave1512.X\slave.c
+[v _interrupt_handler interrupt_handler `II(v  1 e 1 0 ]
+"48
+[v _main main `(v  1 e 1 0 ]
+"85
+[v _i2c_interrupt i2c_interrupt `(v  1 e 1 0 ]
+"91
+[v _PicRead PicRead `(uc  1 e 1 0 ]
+[s S27 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[u S36 . 1 `S27 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES36  1 e 1 @17 ]
+"1052
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1114
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S103 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1193
+[u S112 . 1 `S103 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES112  1 e 1 @142 ]
+[s S48 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1561
+[s S52 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S60 . 1 `S48 1 . 1 0 `S52 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES60  1 e 1 @153 ]
+"1895
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S81 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"1974
+[u S90 . 1 `S81 1 . 1 0 ]
+[v _LATBbits LATBbits `VES90  1 e 1 @269 ]
+"2199
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2252
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2310
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2958
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"2996
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3072
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S137 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3094
+[u S146 . 1 `S137 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES146  1 e 1 @532 ]
+"3194
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+"3398
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+"5145
+[v _CKP CKP `VEb  1 e 0 @4268 ]
+"5196
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"5409
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"5571
+[v _SSPIE SSPIE `VEb  1 e 0 @1163 ]
+"5574
+[v _SSPIF SSPIF `VEb  1 e 0 @139 ]
+"37 C:\Users\Jonas\MPLABXProjects\slave1512.X\slave.c
+[v _readData readData `VEuc  1 e 1 0 ]
+"48
+[v _main main `(v  1 e 1 0 ]
+{
+"82
+} 0
+"39
+[v _interrupt_handler interrupt_handler `II(v  1 e 1 0 ]
+{
+"46
+} 0
+"85
+[v _i2c_interrupt i2c_interrupt `(v  1 e 1 0 ]
+{
+"89
+} 0
+"91
+[v _PicRead PicRead `(uc  1 e 1 0 ]
+{
+"92
+[v PicRead@tempData tempData `uc  1 a 1 2 ]
+"116
+} 0

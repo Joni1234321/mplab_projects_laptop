@@ -1,0 +1,152 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1512 ]
+[d frameptr 6 ]
+"10 D:\Programs\Compilers\8 bit\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 D:\Programs\Compilers\8 bit\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"42 C:\Users\Jonas\MPLABXProjects\master1512.X\master.c
+[v _main main `(v  1 e 1 0 ]
+"87
+[v _EepromWrite EepromWrite `(v  1 e 1 0 ]
+"128
+[v _EepromRead EepromRead `(uc  1 e 1 0 ]
+[s S137 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653 D:\Programs\Compilers\8 bit\pic\include\pic16f1512.h
+[u S146 . 1 `S137 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES146  1 e 1 @17 ]
+"1052
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1114
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S77 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1193
+[u S86 . 1 `S77 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES86  1 e 1 @142 ]
+[s S22 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1561
+[s S26 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S34 . 1 `S22 1 . 1 0 `S26 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES34  1 e 1 @153 ]
+"1895
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S55 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"1974
+[u S64 . 1 `S55 1 . 1 0 ]
+[v _LATBbits LATBbits `VES64  1 e 1 @269 ]
+"2199
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2252
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2310
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2958
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"2996
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+[s S162 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3094
+[u S171 . 1 `S162 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES171  1 e 1 @532 ]
+"3194
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S115 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"3420
+[u S124 . 1 `S115 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES124  1 e 1 @534 ]
+"4896
+[v _ACKEN ACKEN `VEb  1 e 0 @4276 ]
+"5412
+[v _PEN PEN `VEb  1 e 0 @4274 ]
+"5517
+[v _RSEN RSEN `VEb  1 e 0 @4273 ]
+"5550
+[v _SEN SEN `VEb  1 e 0 @4272 ]
+"5574
+[v _SSPIF SSPIF `VEb  1 e 0 @139 ]
+"39 C:\Users\Jonas\MPLABXProjects\master1512.X\master.c
+[v _readData readData `VEuc  1 e 1 0 ]
+"42
+[v _main main `(v  1 e 1 0 ]
+{
+"43
+[v main@x x `i  1 a 2 8 ]
+"85
+} 0
+"87
+[v _EepromWrite EepromWrite `(v  1 e 1 0 ]
+{
+[v EepromWrite@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+[v EepromWrite@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+[v EepromWrite@addHigh addHigh `uc  1 p 1 0 ]
+[v EepromWrite@addLow addLow `uc  1 p 1 1 ]
+[v EepromWrite@eeData eeData `uc  1 p 1 2 ]
+[v EepromWrite@slaveAdd slaveAdd `uc  1 a 1 3 ]
+"126
+} 0
+"128
+[v _EepromRead EepromRead `(uc  1 e 1 0 ]
+{
+[v EepromRead@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+"129
+[v EepromRead@tempData tempData `uc  1 a 1 3 ]
+"128
+[v EepromRead@slaveAdd slaveAdd `uc  1 a 1 wreg ]
+[v EepromRead@addHigh addHigh `uc  1 p 1 0 ]
+[v EepromRead@addLow addLow `uc  1 p 1 1 ]
+"131
+[v EepromRead@slaveAdd slaveAdd `uc  1 a 1 4 ]
+"187
+} 0

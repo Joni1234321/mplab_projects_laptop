@@ -1,0 +1,69 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Sun Mar 24 20:34:19 2019
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                    RESET       code   0x000000    program   0x000006
+                   .cinit    romdata   0x000003    program   0x000004
+                     MAIN       code   0x000005    program   0x000036
+                    .code       code   0x000020    program   0x000016
+                    RCCAL       code   0x0000ff    program   0x000002
+.config_0FFF_BUILD/DEFAULT/PRODUCTION/INPUT T       code   0x000fff    program   0x000002
+                   .udata      udata   0x000010       data   0x000006
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00002a      
+                            0x0000ff    0x0000ff      
+                            0x000fff    0x000fff      
+            45 out of 261 program addresses used, program memory utilization is 17%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    db_dn   0x000009    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                    db_up   0x000016    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                  delay10   0x000002    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                delay10_R   0x000020    program     extern C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                     dly1   0x000024    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                     dly2   0x000021    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                   dn_dly   0x00000c    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                main_loop   0x000009    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                    start   0x000005    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                   up_dly   0x000019    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                   db_cnt   0x000011       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                      dc1   0x000012       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                      dc1   0x000013       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                      dc2   0x000014       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                      dc3   0x000015       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                    sGPIO   0x000010       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  delay10   0x000002    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                    start   0x000005    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                    db_dn   0x000009    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                main_loop   0x000009    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                   dn_dly   0x00000c    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                    db_up   0x000016    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                   up_dly   0x000019    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                delay10_R   0x000020    program     extern C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                     dly2   0x000021    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                     dly1   0x000024    program     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                    sGPIO   0x000010       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                   db_cnt   0x000011       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                      dc1   0x000012       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\input test-main.ASM
+                      dc1   0x000013       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                      dc2   0x000014       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+                      dc3   0x000015       data     static C:\Users\Jonas\MPLABXProjects\Input assembly test.X\dealy10.asm
+
+

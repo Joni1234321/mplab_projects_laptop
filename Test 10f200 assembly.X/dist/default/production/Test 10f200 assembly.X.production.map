@@ -1,0 +1,59 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Sun Mar 24 19:10:23 2019
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                    RESET       code   0x000000    program   0x000006
+                   .cinit    romdata   0x000003    program   0x000004
+                     MAIN       code   0x000005    program   0x00001a
+                    .code       code   0x000012    program   0x000016
+                    RCCAL       code   0x0000ff    program   0x000002
+.config_0FFF_BUILD/DEFAULT/PRODUCTION/LED TES       code   0x000fff    program   0x000002
+                   .udata      udata   0x000010       data   0x000005
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00001c      
+                            0x0000ff    0x0000ff      
+                            0x000fff    0x000fff      
+            31 out of 261 program addresses used, program memory utilization is 11%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  delay10   0x000002    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                delay10_R   0x000012    program     extern C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                     dly1   0x000016    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                     dly2   0x000013    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                main_loop   0x000008    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                    start   0x000005    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                      dc1   0x000010       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                      dc2   0x000011       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                      dc3   0x000012       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                      dc4   0x000014       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                    sGPIO   0x000013       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  delay10   0x000002    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                    start   0x000005    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                main_loop   0x000008    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                delay10_R   0x000012    program     extern C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                     dly2   0x000013    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                     dly1   0x000016    program     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                      dc1   0x000010       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                      dc2   0x000011       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                      dc3   0x000012       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\dealy10.asm
+                    sGPIO   0x000013       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+                      dc4   0x000014       data     static C:\Users\Jonas\MPLABXProjects\Test 10f200 assembly.X\LED TEST-main.ASM
+
+
